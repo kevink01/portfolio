@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import { motion } from 'framer-motion';
+import Toolbar from '@/components/toolbar';
+import Welcome from '@/components/welcome';
+import About from '@/components/about';
 
 export default function Home() {
 	return (
@@ -12,13 +14,13 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
-				<h1 className="text-green-500">Portfolio</h1>
-				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 2 }}>
-					<p className="text-green-500">Hello World</p>
-				</motion.div>
+				<Toolbar />
+				<section id="home">
+					<Welcome />
+				</section>
+				<section id="about">
+					<About />
+				</section>
 			</main>
 		</>
 	);

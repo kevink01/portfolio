@@ -1,4 +1,16 @@
 .main {
 	background: #121212;
-	@apply font-mono p-1;
+	@apply font-mono;
+}
+
+.offset {
+	height: calc(100vh - 64px);
+}
+
+.terminal {
+	@apply flex items-center offset;
+}
+
+.welcome {
+	@apply flex flex-col lg:flex-row justify-center items-center w-screen offset;
 }

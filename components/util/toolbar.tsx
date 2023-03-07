@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 function Toolbar() {
 	return (
 		<motion.div
-			className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto pt-2 z-50 drop-shadow-2xl"
+			className="sticky top-0 flex items-start justify-between max-w-7xl h-16 mx-auto pt-2 z-50 drop-shadow-2xl"
 			animate={{
 				y: [-200, 200, 0],
 				opacity: [0, 0.5, 1],
@@ -15,10 +15,12 @@ function Toolbar() {
 			<div className="space-x-3">
 				<SocialIcon
 					url="https://github.com/kevink01"
+					target="_blank"
 					style={{ height: 50, width: 50 }}
 				/>
 				<SocialIcon
 					url="https://github.com/kevink01"
+					target="_blank"
 					style={{ height: 50, width: 50 }}
 				/>
 				<SocialIcon

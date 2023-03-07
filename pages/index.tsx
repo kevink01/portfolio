@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import Toolbar from '@/components/toolbar';
+import Toolbar from '@/components/util/toolbar';
 import Welcome from '@/components/welcome';
 import About from '@/components/about';
+import Projects from '@/components/projects';
 
 export default function Home() {
 	return (
@@ -15,12 +16,17 @@ export default function Home() {
 			</Head>
 			<main className={styles.main}>
 				<Toolbar />
-				<section id="home">
-					<Welcome />
-				</section>
-				<section id="about">
-					<About />
-				</section>
+				<div className="flex flex-col">
+					<section id="home" className="snap-start">
+						<Welcome />
+					</section>
+					<section id="about" className="snap-center">
+						<About />
+					</section>
+					<section id="projects" className="snap-center">
+						<Projects />
+					</section>
+				</div>
 			</main>
 		</>
 	);

@@ -11,12 +11,14 @@ module.exports = {
 				104: '26rem',
 				120: '30rem',
 				128: '32rem',
+				144: '36rem',
 				160: '40rem',
 			},
 			height: {
 				104: '26rem',
 				120: '30rem',
 				128: '32rem',
+				144: '36rem',
 				160: '40rem',
 			},
 			colors: {

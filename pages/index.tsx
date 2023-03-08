@@ -1,8 +1,5 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
-import Toolbar from '@/components/util/toolbar';
 import Welcome from '@/components/welcome';
-import About from '@/components/about';
 import Projects from '@/components/projects';
 
 export default function Home() {
@@ -14,14 +11,10 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className={styles.main}>
-				<Toolbar />
+			<main className="main">
 				<div className="flex flex-col">
 					<section id="home" className="snap-start">
 						<Welcome />
-					</section>
-					<section id="about" className="snap-center">
-						<About />
 					</section>
 					<section id="projects" className="snap-center">
 						<Projects />

@@ -1,7 +1,4 @@
 import React from 'react';
-import VScode from '@/public/images/vscode.png';
-import Link from 'next/link';
-import Image from 'next/image';
 import Project from './util/project';
 
 function Projects() {

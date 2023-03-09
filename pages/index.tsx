@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Welcome from '@/components/welcome';
 import Projects from '@/components/projects';
 import Experiences from '@/components/experiences';
+import Skills from '@/components/skills';
 
 export default function Home() {
 	return (
@@ -23,6 +24,9 @@ export default function Home() {
 				</section>
 				<section id="projects" className="section">
 					<Projects />
+				</section>
+				<section id="skills" className="section">
+					<Skills />
 				</section>
 				<div className="h-px"></div> {/* Footer for snapping */}
 			</main>

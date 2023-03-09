@@ -14,7 +14,7 @@ function ExperienceCard() {
 				<Technologies />
 				<div>
 					<p className="text-xl font-bold">Responsibilities</p>
-					<div className="flex-1 max-h-52 overflow-y-auto scroll-smooth">
+					<div className="w-full h-3/5 overflow-y-auto">
 						<ul className="list-disc list-inside">
 							<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
 							<li>
@@ -42,22 +42,36 @@ function ExperienceCard() {
 						</ul>
 					</div>
 				</div>
-				{/*<div className="pb-2">
+				{/* <div>
 					<p className="text-xl font-bold">Responsibilities</p>
-					<ul className="list-disc list-inside">
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-						<li>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Reiciendis ab suscipit commodi similique.
-						</li>
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-							autem officiis saepe inventore cupiditate beatae
-						</li>
-					</ul>
-    </div>*/}
+					<div className="flex-1 overflow-y-auto scroll-smooth">
+						<ul className="list-disc list-inside">
+							<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+							<li>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Reiciendis ab suscipit commodi similique.
+							</li>
+							<li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+								autem officiis saepe inventore cupiditate beatae
+							</li>
+							<li>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+								autem officiis saepe inventore cupiditate beatae
+							</li>
+							<li>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+								autem officiis saepe inventore cupiditate beatae
+							</li>
+							<li>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+								autem officiis saepe inventore cupiditate beatae
+							</li>
+						</ul>
+					</div>
+				</div> */}
 			</div>
 		</div>
 	);

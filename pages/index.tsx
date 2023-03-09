@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Welcome from '@/components/welcome';
 import Projects from '@/components/projects';
-import Jobs from '@/components/jobs';
+import Experiences from '@/components/experiences';
 
 export default function Home() {
 	return (
@@ -19,7 +19,7 @@ export default function Home() {
 					<Welcome />
 				</section>
 				<section id="experience" className="section">
-					<Jobs />
+					<Experiences />
 				</section>
 				<section id="projects" className="section">
 					<Projects />

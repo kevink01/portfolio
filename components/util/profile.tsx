@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
@@ -97,18 +98,19 @@ function Profile() {
 						bgColor="#B77A03"
 						className="transition duration-500 ease-in-out hover:scale-125"
 					/>
-					<button
-						className="w-50 h-50 rounded-full bg-secondary transition duration-500 ease-in-out hover:scale-125"
-						data-te-toggle="tooltip"
-						data-te-placement="top"
-						title="Download Resume">
-						<Image
-							src={Resume.src}
-							width={Resume.width}
-							height={Resume.height}
-							alt="Resume"
-						/>
-					</button>
+					<Link download href={`/Kevin Kulich Resume.pdf`} target="_blank">
+						<button
+							className="w-50 h-50 rounded-full bg-secondary transition duration-500 ease-in-out hover:scale-125"
+							data-te-toggle="tooltip"
+							title="Download Resume">
+							<Image
+								src={Resume.src}
+								width={Resume.width}
+								height={Resume.height}
+								alt="Resume"
+							/>
+						</button>
+					</Link>
 				</div>
 			</motion.div>
 		</div>

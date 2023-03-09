@@ -1,8 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import Kevin from '@/public/images/Kevin.jpg';
+import Resume from '@/public/images/resume.png';
 
 function Profile() {
 	const [text] = useTypewriter({
@@ -73,7 +75,7 @@ function Profile() {
 					<span>{text}</span>
 					<Cursor cursorBlinking={true} cursorColor="#007fff" />
 				</h1>
-				<div className="space-x-3">
+				<div className="flex items-center space-x-3">
 					<SocialIcon
 						url="https://www.linkedin.com/in/kevin-kulich/"
 						target="_blank"
@@ -95,6 +97,18 @@ function Profile() {
 						bgColor="#B77A03"
 						className="transition duration-500 ease-in-out hover:scale-125"
 					/>
+					<button
+						className="w-50 h-50 rounded-full bg-secondary transition duration-500 ease-in-out hover:scale-125"
+						data-te-toggle="tooltip"
+						data-te-placement="top"
+						title="Download Resume">
+						<Image
+							src={Resume.src}
+							width={Resume.width}
+							height={Resume.height}
+							alt="Resume"
+						/>
+					</button>
 				</div>
 			</motion.div>
 		</div>

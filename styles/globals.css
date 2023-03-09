@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.main {
-	background: #121212;
-	@apply font-mono;
+@layer components {
+	.main {
+		/* Solution for snapping: https://css-tricks.com/practical-css-scroll-snapping/ */
+		@apply basis-2/4 h-screen overflow-scroll scroll-smooth snap-y snap-mandatory font-mono bg-[#121212] select-none;
+	}
+
+	.section {
+		@apply snap-center snap-always;
+	}
 }

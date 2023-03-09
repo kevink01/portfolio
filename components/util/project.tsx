@@ -5,7 +5,7 @@ import VScode from '@/public/images/vscode.png';
 
 function Project() {
 	return (
-		<div className="flex flex-col flex-shrink-0 content-between w-128 h-104 p-2 rounded-3xl text-sm bg-zinc-800 hover:bg-zinc-700 hover:cursor-pointer snap-start">
+		<div className="flex flex-col flex-shrink-0 content-between w-104 xl:w-120 2xl:w-150 h-104 xl:h-120 2xl:h-150 p-2 rounded-3xl text-sm bg-zinc-800 hover:bg-zinc-700 hover:cursor-pointer snap-start">
 			<div className="space-y-3 h-full text-white">
 				<div className="relative w-full h-20">
 					<Image src={VScode.src} fill alt="Spotify" />

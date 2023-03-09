@@ -5,10 +5,10 @@ function Projects() {
 	return (
 		<>
 			<div className="flex flex-col items-center justify-center space-y-4 h-screen">
-				<h1 className="w-full text-center text-4xl tracking-widest text-slate-300">
+				<h1 className="w-full text-center 2xl:mt-24 text-4xl tracking-widest text-slate-300">
 					Projects
 				</h1>
-				<div className="flex flex-row justify-start space-x-8 w-full p-5 overflow-x-scroll scroll-smooth snap-x snap-mandatory scroll-mt-10">
+				<div className="flex flex-row justify-start space-x-8 w-full p-5 overflow-x-auto scroll-smooth snap-x snap-mandatory scroll-mt-10">
 					<Project />
 					<Project />
 					<Project />

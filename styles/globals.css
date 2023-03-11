@@ -11,4 +11,20 @@
 	.section {
 		@apply snap-center snap-always;
 	}
+
+	.form-field {
+		@apply flex flex-col space-y-2;
+	}
+
+	.form-field-label {
+		@apply font-serif text-lg text-white tracking-widest;
+	}
+
+	.form-field-input {
+		@apply pl-2 py-2 rounded-lg text-white bg-zinc-700 motion-safe:focus:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 focus:border-none;
+	}
+
+	.form-message {
+		@apply pl-2 py-2 rounded-lg text-white bg-zinc-700 resize-none motion-safe:focus:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 focus:border-none;
+	}
 }

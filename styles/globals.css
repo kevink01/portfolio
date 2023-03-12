@@ -17,14 +17,18 @@
 	}
 
 	.form-field-label {
-		@apply font-serif text-lg text-white tracking-widest;
+		@apply font-serif text-lg tracking-widest;
 	}
 
 	.form-field-input {
-		@apply pl-2 py-2 rounded-lg text-white bg-zinc-700 motion-safe:focus:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 focus:border-none;
+		@apply pl-2 py-2 rounded-lg bg-zinc-700 motion-safe:hover:scale-95 motion-safe:focus:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 focus:outline-none;
 	}
 
 	.form-message {
-		@apply pl-2 py-2 rounded-lg text-white bg-zinc-700 resize-none motion-safe:focus:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 focus:border-none;
+		@apply pl-2 py-2 rounded-lg bg-zinc-700 resize-none motion-safe:hover:scale-95 motion-safe:focus:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 focus:outline-none;
+	}
+
+	.form-button {
+		@apply w-40 h-12 mt-10 rounded-20 text-xl bg-secondary hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 disabled:bg-secondary/50 disabled:scale-100;
 	}
 }

@@ -98,9 +98,13 @@ function Profile() {
 						bgColor="#B77A03"
 						className="transition duration-500 ease-in-out hover:scale-125"
 					/>
-					<Link download href={`/Kevin Kulich Resume.pdf`} target="_blank">
+					<Link
+						download
+						href={`/Kevin Kulich Resume.pdf`}
+						target="_blank"
+						className="w-12.5 h-12.5">
 						<button
-							className="w-50 h-50 rounded-full bg-secondary transition duration-500 ease-in-out hover:scale-125"
+							className="rounded-full bg-secondary transition duration-500 ease-in-out hover:scale-125"
 							data-te-toggle="tooltip"
 							title="Download Resume">
 							<Image

@@ -31,4 +31,8 @@
 	.form-button {
 		@apply w-40 h-12 mt-10 rounded-20 text-xl bg-secondary hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 disabled:bg-secondary/50 disabled:scale-100;
 	}
+
+	.carousel-button {
+		@apply w-10 h-10 motion-safe:transition-all ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125 motion-safe:hover:opacity-100 motion-reduce:opacity-100 opacity-50;
+	}
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import VScode from '@/public/images/vscode.png';
 import Technologies from './technologies';
-import Link from 'next/link';
 
 function ProjectCard() {
 	return (
-		<div className="flex flex-col flex-shrink-0 justify-between w-100 h-full rounded-20 bg-card">
-			<div className="flex-1">
+		<div className="flex flex-col flex-shrink-0 justify-between w-160 h-160 rounded-20 bg-card">
+			<div>
 				<div className="relative w-full h-20">
 					<Image src={VScode.src} fill alt="Spotify" />
 				</div>

@@ -7,13 +7,13 @@ function Welcome() {
 	return (
 		<div className="flex flex-col items-center justify-center h-screen text-white">
 			<motion.div
-				className="flex flex-row w-4/5 h-9/10 rounded-xl bg-card"
+				className="flex flex-col 24:flex-row w-4/5 h-9/10 rounded-xl bg-card"
 				animate={{ scale: [0.7, 0.6, 0.5, 0.4, 0.25, 1] }}
 				transition={{ ease: 'linear', duration: 1.5 }}>
-				<div className="flex flex-col jusitfy-center items-center w-2/5 h-full">
+				<div className="flex flex-col jusitfy-center items-center w-full 24:w-2/5 h-3/5 24:h-full">
 					<Profile />
 				</div>
-				<div className="flex justify-center items-center w-3/5 h-full p-2">
+				<div className="flex justify-center items-center w-full 24:w-3/5 h-2/5 24:h-full p-2">
 					<Terminal />
 				</div>
 			</motion.div>

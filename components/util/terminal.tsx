@@ -2,6 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import { Cursor } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
+import {
+	BuildingOfficeIcon,
+	ComputerDesktopIcon,
+	PhoneIcon,
+	WrenchScrewdriverIcon,
+} from '@heroicons/react/24/solid';
 
 function Terminal() {
 	return (
@@ -16,17 +22,17 @@ function Terminal() {
 				ease: 'linear',
 				duration: 1.5,
 			}}>
-			<div className="relative flex flex-row items-center w-full h-8 px-2 my-auto rounded-t-xl bg-[#2F2F2F]">
+			<div className="relative flex flex-row items-center w-full h-4 24:h-8 px-2 rounded-t-xl bg-[#2F2F2F]">
 				<div className="absolute flex flex-row space-x-2">
-					<div className="w-4 h-4 rounded-full bg-[#FE5E56]"></div>
-					<div className="w-4 h-4 rounded-full bg-[#FCBC2D]"></div>
-					<div className="w-4 h-4 rounded-full bg-[#26C940]"></div>
+					<div className="w-2 24:w-4 h-2 24:h-4 rounded-full bg-[#FE5E56]"></div>
+					<div className="w-2 24:w-4 h-2 24:h-4 rounded-full bg-[#FCBC2D]"></div>
+					<div className="w-2 24:w-4 h-2 24:h-4 rounded-full bg-[#26C940]"></div>
 				</div>
-				<span className="flex justify-center w-full h-full text-xl">
+				<span className="flex justify-center w-full h-full text-xs 24:text-xl">
 					Kevin Kulich
 				</span>
 			</div>
-			<div className="flex flex-1 flex-col w-full pt-2 px-2 space-y-2">
+			<div className="inline 24:flex 24:flex-1 24:flex-col w-full pt-0 24:pt-2 px-px 24:px-2 space-y-1 24:space-y-2 text-xs 24:text-3xl h-3/4 24:h-auto overflow-y-auto">
 				<p>
 					Hello, my name is Kevin Kulich and I&apos;m currently a 3rd year
 					computer science major at Michigan Technological University, with a
@@ -43,31 +49,47 @@ function Terminal() {
 					Besides programming personal projects, I enjoy playing bowling and
 					pool, watching sitcoms, and going on hikes.
 				</p>
-				<div>
-					<span className="text-primary">$</span>
-					<Cursor cursorColor="#B77A03" />
-				</div>
+			</div>
+			<div className="text-xs 24:text-3xl">
+				<span className="text-primary">$</span>
+				<Cursor cursorColor="#B77A03" />
 			</div>
 			<div className="w-full h-1 bg-primary"></div>
 			<div className="flex flex-row justify-between items-center w-full h-16 px-2 rounded-b-xl">
 				<Link href="#experience">
-					<button className="w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
-						Experience
+					<button className="w-10 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+						<p className="hidden mobile:inline">Experience</p>
+						<BuildingOfficeIcon
+							className="inline mobile:hidden w-3/5 h-3/5"
+							aria-label="Experience"
+						/>
 					</button>
 				</Link>
 				<Link href="#projects">
-					<button className="w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
-						Projects
+					<button className="w-10 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+						<p className="hidden mobile:inline">Projects</p>
+						<ComputerDesktopIcon
+							className="inline mobile:hidden w-3/5 h-3/5"
+							aria-label="Projects"
+						/>
 					</button>
 				</Link>
 				<Link href="#skills">
-					<button className="w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
-						Skills
+					<button className="w-10 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+						<p className="hidden mobile:inline">Skills</p>
+						<WrenchScrewdriverIcon
+							className="inline mobile:hidden w-3/5 h-3/5"
+							aria-label="Skills"
+						/>
 					</button>
 				</Link>
 				<Link href="#contact">
-					<button className="w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
-						Contact
+					<button className="w-10 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+						<p className="hidden mobile:inline">Contact</p>
+						<PhoneIcon
+							className="inline mobile:hidden w-3/5 h-3/5"
+							aria-label="Skills"
+						/>
 					</button>
 				</Link>
 			</div>

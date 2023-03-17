@@ -23,22 +23,22 @@ function Contact() {
 
 	return (
 		<>
-			<div className="flex flex-col items-center justify-center w-full h-screen text-white">
-				<div className="flex flex-col items-center space-y-3 w-120 h-9/10 px-1">
+			<div className="flex flex-col items-center justify-center w-screen h-screen text-white">
+				<div className="flex flex-col items-center space-y-3 w-full 24:w-120 h-9/10 px-5 24:px-1">
 					<div className="space-y-1 text-center">
-						<h1 className="mt-10 text-3xl">Heard enough?</h1>
-						<h3 className="text-2xl">Contact me!</h3>
+						<h1 className="mt-10 text-xl 24:text-3xl">Heard enough?</h1>
+						<h3 className="text-lg 24:text-2xl">Contact me!</h3>
 					</div>
 					<div className="flex flex-col items-center space-y-5 w-full">
-						<div className="flex space-x-2 h-10 2xl:h-12">
+						<div className="flex space-x-2 h-6 24:h-12">
 							<PhoneIcon className="h-full text-secondary" />
-							<span className="flex items-center h-full text-xl">
+							<span className="flex items-center h-full text-sm 24:text-xl">
 								+1 (507) 512-9191
 							</span>
 						</div>
-						<div className="flex space-x-2 h-10 2xl:h-12">
+						<div className="flex space-x-2 h-6 24:h-12">
 							<AtSymbolIcon className="h-full text-secondary" />
-							<span className="flex items-center h-full text-xl">
+							<span className="flex items-center h-full text-sm 24:text-xl">
 								kakulich01@gmail.com
 							</span>
 						</div>
@@ -46,7 +46,7 @@ function Contact() {
 					<div className="flex w-full h-full">
 						<form
 							onSubmit={handleSubmit(sendEmail)}
-							className="flex flex-col space-y-2 w-full h-fit p-5 rounded-20 bg-card">
+							className="flex flex-col space-y-2 w-full h-full p-5 rounded-20 bg-card">
 							<div className="form-field">
 								<label className="form-field-label">Name</label>
 								<input
@@ -68,9 +68,9 @@ function Contact() {
 								<textarea
 									placeholder="I liked your portfolio!"
 									{...register('message', { required: true })}
-									className="form-message h-52"></textarea>
+									className="form-message h-20 24:h-52"></textarea>
 							</div>
-							<div className="flex justify-center items-end">
+							<div className="flex justify-center items-end h-20 24:h-auto">
 								<button
 									type="submit"
 									disabled={!isDirty || !isValid}
@@ -81,7 +81,7 @@ function Contact() {
 						</form>
 					</div>
 				</div>
-				<div className="w-full h-[10%] bg-card"></div>
+				<div className="w-full mt-4 h-1/10 bg-card"></div>
 			</div>
 		</>
 	);

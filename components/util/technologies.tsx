@@ -4,9 +4,9 @@ import VScode from '@/public/images/vscode.png';
 
 function Technologies() {
 	return (
-		<div>
-			<p className="text-xl font-bold">Technologies used:</p>
-			<div className="flex flex-row space-x-2">
+		<>
+			<p className="font-bold text-base 24:text-xl">Technologies used:</p>
+			<div className="flex flex-row flex-wrap justify-between mobile:justify-start w-full 24:space-x-2">
 				<Image src={VScode.src} width={30} height={30} alt="Tech" />
 				<Image src={VScode.src} width={30} height={30} alt="Tech" />
 				<Image src={VScode.src} width={30} height={30} alt="Tech" />
@@ -15,7 +15,7 @@ function Technologies() {
 				<Image src={VScode.src} width={30} height={30} alt="Tech" />
 				<Image src={VScode.src} width={30} height={30} alt="Tech" />
 			</div>
-		</div>
+		</>
 	);
 }
 

@@ -6,6 +6,17 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {
+		screens: {
+			// Credit: https://screensizemap.com/
+			mobile: '320px',
+			tablet: '480px',
+			13: '1024px',
+			15: '1280px',
+			17: '1536px',
+			21: '1680px',
+			24: '1920px',
+			27: '2560px',
+		},
 		extend: {
 			borderRadius: {
 				20: '20px',
@@ -15,6 +26,9 @@ module.exports = {
 				primary: '#222BFF',
 				secondary: '#B77A03',
 				secondaryHover: '#825601',
+			},
+			fontSize: {
+				xxs: ['0.65rem', '1rem'],
 			},
 			height: {
 				12.5: '50px',

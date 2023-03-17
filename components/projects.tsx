@@ -19,34 +19,30 @@ function Projects() {
 
 	return (
 		<>
-			<div className="flex flex-col items-center p-2 space-y-2 w-full h-screen text-white">
-				<h1 className="flex items-end h-10 text-4xl tracking-widest text-slate-300">
+			<div className="flex flex-col items-center p-2 space-y-2 w-screen h-screen text-white">
+				<h1 className="flex items-end h-10 text-xl 24:text-4xl tracking-widest text-slate-300">
 					Projects
 				</h1>
-				<div className="flex justify-center w-full h-160">
-					<div className="flex flex-row justify-center space-x-2 w-full h-full">
-						<div className="flex items-center h-full">
-							<button onClick={prev} className="carousel-button">
-								<ArrowLeftCircleIcon />
-							</button>
+				<div className="flex flex-row justify-center space-x-2 w-full h-auto 24:h-160">
+					<div className="flex items-center h-full">
+						<button onClick={prev} className="carousel-button">
+							<ArrowLeftCircleIcon />
+						</button>
+					</div>
+					{/* Tutorial found on: https://youtu.be/XJSOgV4VELk*/}
+					<div className="relative flex items-center overflow-hidden h-full 24:h-160">
+						<div
+							className={`flex w-52 24:w-160 h-full transition-transform ease-out duration-500`}
+							style={{ transform: `translateX(-${index * 100}%)` }}>
+							<ProjectCard key={1} />
+							<ProjectCard key={2} />
+							<ProjectCard key={3} />
 						</div>
-						{/* Tutorial found on: https://youtu.be/XJSOgV4VELk*/}
-						<div className="flex items-center">
-							<div className="overflow-hidden relative">
-								<div
-									className={`flex w-160 transition-transform ease-out duration-500`}
-									style={{ transform: `translateX(-${index * 100}%)` }}>
-									<ProjectCard key={1} />
-									<ProjectCard key={2} />
-									<ProjectCard key={3} />
-								</div>
-							</div>
-						</div>
-						<div className="flex items-center h-full">
-							<button onClick={next} className="carousel-button">
-								<ArrowRightCircleIcon />
-							</button>
-						</div>
+					</div>
+					<div className="flex items-center h-full">
+						<button onClick={next} className="carousel-button">
+							<ArrowRightCircleIcon />
+						</button>
 					</div>
 				</div>
 			</div>

@@ -8,7 +8,7 @@ function Skills() {
 			</h1>
 			<div className="flex flex-col w-full h-full rounded-20 bg-gradient-to-b from-card/10 via-card to-primary/50">
 				<div className="flex flex-row w-full h-9/10">
-					<div className="flex flex-col justify-between py-2 w-1/4 h-full text-sm 24:text-2xl overflow-hidden">
+					<div className="flex flex-col justify-between py-2 pl-2 w-1/4 h-full text-sm 24:text-2xl overflow-hidden">
 						<span className="skill-label">TypeScript</span>
 						<span className="skill-label">Java</span>
 						<span className="skill-label">Excel</span>
@@ -17,7 +17,7 @@ function Skills() {
 						<span className="skill-label">Java</span>
 						<span className="skill-label">Excel</span>
 						<span className="skill-label">Firebase</span>
-						<span className="skill-label">TypeScript</span>
+						<span className="skill-label">TypeScriptTypeScript</span>
 						<span className="skill-label">Java</span>
 					</div>
 					<div className="flex flex-col flex-1 justify-between pl-1 pr-2 py-2 border-l-2 border-b-2 border-primary">

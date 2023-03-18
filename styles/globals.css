@@ -13,11 +13,11 @@
 	}
 
 	.form-field {
-		@apply flex flex-col space-y-2 text-xs 24:text-base;
+		@apply flex flex-col space-y-2 text-xs mobile:text-sm 24:text-base;
 	}
 
 	.form-field-label {
-		@apply font-serif text-sm 24:text-lg tracking-widest;
+		@apply font-serif text-sm mobile:text-base 24:text-lg tracking-widest;
 	}
 
 	.form-field-input {

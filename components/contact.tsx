@@ -26,19 +26,21 @@ function Contact() {
 			<div className="flex flex-col items-center justify-center w-screen h-screen text-white">
 				<div className="flex flex-col items-center space-y-3 w-full 24:w-120 h-9/10 px-5 24:px-1">
 					<div className="space-y-1 text-center">
-						<h1 className="mt-10 text-xl 24:text-3xl">Heard enough?</h1>
-						<h3 className="text-lg 24:text-2xl">Contact me!</h3>
+						<h1 className="mt-10 text-xl mobile:text-2xl 24:text-3xl">
+							Heard enough?
+						</h1>
+						<h3 className="text-lg mobile:text-xl 24:text-2xl">Contact me!</h3>
 					</div>
-					<div className="flex flex-col items-center space-y-5 w-full">
+					<div className="flex flex-col items-center space-y-5 w-full text-sm mobile:text-base 24:text-xl">
 						<div className="flex space-x-2 h-6 24:h-12">
 							<PhoneIcon className="h-full text-secondary" />
-							<span className="flex items-center h-full text-sm 24:text-xl">
+							<span className="flex items-center h-full">
 								+1 (507) 512-9191
 							</span>
 						</div>
 						<div className="flex space-x-2 h-6 24:h-12">
 							<AtSymbolIcon className="h-full text-secondary" />
-							<span className="flex items-center h-full text-sm 24:text-xl">
+							<span className="flex items-center h-full tracking-wider">
 								kakulich01@gmail.com
 							</span>
 						</div>
@@ -63,12 +65,12 @@ function Contact() {
 									{...register('subject', { required: true, maxLength: 50 })}
 									className="form-field-input"></input>
 							</div>
-							<div className="form-field">
+							<div className="flex flex-1 form-field">
 								<label className="form-field-label">Message</label>
 								<textarea
 									placeholder="I liked your portfolio!"
 									{...register('message', { required: true })}
-									className="form-message h-20 24:h-52"></textarea>
+									className="flex flex-1 form-message"></textarea>
 							</div>
 							<div className="flex justify-center items-end h-20 24:h-auto">
 								<button

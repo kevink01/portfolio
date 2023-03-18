@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import VScode from '@/public/images/vscode.png';
 import Technologies from './technologies';
 
 function ProjectCard() {
+	const [show, setShow] = useState<boolean>(false);
+	const [text, setText] = useState<string>('');
+
+	function setData(str: string) {
+		if (show === true) {
+			setShow(false);
+			return;
+		}
+		setText(str);
+		setShow(true);
+	}
+
 	return (
 		<div className="flex flex-col flex-shrink-0 justify-between w-full h-full rounded-20 bg-card">
-			<div>
+			<div className="relative">
 				<div className="relative w-full h-10 24:h-20">
 					<Image src={VScode.src} fill alt="Spotify" />
 				</div>
-				<div className="flex justify-center text-lg 24:text-2xl">
-					Project title
+				<div className="flex w-full overflow-x-hidden px-2 justify-center text-lg 24:text-2xl">
+					<p
+						className="py-2 truncate underline tablet:no-underline underline-offset-8 decoration-secondary decoration-2"
+						onClick={() => setData('Very long job title')}>
+						Very long Project Title
+					</p>
 				</div>
 				<div className="h-1 bg-primary"></div>
 				<div className="p-2 w-full h-full">
@@ -28,6 +44,12 @@ function ProjectCard() {
 						</p>
 					</div>
 					<Technologies />
+				</div>
+				<div
+					className={`${
+						!show && 'opacity-0'
+					} tablet:hidden absolute bottom-0 left-0 right-0 z-10 bg-red-900 transition-all ease-in-out duration-500 text-center text-black`}>
+					{text}
 				</div>
 			</div>
 			<div>

@@ -9,6 +9,7 @@ module.exports = {
 		screens: {
 			// Credit: https://screensizemap.com/
 			mobile: '320px',
+			// TODO Add breakpoint for larger phones
 			tablet: '480px',
 			13: '1024px',
 			15: '1280px',

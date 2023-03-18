@@ -69,7 +69,7 @@ function Profile() {
 					ease: 'linear',
 					duration: 1.5,
 				}}>
-				<h1 className="text-xs 24:text-xl text-white">
+				<h1 className="px-2 text-xs mobile:text-base 24:text-xl text-white">
 					<span>{text}</span>
 					<Cursor cursorBlinking={true} cursorColor="#007fff" />
 				</h1>

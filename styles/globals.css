@@ -13,11 +13,11 @@
 	}
 
 	.form-field {
-		@apply flex flex-col space-y-2 text-xs mobile:text-sm 24:text-base;
+		@apply flex flex-col space-y-2 text-xs mobile:text-sm tablet:text-base;
 	}
 
 	.form-field-label {
-		@apply font-serif text-sm mobile:text-base 24:text-lg tracking-widest;
+		@apply font-serif text-sm mobile:text-base tablet:text-lg tracking-widest;
 	}
 
 	.form-field-input {
@@ -25,7 +25,7 @@
 	}
 
 	.form-message {
-		@apply pl-2 py-2 rounded-lg bg-zinc-700 resize-none motion-safe:hover:scale-95 motion-safe:focus:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 focus:outline-none;
+		@apply form-field-input resize-none;
 	}
 
 	.form-button {

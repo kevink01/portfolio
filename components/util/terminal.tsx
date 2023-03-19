@@ -32,7 +32,7 @@ function Terminal() {
 					Kevin Kulich
 				</span>
 			</div>
-			<div className="inline 24:flex 24:flex-1 24:flex-col w-full pt-px 24:pt-2 px-px 24:px-2 space-y-1 24:space-y-2 text-xs mobile:text-base 24:text-3xl h-3/4 24:h-auto overflow-y-auto">
+			<div className="inline 24:flex 24:flex-1 24:flex-col w-full pt-px 24:pt-2 px-px 24:px-2 space-y-1 24:space-y-2 text-xs mobile:text-base tablet:text-lg 24:text-3xl h-3/4 24:h-auto overflow-y-auto">
 				<p>
 					Hello, my name is Kevin Kulich and I&apos;m currently a 3rd year
 					computer science major at Michigan Technological University, with a
@@ -57,7 +57,7 @@ function Terminal() {
 			<div className="w-full h-1 bg-primary"></div>
 			<div className="flex flex-row justify-between items-center w-full h-16 px-2 rounded-b-xl">
 				<Link href="#experience">
-					<button className="w-10 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+					<button className="w-10 tablet:w-24 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
 						<p className="hidden tablet:inline">Experience</p>
 						<BuildingOfficeIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -66,7 +66,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#projects">
-					<button className="w-10 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+					<button className="w-10 tablet:w-24 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
 						<p className="hidden tablet:inline">Projects</p>
 						<ComputerDesktopIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -75,7 +75,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#skills">
-					<button className="w-10 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+					<button className="w-10 tablet:w-24 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
 						<p className="hidden tablet:inline">Skills</p>
 						<WrenchScrewdriverIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -84,7 +84,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#contact">
-					<button className="w-10 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+					<button className="w-10 tablet:w-24 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
 						<p className="hidden tablet:inline">Contact</p>
 						<PhoneIcon
 							className="inline tablet:hidden w-3/5 h-3/5"

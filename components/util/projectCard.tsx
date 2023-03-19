@@ -18,50 +18,53 @@ function ProjectCard() {
 	}
 
 	return (
-		<div className="flex flex-col flex-shrink-0 justify-between w-full h-full rounded-20 bg-card">
-			<div className="relative">
-				<div className="relative w-full h-10 24:h-20">
-					<Image src={VScode.src} fill alt="Spotify" />
-				</div>
-				<div className="flex w-full overflow-x-hidden px-2 justify-center text-lg 24:text-2xl">
-					<p
-						className="py-2 truncate underline tablet:no-underline underline-offset-8 decoration-secondary decoration-2"
-						onClick={() => setData('Very long job title')}>
-						Very long Project Title
+		<div className="flex flex-col flex-shrink-0 justify-between w-full h-full py-2 rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary">
+			<div className="relative w-full h-10 24:h-20">
+				<Image src={VScode.src} fill alt="Spotify" />
+			</div>
+			<div className="flex w-full overflow-x-hidden px-2 justify-center text-lg 24:text-2xl">
+				<p
+					className="p-2 truncate underline tablet:no-underline underline-offset-8 decoration-secondary decoration-2"
+					onClick={() => setData('Very long job title')}>
+					Very long Project Title that will overflow
+				</p>
+			</div>
+			<div className="h-1 bg-primary/75"></div>
+			<div className="relative flex flex-col flex-1 px-2">
+				<div className="flex flex-col flex-1">
+					<p className="text-base tablet:text-xl 24:text-2xl font-bold">
+						Project description:
 					</p>
-				</div>
-				<div className="h-1 bg-primary"></div>
-				<div className="p-2 w-full h-full">
-					<div>
-						<p className="text-base 24:text-xl font-bold">
-							Project description:
-						</p>
-						<p className="text-xs 24:text-base 24:text-justify">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-							quas expedita voluptatum obcaecati iusto officiis ipsa, laudantium
-							iure quasi mollitia eos, quae eveniet animi quisquam cupiditate
-							maiores delectus labore asperiores.
-						</p>
+					<div className="flex-1 relative text-sm mobile:text-base tablet:text-lg">
+						<div className="absolute inset-0 overflow-y-auto">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consectetur repudiandae placeat error asperiores quod tempore
+							accusamus atque hic deleniti quos, ea quasi? Animi dolores ipsa
+							incidunt unde inventore necessitatibus maxime!
+						</div>
 					</div>
+				</div>
+				<div className="text-lg tablet:text-xl 24:text-2xl font-bold">
 					<Technologies />
 				</div>
 				<div
 					className={`${
 						!show && 'opacity-0'
-					} tablet:hidden absolute bottom-0 left-0 right-0 z-10 bg-red-900 transition-all ease-in-out duration-500 text-center text-black`}>
+					} 13:hidden absolute bottom-0 left-0 right-0 z-10 bg-red-900 transition-all ease-in-out duration-500 text-center text-black`}>
 					{text}
 				</div>
 			</div>
-			<div>
-				<div className="w-full h-1 mb-2 bg-primary"></div>
-				<div className="flex flex-row justify-center space-x-2 w-full h-full mb-2">
+
+			<div className="space-y-1">
+				<div className="h-1 bg-primary/75"></div>
+				<div className="flex flex-row justify-center space-x-2 w-full h-full">
 					<Link href="#skills">
-						<button className="w-20 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm 24:text-base">
+						<button className="w-20 tablet:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm 24:text-base">
 							Source code
 						</button>
 					</Link>
 					<Link href="#skills">
-						<button className="w-20 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm 24:text-base">
+						<button className="w-20 tablet:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm 24:text-base">
 							Live Demo
 						</button>
 					</Link>

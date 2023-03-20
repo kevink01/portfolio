@@ -19,7 +19,7 @@ function Projects() {
 
 	return (
 		<div className="flex flex-col items-center p-2 24:space-y-10 w-screen h-screen text-white">
-			<h1 className="flex items-end h-10 text-xl tablet:text-2xl 24:text-4xl tracking-widest text-slate-300">
+			<h1 className="flex items-end h-10 text-xl tablet:text-2xl 1024:text-3xl 24:text-4xl tracking-widest text-slate-300">
 				Projects
 			</h1>
 			<div className="flex flex-1 24:flex-grow-0 flex-row justify-center space-x-2 w-full h-auto 24:h-160">
@@ -31,7 +31,7 @@ function Projects() {
 				{/* Tutorial found on: https://youtu.be/XJSOgV4VELk*/}
 				<div className="relative flex items-center overflow-hidden">
 					<div
-						className={`flex w-52 tablet:w-80 24:w-160 h-104 tablet:h-160 transition-transform ease-out duration-500`}
+						className={`flex w-52 tablet:w-80 1024:w-120 24:w-160 h-104 tablet:h-160 transition-transform ease-out duration-500`}
 						style={{ transform: `translateX(-${index * 100}%)` }}>
 						<ProjectCard key={1} />
 						<ProjectCard key={2} />

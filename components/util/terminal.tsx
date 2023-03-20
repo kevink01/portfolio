@@ -22,17 +22,17 @@ function Terminal() {
 				ease: 'linear',
 				duration: 1.5,
 			}}>
-			<div className="relative flex flex-row items-center w-full h-4 24:h-8 px-2 rounded-t-xl bg-[#2F2F2F]">
+			<div className="relative flex flex-row items-center w-full h-4 1024:h-8 px-2 rounded-t-xl bg-[#2F2F2F]">
 				<div className="absolute flex flex-row space-x-2">
-					<div className="w-2 24:w-4 h-2 24:h-4 rounded-full bg-[#FE5E56]"></div>
-					<div className="w-2 24:w-4 h-2 24:h-4 rounded-full bg-[#FCBC2D]"></div>
-					<div className="w-2 24:w-4 h-2 24:h-4 rounded-full bg-[#26C940]"></div>
+					<div className="w-2 1024:w-4 h-2 1024:h-4 rounded-full bg-[#FE5E56]"></div>
+					<div className="w-2 1024:w-4 h-2 1024:h-4 rounded-full bg-[#FCBC2D]"></div>
+					<div className="w-2 1024:w-4 h-2 1024:h-4 rounded-full bg-[#26C940]"></div>
 				</div>
-				<span className="flex justify-center w-full h-full text-xs 24:text-xl">
+				<span className="flex justify-center items-center w-full h-full text-xs 1024:text-xl">
 					Kevin Kulich
 				</span>
 			</div>
-			<div className="inline 24:flex 24:flex-1 24:flex-col w-full pt-px 24:pt-2 px-px 24:px-2 space-y-1 24:space-y-2 text-xs mobile:text-base tablet:text-lg 24:text-3xl h-3/4 24:h-auto overflow-y-auto">
+			<div className="inline 24:flex 1024:flex-1 24:flex-col w-full pt-px 24:pt-2 px-px 24:px-2 space-y-1 24:space-y-2 text-xs mobile:text-base tablet:text-lg 1024:text-xl 24:text-3xl h-3/4 1024:h-auto overflow-y-auto">
 				<p>
 					Hello, my name is Kevin Kulich and I&apos;m currently a 3rd year
 					computer science major at Michigan Technological University, with a
@@ -50,14 +50,14 @@ function Terminal() {
 					pool, watching sitcoms, and going on hikes.
 				</p>
 			</div>
-			<div className="text-xs mobile:text-base 24:text-3xl">
+			<div className="text-xs mobile:text-base tablet:text-lg 1024:text-xl 24:text-3xl">
 				<span className="text-primary">$</span>
 				<Cursor cursorColor="#B77A03" />
 			</div>
 			<div className="w-full h-1 bg-primary"></div>
 			<div className="flex flex-row justify-between items-center w-full h-16 px-2 rounded-b-xl">
 				<Link href="#experience">
-					<button className="w-10 tablet:w-24 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+					<button className="w-10 tablet:w-24 1024:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover 1024:text-lg">
 						<p className="hidden tablet:inline">Experience</p>
 						<BuildingOfficeIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -66,7 +66,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#projects">
-					<button className="w-10 tablet:w-24 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+					<button className="w-10 tablet:w-24 1024:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover 1024:text-lg">
 						<p className="hidden tablet:inline">Projects</p>
 						<ComputerDesktopIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -75,7 +75,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#skills">
-					<button className="w-10 tablet:w-24 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+					<button className="w-10 tablet:w-24 1024:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover 1024:text-lg">
 						<p className="hidden tablet:inline">Skills</p>
 						<WrenchScrewdriverIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -84,7 +84,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#contact">
-					<button className="w-10 tablet:w-24 24:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover">
+					<button className="w-10 tablet:w-24 1024:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover 1024:text-lg">
 						<p className="hidden tablet:inline">Contact</p>
 						<PhoneIcon
 							className="inline tablet:hidden w-3/5 h-3/5"

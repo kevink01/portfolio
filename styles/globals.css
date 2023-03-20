@@ -13,15 +13,15 @@
 	}
 
 	.form-field {
-		@apply flex flex-col space-y-2 text-xs mobile:text-sm tablet:text-base;
+		@apply flex flex-col space-y-2 text-xs mobile:text-sm tablet:text-base 1024:text-lg;
 	}
 
 	.form-field-label {
-		@apply font-serif text-sm mobile:text-base tablet:text-lg tracking-widest;
+		@apply font-serif text-sm mobile:text-base tablet:text-lg 1024:text-xl tracking-widest;
 	}
 
 	.form-field-input {
-		@apply px-2 py-2 rounded-lg bg-zinc-700 motion-safe:hover:scale-95 motion-safe:focus:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 focus:outline-none;
+		@apply px-2 py-2 rounded-lg bg-zinc-700 motion-safe:hover:scale-95 motion-safe:focus:scale-105 1024:motion-safe:focus:scale-102 motion-safe:transition ease-in-out motion-safe:duration-500 focus:outline-none;
 	}
 
 	.form-message {

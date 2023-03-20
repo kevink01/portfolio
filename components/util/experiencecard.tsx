@@ -18,6 +18,7 @@ function ExperienceCard() {
 		<div className="relative flex flex-col flex-shrink-0 w-full h-full rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary">
 			<div className="flex flex-col text-center text-lg 24:text-2xl">
 				<div className="flex-1 w-full h-full overflow-x-hidden px-3">
+					{/* TODO Fix experience title height*/}
 					<p
 						className="pt-2 pb-1 truncate"
 						onClick={() => setData('Very long job title')}>
@@ -26,7 +27,7 @@ function ExperienceCard() {
 				</div>
 				<div className="w-full h-1 bg-primary/75"></div>
 			</div>
-			<div className="px-2 w-full text-sm tablet:text-lg 24:text-2xl">
+			<div className="px-2 w-full text-sm tablet:text-lg 1024:text-xl 24:text-2xl">
 				<p
 					className="italic"
 					onClick={() => setData('Very long employer name')}>
@@ -37,7 +38,6 @@ function ExperienceCard() {
 			<div className="px-2 text-lg tablet:text-xl 24:text-2xl font-bold">
 				<Technologies />
 			</div>
-
 			<div className="flex-1 relative px-2 w-full mb-10">
 				<p className="text-lg tablet:text-xl 24:text-2xl font-bold">
 					Responsibilities:
@@ -86,7 +86,7 @@ function ExperienceCard() {
 			<div
 				className={`${
 					!show && 'opacity-0'
-				} 13:hidden absolute bottom-0 left-0 right-0 z-10 bg-red-900 transition-all ease-in-out duration-500 text-center text-black`}>
+				} 1024:hidden absolute bottom-0 left-0 right-0 z-10 bg-red-900 transition-all ease-in-out duration-500 text-center text-black`}>
 				{text}
 			</div>
 		</div>

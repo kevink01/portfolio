@@ -26,12 +26,14 @@ function Contact() {
 			<div className="flex flex-col items-center justify-center w-screen h-screen text-white">
 				<div className="flex flex-col items-center space-y-3 w-full 24:w-120 h-9/10 px-5 24:px-1">
 					<div className="space-y-1 text-center">
-						<h1 className="mt-10 text-xl mobile:text-2xl 24:text-3xl">
+						<h1 className="mt-10 text-xl mobile:text-2xl 1024:text-3xl">
 							Heard enough?
 						</h1>
-						<h3 className="text-lg mobile:text-xl 24:text-2xl">Contact me!</h3>
+						<h3 className="text-lg mobile:text-xl 1024:text-2xl">
+							Contact me!
+						</h3>
 					</div>
-					<div className="flex flex-col items-center space-y-5 w-full text-sm mobile:text-base 24:text-xl">
+					<div className="flex flex-col items-center space-y-5 w-full text-sm mobile:text-base 1024:text-lg 24:text-xl">
 						<div className="flex space-x-2 h-6 24:h-12">
 							<PhoneIcon className="h-full text-secondary" />
 							<span className="flex items-center h-full">
@@ -46,6 +48,7 @@ function Contact() {
 						</div>
 					</div>
 					<div className="flex w-full h-full">
+						{/* TODO Contact form styling */}
 						<form
 							onSubmit={handleSubmit(sendEmail)}
 							className="flex flex-col space-y-2 w-full h-full p-5 rounded-20 bg-card">

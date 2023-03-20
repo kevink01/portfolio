@@ -11,7 +11,7 @@ module.exports = {
 			mobile: '320px',
 			// TODO Add breakpoint for larger phones
 			tablet: '480px',
-			13: '1024px',
+			1024: '1024px',
 			15: '1280px',
 			17: '1536px',
 			21: '1680px',
@@ -45,6 +45,9 @@ module.exports = {
 				'1/8': '12.5%',
 				'7/10': '70%',
 				'9/10': '90%',
+			},
+			scale: {
+				102: '102%',
 			},
 			width: {
 				12.5: '50px',

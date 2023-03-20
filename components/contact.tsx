@@ -24,7 +24,7 @@ function Contact() {
 	return (
 		<>
 			<div className="flex flex-col items-center justify-center w-screen h-screen text-white">
-				<div className="flex flex-col items-center space-y-3 w-full max-w-3xl h-9/10 px-5 24:px-1">
+				<div className="flex flex-col items-center space-y-3 w-full max-w-3xl h-9/10 px-5 1920:px-1">
 					<div className="space-y-1 text-center">
 						<h1 className="mt-10 text-xl mobile:text-2xl 1024:text-3xl 1536:text-4xl">
 							Heard enough?
@@ -34,13 +34,13 @@ function Contact() {
 						</h3>
 					</div>
 					<div className="flex flex-col items-center space-y-5 w-full text-sm mobile:text-base 1024:text-lg 1536:text-xl">
-						<div className="flex space-x-2 h-6 24:h-12">
+						<div className="flex space-x-2 h-6 1920:h-12">
 							<PhoneIcon className="h-full text-secondary" />
 							<span className="flex items-center h-full">
 								+1 (507) 512-9191
 							</span>
 						</div>
-						<div className="flex space-x-2 h-6 24:h-12">
+						<div className="flex space-x-2 h-6 1920:h-12">
 							<AtSymbolIcon className="h-full text-secondary" />
 							<span className="flex items-center h-full tracking-wider">
 								kakulich01@gmail.com
@@ -75,7 +75,7 @@ function Contact() {
 									{...register('message', { required: true })}
 									className="flex flex-1 form-message"></textarea>
 							</div>
-							<div className="flex justify-center items-end h-20 24:h-auto">
+							<div className="flex justify-center items-end h-20 1920:h-auto">
 								<button
 									type="submit"
 									disabled={!isDirty || !isValid}

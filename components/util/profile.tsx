@@ -27,7 +27,7 @@ function Profile() {
 					animate={{ scale: [1, 0.95, 0.9, 0.75, 0.5, 1] }}
 					transition={{ ease: 'linear', duration: 1.5 }}>
 					<motion.div
-						className="w-28 1024:w-48 1280:w-52 24:w-56 h-28 1024:h-48 1280:h-52 24:h-56 rounded-full border-2 border-blue-700"
+						className="w-28 1024:w-48 1280:w-52 1536:w-56 h-28 1024:h-48 1280:h-52 1536:h-56 rounded-full border-2 border-blue-700"
 						animate={{ opacity: [0.1, 0.2, 0.25, 0.2, 0.1] }}
 						transition={{
 							duration: 3,
@@ -39,7 +39,7 @@ function Profile() {
 					animate={{ scale: [1, 0.95, 0.9, 0.75, 0.5, 1] }}
 					transition={{ ease: 'linear', duration: 1.5 }}>
 					<motion.div
-						className="w-48 1024:w-60 1280:w-64 24:w-72 h-48 1024:h-60 1280:h-64 24:h-72 rounded-full border-4 border-blue-700"
+						className="w-48 1024:w-60 1280:w-64 1536:w-72 h-48 1024:h-60 1280:h-64 1536:h-72 rounded-full border-4 border-blue-700"
 						animate={{ opacity: [0.9, 0.5, 0.1, 0.5, 0.9] }}
 						transition={{
 							duration: 3,
@@ -47,7 +47,7 @@ function Profile() {
 						}}></motion.div>
 				</motion.div>
 				<motion.img
-					className="w-24 mobile:w-36 tablet:w-40 1024:w-44 1280:w-48 21:w-52 h-24 mobile:h-36 tablet:h-40 1024:h-44 1280:h-48 21:h-52 rounded-full"
+					className="w-24 mobile:w-36 tablet:w-40 1024:w-44 1280:w-48 1536:w-52 h-24 mobile:h-36 tablet:h-40 1024:h-44 1280:h-48 1536:h-52 rounded-full"
 					src={Kevin.src}
 					initial={{ opacity: 0 }}
 					animate={{
@@ -60,7 +60,7 @@ function Profile() {
 					}}></motion.img>
 			</div>
 			<motion.div
-				className="flex flex-col justify-center items-center text-center mb-1 24:mb-5 space-y-4"
+				className="flex flex-col justify-center items-center text-center mb-1 1920:mb-5 space-y-4"
 				animate={{
 					scale: [1, 0.95, 0.9, 0.75, 0.25, 1],
 					opacity: [0, 0.1, 0.2, 0.3, 0.5, 1],

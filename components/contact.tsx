@@ -24,16 +24,16 @@ function Contact() {
 	return (
 		<>
 			<div className="flex flex-col items-center justify-center w-screen h-screen text-white">
-				<div className="flex flex-col items-center space-y-3 w-full 24:w-120 h-9/10 px-5 24:px-1">
+				<div className="flex flex-col items-center space-y-3 w-full max-w-3xl h-9/10 px-5 24:px-1">
 					<div className="space-y-1 text-center">
-						<h1 className="mt-10 text-xl mobile:text-2xl 1024:text-3xl">
+						<h1 className="mt-10 text-xl mobile:text-2xl 1024:text-3xl 1536:text-4xl">
 							Heard enough?
 						</h1>
-						<h3 className="text-lg mobile:text-xl 1024:text-2xl">
+						<h3 className="text-lg mobile:text-xl 1024:text-2xl 1536:text-3xl">
 							Contact me!
 						</h3>
 					</div>
-					<div className="flex flex-col items-center space-y-5 w-full text-sm mobile:text-base 1024:text-lg 24:text-xl">
+					<div className="flex flex-col items-center space-y-5 w-full text-sm mobile:text-base 1024:text-lg 1536:text-xl">
 						<div className="flex space-x-2 h-6 24:h-12">
 							<PhoneIcon className="h-full text-secondary" />
 							<span className="flex items-center h-full">

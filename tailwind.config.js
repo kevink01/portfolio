@@ -12,8 +12,8 @@ module.exports = {
 			// TODO Add breakpoint for larger phones
 			tablet: '480px',
 			1024: '1024px',
-			15: '1280px',
-			17: '1536px',
+			1280: '1280px',
+			1536: '1536px',
 			21: '1680px',
 			24: '1920px',
 			27: '2560px',
@@ -27,9 +27,6 @@ module.exports = {
 				primary: '#222BFF',
 				secondary: '#B77A03',
 				secondaryHover: '#825601',
-			},
-			fontSize: {
-				xxs: ['0.65rem', '1rem'],
 			},
 			height: {
 				12.5: '50px',

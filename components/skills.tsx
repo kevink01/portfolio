@@ -6,6 +6,7 @@ function Skills() {
 			<h1 className="flex items-end h-10 text-xl tablet:text-2xl 24:text-4xl tracking-widest text-slate-300">
 				Skills
 			</h1>
+			{/* TODO: Fix graph (use absolute for outline)*/}
 			<div className="flex flex-col w-full h-full rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary">
 				<div className="flex flex-row w-full h-9/10">
 					<div className="flex flex-col justify-between py-2 pl-2 w-1/4 h-full text-sm tablet:text-base 24:text-2xl overflow-hidden">
@@ -20,7 +21,7 @@ function Skills() {
 						<span className="skill-label">TypeScriptTypeScript</span>
 						<span className="skill-label">Java</span>
 					</div>
-					<div className="flex flex-col flex-1 justify-between pl-1 pr-2 py-2 border-l-2 border-b-2 border-primary">
+					<div className="flex flex-col flex-1 justify-between pl-1 pr-2 py-2 border-l-2 border-b-2">
 						<div className="w-[90%] h-10 rounded-r-xl bg-primary motion-safe:hover:bg-primary/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
 							<span className="skill-value-label">90%</span>
 						</div>

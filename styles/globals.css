@@ -41,7 +41,7 @@
 	}
 
 	.skill-label {
-		@apply inline-block text-right pt-2.5 24:pt-0 24:flex 24:items-center 24:justify-end h-10 text-ellipsis overflow-hidden;
+		@apply inline-block text-right pt-2.5 24:pt-0 24:flex 24:items-center 24:justify-end h-10 text-ellipsis overflow-hidden 1024:text-lg;
 	}
 
 	.skill-value-label {

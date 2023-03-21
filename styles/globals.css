@@ -13,11 +13,11 @@
 	}
 
 	.form-field {
-		@apply flex flex-col space-y-2 text-xs mobile:text-sm tablet:text-base 1024:text-lg;
+		@apply flex flex-col space-y-2;
 	}
 
 	.form-field-label {
-		@apply font-serif text-sm mobile:text-base tablet:text-lg 1024:text-xl tracking-widest;
+		@apply font-serif text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl tracking-widest;
 	}
 
 	.form-field-input {
@@ -40,12 +40,12 @@
 		@apply w-1 h-1 transition duration-500 ease-in-out hover:scale-125;
 	}
 
-	.skill-label {
-		@apply inline-block text-right pt-2.5 1920:pt-0 1920:flex 1920:items-center 1920:justify-end h-10 text-ellipsis overflow-hidden 1024:text-lg;
-	}
-
 	.skill-value-label {
 		@apply flex justify-end items-center h-full pr-5 text-xl;
+	}
+
+	.skill-progress-bar {
+		@apply rounded-r-xl motion-safe:hover:scale-[101%] motion-safe:hover:opacity-70 motion-safe:transition ease-in-out motion-safe:duration-500;
 	}
 
 	.skill-progress-label {

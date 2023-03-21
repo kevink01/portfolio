@@ -24,16 +24,16 @@ function Contact() {
 	return (
 		<>
 			<div className="flex flex-col items-center justify-center w-screen h-screen text-white">
-				<div className="flex flex-col items-center space-y-3 w-full max-w-3xl h-9/10 px-5 1920:px-1">
+				<div className="flex flex-col items-center space-y-3 w-full max-w-xl h-9/10 px-5 1920:px-1">
 					<div className="space-y-1 text-center">
-						<h1 className="mt-10 text-xl mobile:text-2xl 1024:text-3xl 1536:text-4xl">
+						<h1 className="mt-10 text-xl tablet:text-2xl 1024:text-3xl 1536:text-4xl 2560:text-5xl">
 							Heard enough?
 						</h1>
-						<h3 className="text-lg mobile:text-xl 1024:text-2xl 1536:text-3xl">
+						<h3 className="text-lg tablet:text-xl 1024:text-2xl 1536:text-3xl 2560:text-4xl">
 							Contact me!
 						</h3>
 					</div>
-					<div className="flex flex-col items-center space-y-5 w-full text-sm mobile:text-base 1024:text-lg 1536:text-xl">
+					<div className="flex flex-col items-center space-y-5 w-full text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl">
 						<div className="flex space-x-2 h-6 1920:h-12">
 							<PhoneIcon className="h-full text-secondary" />
 							<span className="flex items-center h-full">
@@ -47,7 +47,7 @@ function Contact() {
 							</span>
 						</div>
 					</div>
-					<div className="flex w-full h-full">
+					<div className="flex w-full h-full max-h-150 2560:max-h-180">
 						{/* TODO Contact form styling */}
 						<form
 							onSubmit={handleSubmit(sendEmail)}

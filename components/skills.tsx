@@ -1,63 +1,34 @@
 import React from 'react';
+import Skill from './util/skill';
 
 function Skills() {
 	return (
-		<div className="flex flex-col items-center p-2 space-y-2 w-screen h-screen text-white">
-			<h1 className="flex items-end h-10 text-xl tablet:text-2xl 1920:text-4xl tracking-widest text-slate-300">
+		<div className="flex flex-col items-center px-2 pt-2 pb-4 space-y-2 w-screen h-screen text-white">
+			<h1 className="py-1 1024:py-4 text-xl tablet:text-2xl 1024:text-3xl 1536:text-4xl 2560:text-5xl tracking-widest text-slate-300">
 				Skills
 			</h1>
-			{/* TODO: Fix graph (use absolute for outline)*/}
-			<div className="flex flex-col w-full h-full rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary">
-				<div className="flex flex-row w-full h-9/10">
-					<div className="flex flex-col justify-between py-2 pl-2 w-1/4 h-full text-sm tablet:text-base 1920:text-2xl overflow-hidden">
-						<span className="skill-label">TypeScript</span>
-						<span className="skill-label">Java</span>
-						<span className="skill-label">Excel</span>
-						<span className="skill-label">Firebase</span>
-						<span className="skill-label">TypeScript</span>
-						<span className="skill-label">Java</span>
-						<span className="skill-label">Excel</span>
-						<span className="skill-label">Firebase</span>
-						<span className="skill-label">TypeScriptTypeScript</span>
-						<span className="skill-label">Java</span>
-					</div>
-					<div className="flex flex-col flex-1 justify-between pl-1 pr-2 py-2 border-l-2 border-b-2">
-						<div className="w-[90%] h-10 rounded-r-xl bg-primary motion-safe:hover:bg-primary/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
-							<span className="skill-value-label">90%</span>
-						</div>
-						<div className="w-[80%] h-10 rounded-r-xl bg-orange-500 motion-safe:hover:bg-orange-500/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
-							<span className="skill-value-label">80%</span>
-						</div>
-						<div className="w-[85%] h-10 rounded-r-xl bg-green-500 motion-safe:hover:bg-green-500/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
-							<span className="skill-value-label">85%</span>
-						</div>
-						<div className="w-[60%] h-10 rounded-r-xl bg-yellow-500 motion-safe:hover:bg-yellow-500/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
-							<span className="skill-value-label">60%</span>
-						</div>
-						<div className="w-[90%] h-10 rounded-r-xl bg-primary motion-safe:hover:bg-primary/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
-							<span className="skill-value-label">90%</span>
-						</div>
-						<div className="w-[80%] h-10 rounded-r-xl bg-orange-500 motion-safe:hover:bg-orange-500/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
-							<span className="skill-value-label">80%</span>
-						</div>
-						<div className="w-[85%] h-10 rounded-r-xl bg-green-500 hover:bg-green-500/70 hover:scale-[101%] transition ease-in-out duration-500">
-							<span className="skill-value-label">85%</span>
-						</div>
-						<div className="w-[60%] h-10 rounded-r-xl bg-yellow-500 hover:bg-yellow-500/70 hover:scale-[101%] transition ease-in-out duration-500">
-							<span className="skill-value-label">60%</span>
-						</div>
-						<div className="w-[90%] h-10 rounded-r-xl bg-primary motion-safe:hover:bg-primary/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
-							<span className="skill-value-label">90%</span>
-						</div>
-						<div className="w-[80%] h-10 rounded-r-xl bg-orange-500 motion-safe:hover:bg-orange-500/70 motion-safe:hover:scale-[101%] motion-safe:transition ease-in-out motion-safe:duration-500">
-							<span className="skill-value-label">80%</span>
-						</div>
-					</div>
+			<div className="flex flex-col w-full h-full rounded-20 p-2 bg-gradient-to-b from-card/50 via-primary/10 to-primary">
+				<div className="flex flex-col justify-between w-full h-9/10 py-2 text-xs 1024:text-base 1536:text-lg 2560:text-xl">
+					<Skill name="TypeScript" progress={90} color="222bff" />
+					<Skill name="C++" progress={80} color="3b82f6" />
+					<Skill name="Firebase" progress={60} color="eab308" />
+					<Skill name="Java" progress={70} color="f97316" />
+					<Skill name="TypeScript" progress={90} color="222bff" />
+					<Skill name="C++" progress={80} color="3b82f6" />
+					<Skill name="Firebase" progress={60} color="eab308" />
+					<Skill name="Java" progress={70} color="f97316" />
+					<Skill name="TypeScript" progress={90} color="222bff" />
+					<Skill name="C++" progress={80} color="3b82f6" />
+					<Skill name="Firebase" progress={60} color="eab308" />
+					<Skill name="Java" progress={70} color="f97316" />
+					<Skill name="TypeScriptTypeScript" progress={90} color="222bff" />
+					<Skill name="C++" progress={80} color="3b82f6" />
+					<Skill name="Firebase" progress={60} color="eab308" />
+					<Skill name="Java" progress={70} color="f97316" />
 				</div>
-				{/* TODO Fix progress bars */}
-				<div className="flex flex-row h-[10%]">
-					<div className="w-1/4 h-full"></div>
-					<div className="flex flex-1 justify-end items-end pr-2 h-full text-xs 1920:text-lg">
+				<div className="h-1/10 ml-[25%]">
+					{/* TODO Fix progress bar */}
+					<div className="flex flex-1 justify-end items-end h-full text-xs 1920:text-lg">
 						<span className="skill-progress-label">10%</span>
 						<span className="skill-progress-label">20%</span>
 						<span className="skill-progress-label">30%</span>

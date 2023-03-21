@@ -15,79 +15,87 @@ function ExperienceCard() {
 	}
 
 	return (
-		<div className="flex flex-col flex-shrink-0 w-full h-full rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary">
-			<div className="flex flex-col text-center text-lg 1280:text-lg  1920:text-2xl">
-				<div className="flex-1 w-full h-full overflow-x-hidden px-3">
-					{/* TODO Fix experience title height*/}
+		<div className="relative flex flex-col flex-shrink-0 w-full h-full rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary">
+			<div className="flex flex-col text-center text-lg tablet:text-xl 1024:text-2xl 1536:text-3xl 2560:text-4xl">
+				<div className="overflow-x-hidden tablet:overflow-x-visible px-3">
 					<p
-						className="pt-2 pb-2"
+						className="pt-2 pb-2 truncate tablet:whitespace-normal"
 						onClick={() => setData('Very long job title')}>
 						Information Technology Intern and Consultant blah blah
 					</p>
 				</div>
 				<div className="w-full h-1 bg-primary/75"></div>
 			</div>
-			{/* TODO: Make text sizes proper to their emphasis */}
-			<div className="px-2 w-full text-sm tablet:text-lg 1024:text-xl 1920:text-2xl">
-				<p
-					className="italic"
-					onClick={() => setData('Very long employer name')}>
-					Going to try to wrap text for this employer
-				</p>
-				<p className="font-bold">1/1/2022 - 12/31/2022</p>
-			</div>
-			<div className="px-2 text-lg 1024:text-xl 1280:text-2xl font-bold">
-				<Technologies />
-			</div>
-			<div className="flex-1 relative px-2 w-full mb-10">
-				<p className="text-lg tablet:text-xl 1280:text-2xl font-bold">
-					Responsibilities:
-				</p>
-				<div className="absolute pl-2 inset-x-0 inset-y-1 mt-6 w-full overflow-y-auto">
-					<ul className="marker:text-white list-disc list-inside text-xs tablet:text-base 1024:text-lg 1920:text-xl">
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-						<li>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Reiciendis ab suscipit commodi similique.
-						</li>
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-							autem officiis saepe inventore cupiditate beatae
-						</li>
-						<li>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-							autem officiis saepe inventore cupiditate beatae
-						</li>
-						<li>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-							autem officiis saepe inventore cupiditate beatae
-						</li>
-						<li>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-							autem officiis saepe inventore cupiditate beatae
-						</li>
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-						<li>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Reiciendis ab suscipit commodi similique.
-						</li>
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-							Excepturi possimus consequuntur dicta quidem quos officiis itaque
-							reprehenderit, aut temporibus expedita fuga. Nemo porro error
-							inventore tempora corporis, illo placeat quos.
-						</li>
-					</ul>
+			<div className="flex flex-col flex-1 space-y-2 px-2 pb-2">
+				<div className="w-full">
+					<p
+						className="italic tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl"
+						onClick={() => setData('Very long employer name')}>
+						Going to try to wrap text for this employer
+					</p>
+					<p className="font-bold text-xs tablet:text-sm 1024:text-base 1536:text-lg 2560:text-xl">
+						1/1/2022 - 12/31/2022
+					</p>
+				</div>
+				<div className="tablet:text-lg 1024:text-xl 1536:text-2xl font-bold">
+					<Technologies />
+				</div>
+				<div className="flex flex-col flex-1">
+					<p className="tablet:text-lg 1024:text-xl 1536:text-2xl font-bold">
+						Responsibilities:
+					</p>
+					<div className="relative flex-1">
+						<div className="absolute inset-x-0 top-0.5 bottom-1 w-full overflow-y-auto">
+							<ul className="marker:text-white list-disc list-inside text-sm tablet:text-base 1024:text-lg 1536:text-xl">
+								<li>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</li>
+								<li>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Reiciendis ab suscipit commodi similique.
+								</li>
+								<li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Debitis autem officiis saepe inventore cupiditate beatae
+								</li>
+								<li>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Debitis autem officiis saepe inventore cupiditate beatae
+								</li>
+								<li>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Debitis autem officiis saepe inventore cupiditate beatae
+								</li>
+								<li>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Debitis autem officiis saepe inventore cupiditate beatae
+								</li>
+								<li>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</li>
+								<li>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Reiciendis ab suscipit commodi similique.
+								</li>
+								<li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+									Excepturi possimus consequuntur dicta quidem quos officiis
+									itaque reprehenderit, aut temporibus expedita fuga. Nemo porro
+									error inventore tempora corporis, illo placeat quos.
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div
 				className={`${
 					!show && 'opacity-0'
-				} 1024:hidden absolute bottom-0 left-0 right-0 z-10 bg-red-900 transition-all ease-in-out duration-500 text-center text-black`}>
+				} 1024:hidden absolute bottom-0 left-0 right-0 z-10 bg-primary transition-all ease-in-out duration-500 text-center text-white`}>
 				{text}
 			</div>
 		</div>

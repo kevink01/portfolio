@@ -22,13 +22,13 @@ function Terminal() {
 				ease: 'linear',
 				duration: 1.5,
 			}}>
-			<div className="relative flex flex-row items-center w-full tablet:h-8 px-2 rounded-t-xl bg-[#2F2F2F]">
+			<div className="relative flex flex-row items-center w-full px-2 rounded-t-xl bg-[#2F2F2F]">
 				<div className="absolute flex flex-row space-x-2">
 					<div className="w-2 tablet:w-4 h-2 tablet:h-4 rounded-full bg-[#FE5E56]"></div>
 					<div className="w-2 tablet:w-4 h-2 tablet:h-4 rounded-full bg-[#FCBC2D]"></div>
 					<div className="w-2 tablet:w-4 h-2 tablet:h-4 rounded-full bg-[#26C940]"></div>
 				</div>
-				<span className="flex justify-center items-center w-full h-full text-xs tablet:text-xl">
+				<span className="flex justify-center items-center w-full text-xs tablet:text-xl">
 					Kevin Kulich
 				</span>
 			</div>

@@ -48,7 +48,6 @@ function Contact() {
 						</div>
 					</div>
 					<div className="flex w-full h-full max-h-150 2560:max-h-180">
-						{/* TODO Contact form styling */}
 						<form
 							onSubmit={handleSubmit(sendEmail)}
 							className="flex flex-col space-y-2 w-full h-full p-5 rounded-20 bg-card">
@@ -75,7 +74,7 @@ function Contact() {
 									{...register('message', { required: true })}
 									className="flex flex-1 form-message"></textarea>
 							</div>
-							<div className="flex justify-center items-end h-20 1920:h-auto">
+							<div className="flex justify-center items-end h-20">
 								<button
 									type="submit"
 									disabled={!isDirty || !isValid}

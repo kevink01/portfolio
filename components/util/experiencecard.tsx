@@ -15,38 +15,46 @@ function ExperienceCard() {
 	}
 
 	return (
-		<div className="relative flex flex-col flex-shrink-0 w-full h-full rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary">
-			<div className="flex flex-col text-center text-lg tablet:text-xl 1024:text-2xl 1536:text-3xl 2560:text-4xl">
-				<div className="overflow-x-hidden tablet:overflow-x-visible px-3">
+		<div className='relative flex flex-col flex-shrink-0 w-full h-full rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary'>
+			<div className='flex flex-col text-center text-lg tablet:text-xl 1024:text-2xl 1536:text-3xl 2560:text-4xl'>
+				<div className='overflow-x-hidden tablet:overflow-x-visible px-3'>
 					<p
-						className="pt-2 pb-2 truncate tablet:whitespace-normal"
+						className='pt-2 pb-2 truncate tablet:whitespace-normal'
 						onClick={() => setData('Very long job title')}>
 						Information Technology Intern and Consultant blah blah
 					</p>
 				</div>
-				<div className="w-full h-1 bg-primary/75"></div>
+				<div className='w-full h-1 bg-primary/75'></div>
 			</div>
-			<div className="flex flex-col flex-1 space-y-2 px-2 pb-2">
-				<div className="w-full">
+			<div className='flex flex-col flex-1 space-y-2 px-2 pb-2'>
+				<div className='w-full'>
 					<p
-						className="italic tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl"
+						className='italic tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl'
 						onClick={() => setData('Very long employer name')}>
 						Going to try to wrap text for this employer
 					</p>
-					<p className="font-bold text-xs tablet:text-sm 1024:text-base 1536:text-lg 2560:text-xl">
+					<p className='font-bold text-xs tablet:text-sm 1024:text-base 1536:text-lg 2560:text-xl'>
 						1/1/2022 - 12/31/2022
 					</p>
 				</div>
-				<div className="tablet:text-lg 1024:text-xl 1536:text-2xl font-bold">
-					<Technologies />
+				<div className='tablet:text-lg 1024:text-xl 1536:text-2xl font-bold'>
+					<div className='inline tablet:hidden'>
+						<Technologies size={30} />
+					</div>
+					<div className='hidden tablet:inline 2560:hidden'>
+						<Technologies size={40} />
+					</div>
+					<div className='hidden 2560:inline'>
+						<Technologies size={50} />
+					</div>
 				</div>
-				<div className="flex flex-col flex-1">
-					<p className="tablet:text-lg 1024:text-xl 1536:text-2xl font-bold">
+				<div className='flex flex-col flex-1'>
+					<p className='tablet:text-lg 1024:text-xl 1536:text-2xl font-bold'>
 						Responsibilities:
 					</p>
-					<div className="relative flex-1">
-						<div className="absolute inset-x-0 top-0.5 bottom-1 w-full overflow-y-auto">
-							<ul className="marker:text-white list-disc list-inside text-sm tablet:text-base 1024:text-lg 1536:text-xl">
+					<div className='relative flex-1'>
+						<div className='absolute inset-x-0 top-0.5 bottom-1 w-full overflow-y-auto'>
+							<ul className='marker:text-white list-disc list-inside text-sm tablet:text-base 1024:text-lg 1536:text-xl'>
 								<li>
 									Lorem ipsum dolor sit amet consectetur adipisicing elit.
 								</li>

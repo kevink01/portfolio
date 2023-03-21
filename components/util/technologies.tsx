@@ -2,18 +2,22 @@ import Image from 'next/image';
 import React from 'react';
 import VScode from '@/public/images/vscode.png';
 
-function Technologies() {
+type Props = {
+	size: number;
+};
+
+function Technologies({ size }: Props) {
 	return (
 		<>
 			<p>Technologies used:</p>
-			<div className="flex flex-row flex-wrap justify-between mobile:justify-start w-full 1920:space-x-2">
-				<Image src={VScode.src} width={30} height={30} alt="Tech" />
-				<Image src={VScode.src} width={30} height={30} alt="Tech" />
-				<Image src={VScode.src} width={30} height={30} alt="Tech" />
-				<Image src={VScode.src} width={30} height={30} alt="Tech" />
-				<Image src={VScode.src} width={30} height={30} alt="Tech" />
-				<Image src={VScode.src} width={30} height={30} alt="Tech" />
-				<Image src={VScode.src} width={30} height={30} alt="Tech" />
+			<div className='flex flex-row flex-wrap mobile:justify-start w-full 1920:space-x-2'>
+				<Image src={VScode.src} width={size} height={size} alt='Tech' />
+				<Image src={VScode.src} width={size} height={size} alt='Tech' />
+				<Image src={VScode.src} width={size} height={size} alt='Tech' />
+				<Image src={VScode.src} width={size} height={size} alt='Tech' />
+				<Image src={VScode.src} width={size} height={size} alt='Tech' />
+				<Image src={VScode.src} width={size} height={size} alt='Tech' />
+				<Image src={VScode.src} width={size} height={size} alt='Tech' />
 			</div>
 		</>
 	);

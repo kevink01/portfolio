@@ -15,6 +15,13 @@
 	.form-field {
 		@apply flex flex-col space-y-2;
 	}
+	.terminal-icon {
+		@apply w-2 mobile:w-3 tablet:w-4 2560:w-5 h-2 mobile:h-3 tablet:h-4 2560:h-5 rounded-full;
+	}
+
+	.terminal-button {
+		@apply w-10 tablet:w-24 1024:w-30 1920:w-40 2560:w-48 h-10 2560:h-12 rounded-20 1024:text-lg 1920:text-xl 2560:text-2xl bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover;
+	}
 
 	.form-field-label {
 		@apply font-serif text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl tracking-widest;
@@ -29,15 +36,15 @@
 	}
 
 	.form-button {
-		@apply w-40 h-12 mt-10 rounded-20 text-xl bg-secondary hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 disabled:bg-secondary/50 disabled:scale-100;
+		@apply w-40 h-12 rounded-20 tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl bg-secondary hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 disabled:bg-secondary/50 disabled:scale-100;
 	}
 
 	.carousel-button {
-		@apply w-10 h-10 motion-safe:transition-all ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125 motion-safe:hover:opacity-100 motion-reduce:opacity-100 opacity-50;
+		@apply w-10 1024:w-12 1536:w-14 2560:w-16 h-10 1024:h-12 1536:h-14 2560:h-16 motion-safe:transition-all ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125 motion-safe:hover:opacity-100 motion-reduce:opacity-100 opacity-50;
 	}
 
 	.social-link {
-		@apply w-1 h-1 transition duration-500 ease-in-out hover:scale-125;
+		@apply w-1 h-1 rounded-full motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-125 motion-safe:hover:opacity-70;
 	}
 
 	.skill-value-label {

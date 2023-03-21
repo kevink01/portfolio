@@ -23,16 +23,16 @@ function Terminal() {
 				duration: 1.5,
 			}}>
 			<div className="relative flex flex-row items-center w-full px-2 rounded-t-xl bg-[#2F2F2F]">
-				<div className="absolute flex flex-row space-x-2">
-					<div className="w-2 tablet:w-4 h-2 tablet:h-4 rounded-full bg-[#FE5E56]"></div>
-					<div className="w-2 tablet:w-4 h-2 tablet:h-4 rounded-full bg-[#FCBC2D]"></div>
-					<div className="w-2 tablet:w-4 h-2 tablet:h-4 rounded-full bg-[#26C940]"></div>
+				<div className="absolute flex flex-row space-x-2 1536:space-x-3">
+					<div className="terminal-icon bg-[#FE5E56]"></div>
+					<div className="terminal-icon bg-[#FCBC2D]"></div>
+					<div className="terminal-icon bg-[#26C940]"></div>
 				</div>
-				<span className="flex justify-center items-center w-full text-xs tablet:text-xl">
+				<span className="flex justify-center items-center w-full text-xs mobile:text-base tablet:text-lg 1024:text-2xl 1536:text-3xl 2560:text-4xl">
 					Kevin Kulich
 				</span>
 			</div>
-			<div className="inline 1920:flex 1024:flex-1 1920:flex-col w-full pt-px 1920:pt-2 px-px 1920:px-2 space-y-1 1920:space-y-2 text-xs mobile:text-base tablet:text-lg 1024:text-xl 1920:text-2xl h-3/4 1024:h-auto overflow-y-auto">
+			<div className="inline 1920:flex 1024:flex-1 1920:flex-col w-full pt-px px-px 1920:px-2 space-y-1 1920:space-y-2 text-xs mobile:text-base tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl h-3/4 1024:h-auto overflow-y-auto">
 				<p>
 					Hello, my name is Kevin Kulich and I&apos;m currently a 3rd year
 					computer science major at Michigan Technological University, with a
@@ -51,13 +51,13 @@ function Terminal() {
 				</p>
 			</div>
 			<div className="text-xs mobile:text-base tablet:text-lg 1024:text-xl 1920:text-2xl">
-				<span className="text-primary">$</span>
-				<Cursor cursorColor="#B77A03" />
+				<span>$</span>
+				<Cursor cursorColor="#222BFF" />
 			</div>
 			<div className="w-full h-1 bg-primary"></div>
 			<div className="flex flex-row justify-between items-center w-full h-16 px-2 rounded-b-xl">
 				<Link href="#experience">
-					<button className="w-10 tablet:w-24 1024:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover 1024:text-lg">
+					<button className="terminal-button">
 						<p className="hidden tablet:inline">Experience</p>
 						<BuildingOfficeIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -66,7 +66,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#projects">
-					<button className="w-10 tablet:w-24 1024:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover 1024:text-lg">
+					<button className="terminal-button">
 						<p className="hidden tablet:inline">Projects</p>
 						<ComputerDesktopIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -75,7 +75,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#skills">
-					<button className="w-10 tablet:w-24 1024:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover 1024:text-lg">
+					<button className="terminal-button">
 						<p className="hidden tablet:inline">Skills</p>
 						<WrenchScrewdriverIcon
 							className="inline tablet:hidden w-3/5 h-3/5"
@@ -84,7 +84,7 @@ function Terminal() {
 					</button>
 				</Link>
 				<Link href="#contact">
-					<button className="w-10 tablet:w-24 1024:w-30 h-10 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover 1024:text-lg">
+					<button className="terminal-button">
 						<p className="hidden tablet:inline">Contact</p>
 						<PhoneIcon
 							className="inline tablet:hidden w-3/5 h-3/5"

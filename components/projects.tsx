@@ -24,9 +24,7 @@ function Projects() {
 			</h1>
 			<div className='flex-1 1024:flex-initial flex flex-row justify-center items-center'>
 				<div className='flex items-center mr-2'>
-					<button
-						onClick={prev}
-						className='carousel-button'>
+					<button onClick={prev} className='carousel-button'>
 						<ArrowLeftCircleIcon />
 					</button>
 				</div>
@@ -41,9 +39,7 @@ function Projects() {
 					</div>
 				</div>
 				<div className='flex items-center ml-2'>
-					<button
-						onClick={next}
-						className='carousel-button'>
+					<button onClick={next} className='carousel-button'>
 						<ArrowRightCircleIcon />
 					</button>
 				</div>

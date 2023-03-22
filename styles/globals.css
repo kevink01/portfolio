@@ -56,6 +56,6 @@
 	}
 
 	.skill-progress-label {
-		@apply flex justify-end items-center w-[10%] h-[25%] -rotate-45;
+		@apply flex justify-end items-start w-[10%] h-[25%] -skew-y-6 pr-2;
 	}
 }

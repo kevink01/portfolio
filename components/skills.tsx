@@ -32,17 +32,27 @@ function Skills() {
 				</div>
 				<div className='h-1/10 ml-[25%]'>
 					{/* TODO Fix progress bar */}
-					<div className='flex flex-1 justify-end items-end h-full text-xs 1920:text-lg'>
+					<div className='flex flex-1 justify-end items-start h-full text-xs 1920:text-lg'>
 						<span className='skill-progress-label'>10%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>20%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>30%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>40%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>50%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>60%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>70%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>80%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>90%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 						<span className='skill-progress-label'>100%</span>
+						<div className='w-px h-6 bg-slate-500'></div>
 					</div>
 				</div>
 			</div>

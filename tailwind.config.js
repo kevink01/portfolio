@@ -59,6 +59,7 @@ module.exports = {
 			maxHeight: {
 				150: '37.5rem',
 				180: '45rem',
+				360: '90rem',
 			},
 			scale: {
 				102: '102%',

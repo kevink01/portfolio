@@ -4,6 +4,7 @@ import {
 	ArrowLeftCircleIcon,
 	ArrowRightCircleIcon,
 } from '@heroicons/react/24/solid';
+import Test from '@/components/util/test';
 
 function Projects() {
 	const max: number = 3;
@@ -22,16 +23,16 @@ function Projects() {
 			<h1 className='py-1 1024:py-4 text-xl tablet:text-2xl 1024:text-3xl 1536:text-4xl 2560:text-5xl tracking-widest text-slate-300'>
 				Projects
 			</h1>
-			<div className='flex-1 1024:flex-initial flex flex-row justify-center items-center'>
+			<div className='flex-1 flex flex-row justify-center items-center w-full px-2 max-w-2xl'>
 				<div className='flex items-center mr-2'>
 					<button onClick={prev} className='carousel-button'>
 						<ArrowLeftCircleIcon />
 					</button>
 				</div>
 				{/* Tutorial found on: https://youtu.be/XJSOgV4VELk*/}
-				<div className='relative flex items-center overflow-hidden'>
+				<div className='relative flex flex-row flex-1 h-full items-center overflow-hidden'>
 					<div
-						className={`flex w-48 mobile:w-60 tablet:w-96 1024:w-128 1280:w-144 1536:w-160 1920:w-180 2560:w-300 h-104 tablet:h-150 1024:h-160 1920:h-180 2560:h-240 transition-transform ease-out duration-500`}
+						className='flex w-full h-full max-h-150 transition-transform ease-out duration-500'
 						style={{ transform: `translateX(-${index * 100}%)` }}>
 						<ProjectCard key={1} />
 						<ProjectCard key={2} />

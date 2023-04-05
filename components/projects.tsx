@@ -4,7 +4,6 @@ import {
 	ArrowLeftCircleIcon,
 	ArrowRightCircleIcon,
 } from '@heroicons/react/24/solid';
-import Test from '@/components/util/test';
 
 function Projects() {
 	const max: number = 3;

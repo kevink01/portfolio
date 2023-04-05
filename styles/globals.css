@@ -9,7 +9,7 @@
 	}
 
 	.section {
-		@apply snap-center snap-always;
+		@apply snap-center snap-always overflow-y-hidden;
 	}
 
 	.form-field {

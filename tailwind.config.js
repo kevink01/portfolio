@@ -57,9 +57,13 @@ module.exports = {
 				'9/10': '90%',
 			},
 			maxHeight: {
+				144: '36rem',
 				150: '37.5rem',
 				180: '45rem',
 				360: '90rem',
+			},
+			minHeight: {
+				32: '8rem',
 			},
 			scale: {
 				102: '102%',

@@ -17,9 +17,9 @@ export default function Home() {
 
 			<main>
 				<div className='h-px'></div> {/* Header for snapping */}
-				{/* <section id='home' className='section'>
+				<section id='home' className='section'>
 					<Welcome />
-				</section> */}
+				</section>
 				<section id='experience' className='section'>
 					<Experiences />
 				</section>

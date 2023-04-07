@@ -26,10 +26,10 @@ export default function Home() {
 				<section id='projects' className='section'>
 					<Projects />
 				</section>
-				{/* <section id="skills" className="section">
+				<section id='skills' className='section'>
 					<Skills />
 				</section>
-				<section id="contact" className="section">
+				{/*<section id="contact" className="section">
 					<Contact />
 				</section> */}
 				<div className='h-px'></div> {/* Footer for snapping */}

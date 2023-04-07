@@ -4,93 +4,100 @@ import { motion } from 'framer-motion';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import Socials from './socials';
 import Kevin from '@/public/images/Kevin.jpg';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { PhoneIcon, AtSymbolIcon } from '@heroicons/react/24/solid';
+
+type Inputs = {
+	name: string;
+	subject: string;
+	message: string;
+};
 
 function Test() {
-	const [text] = useTypewriter({
-		words: [
-			'System.out.println("Hello World!");',
-			'My name is Kevin Kulich!',
-			'<Full-stack-developer/>',
-			"console.log('TypeScript enjoyer')",
-			'🎱-ball enthusiast',
-		],
-		loop: false,
-		typeSpeed: 50,
-		deleteSpeed: 20,
-		delaySpeed: 2000,
-	});
+	const {
+		handleSubmit,
+		register,
+		reset,
+		formState: { isDirty, isValid },
+	} = useForm<Inputs>();
+
+	const sendEmail: SubmitHandler<Inputs> = (data) => {
+		window.location.href = `mailto:kakulich01@gmail.com?subject=${data.subject}&body=${data.message}`;
+		reset();
+	};
 
 	return (
-		<div className='flex flex-col justify-center items-center w-full h-full overflow-y-hidden'>
-			<div className='flex flex-1 justify-center items-center w-full h-full'>
-				<div className='relative flex items-center justify-center aspect-square min-h-32 h-4/5 max-h-150'>
-					<motion.div
-						className='absolute inset-0'
-						animate={{ scale: [1, 0.95, 0.9, 0.75, 0.5, 1] }}
-						transition={{ ease: 'linear', duration: 1.5 }}>
-						<motion.div
-							className='w-full h-full rounded-full border-2 border-primary'
-							animate={{ opacity: [0.1, 0.2, 0.25, 0.2, 0.1] }}
-							transition={{
-								duration: 3,
-								repeat: Infinity,
-							}}></motion.div>
-					</motion.div>
-					<motion.div
-						className='absolute inset-5'
-						animate={{ scale: [1, 0.95, 0.9, 0.75, 0.5, 1] }}
-						transition={{ ease: 'linear', duration: 1.5 }}>
-						<motion.div
-							className='w-full h-full rounded-full border-2 border-primary'
-							animate={{ opacity: [0.9, 0.5, 0.1, 0.5, 0.9] }}
-							transition={{
-								duration: 3,
-								repeat: Infinity,
-							}}></motion.div>
-					</motion.div>
-					<motion.img
-						className='w-auto h-2/3 rounded-full'
-						src={Kevin.src}
-						initial={{ opacity: 0 }}
-						animate={{
-							scale: [1, 0.95, 0.9, 0.75, 0.25, 1],
-							opacity: [0, 0.1, 0.2, 0.3, 0.5, 1],
-						}}
-						transition={{
-							ease: 'linear',
-							duration: 1.5,
-						}}></motion.img>
+		<div className='flex flex-col items-center justify-center w-screen h-screen text-white overflow-y-auto'>
+			<div className='flex flex-col items-center justify-center flex-1 w-full px-4 py-10'>
+				<div className='relative flex flex-col flex-1 w-full max-w-2xl space-y-2 min-h-32 h-full max-h-240 bg-card rounded-20'>
+					<div className='absolute inset-y-0 inset-x-2 flex flex-col pb-2 overflow-y-auto'>
+						<div className='space-y-1 text-center'>
+							<h1 className='mt-10 text-xl tablet:text-2xl 1024:text-3xl 1536:text-4xl 2560:text-5xl'>
+								Heard enough?
+							</h1>
+							<h3 className='text-lg tablet:text-xl 1024:text-2xl 1536:text-3xl 2560:text-4xl'>
+								Contact me!
+							</h3>
+						</div>
+						<div className='flex-1 w-9/10 h-full mx-auto pb-2'>
+							<form
+								onSubmit={handleSubmit(sendEmail)}
+								className='flex flex-col space-y-2 w-full h-full p-5 rounded-20 bg-card'>
+								<div className='form-field'>
+									<label className='form-field-label'>Name</label>
+									<input
+										type='text'
+										placeholder='John Smith'
+										{...register('name', { required: true })}
+										className='form-field-input'></input>
+								</div>
+								<div className='form-field'>
+									<label className='form-field-label'>Subject</label>
+									<input
+										type='text'
+										placeholder='XYZ Company Recruiter'
+										{...register('subject', { required: true, maxLength: 50 })}
+										className='form-field-input'></input>
+								</div>
+								<div className='flex flex-1 form-field'>
+									<label className='form-field-label'>Message</label>
+									<textarea
+										placeholder='I liked your portfolio!'
+										{...register('message', { required: true })}
+										className='flex-1 min-h-10 form-message'></textarea>
+								</div>
+								<div className='flex justify-center items-end h-20 py-2'>
+									<button
+										type='submit'
+										disabled={!isDirty || !isValid}
+										className='form-button'>
+										Email
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
-			<motion.div
-				className='flex flex-col items-center justify-center w-full mb-1 1920:mb-5 space-y-4'
-				animate={{
-					scale: [1, 0.95, 0.9, 0.75, 0.25, 1],
-					opacity: [0, 0.1, 0.2, 0.3, 0.5, 1],
-				}}
-				transition={{
-					ease: 'linear',
-					duration: 1.5,
-				}}>
-				<h1 className='flex items-end justify-center text-center px-2 text-xs mobile:text-base tablet:text-lg 1024:text-2xl 1536:text-3xl 2560:text-4xl text-white w-full h-10 1024:h-20'>
-					<span>{text}</span>
-					<Cursor cursorBlinking={true} cursorColor='#222BFF' />
-				</h1>
-				<div className='flex justify-center w-full'>
-					<div className='inline mobile:hidden'>
-						<Socials size={30} />
+			<div className='w-full h-full max-h-32 bg-zinc-900'>
+				<div className='relative flex flex-col items-center space-y-2 w-full h-full text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
+					<div className='flex items-center space-x-2 h-12'>
+						<PhoneIcon className='h-2/3 text-secondary' />
+						<span className='flex items-center h-full'>+1 (507) 512-9191</span>
 					</div>
-					<div className='hidden mobile:inline tablet:hidden'>
-						<Socials size={40} />
+					<div className='flex items-center space-x-2 h-12'>
+						<AtSymbolIcon className='h-2/3 text-secondary' />
+						<span className='flex items-center h-full tracking-wider'>
+							kakulich01@gmail.com
+						</span>
 					</div>
-					<div className='hidden tablet:inline 1536:hidden'>
-						<Socials size={50} />
-					</div>
-					<div className='hidden 1536:inline'>
-						<Socials size={60} />
+					<div className='tablet:absolute tablet:inset-y-0 tablet:inset-x-2 flex items-center justify-end'>
+						<button className='w-40 h-6 tablet:h-12 rounded-20 tablet:text-lg bg-secondary hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500'>
+							Figma Designs
+						</button>
 					</div>
 				</div>
-			</motion.div>
+			</div>
 		</div>
 	);
 }

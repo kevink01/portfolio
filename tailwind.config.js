@@ -60,9 +60,12 @@ module.exports = {
 				144: '36rem',
 				150: '37.5rem',
 				180: '45rem',
+				240: '60rem',
+				300: '75rem',
 				360: '90rem',
 			},
 			minHeight: {
+				10: '2.5rem',
 				32: '8rem',
 			},
 			scale: {

@@ -4,6 +4,7 @@ import Projects from '@/components/projects';
 import Experiences from '@/components/experiences';
 import Skills from '@/components/skills';
 import Contact from '@/components/contact';
+import Test from '@/components/util/test';
 
 export default function Home() {
 	return (
@@ -29,9 +30,9 @@ export default function Home() {
 				<section id='skills' className='section'>
 					<Skills />
 				</section>
-				{/*<section id="contact" className="section">
+				<section id='contact' className='section'>
 					<Contact />
-				</section> */}
+				</section>
 				<div className='h-px'></div> {/* Footer for snapping */}
 			</main>
 		</div>

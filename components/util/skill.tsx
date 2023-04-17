@@ -1,10 +1,39 @@
-import { motion } from 'framer-motion';
+import { viewportOptions } from '@/utilities/animations';
+import { Variants, motion } from 'framer-motion';
 import React from 'react';
+
 type Props = {
 	name: string;
 	progress: number;
 	color: string;
 	delay: number;
+};
+
+const progressLabelAnimation: Variants = {
+	hidden: { opacity: 0 },
+	show: { opacity: 1, transition: { ease: 'linear', duration: 1 } },
+};
+
+const progressAnimation = (progress: number, delay: number) => {
+	return {
+		hidden: { width: '0%' },
+		show: {
+			width: [
+				'0%',
+				`${progress * 0.25}%`,
+				`${progress * 0.5}%`,
+				`${progress * 0.75}%`,
+				`${progress}%`,
+				`${progress * 1.1}%`,
+				`${progress}%`,
+			],
+			transition: {
+				ease: 'linear',
+				delay: delay * 0.2,
+				duration: 1,
+			},
+		},
+	} as Variants;
 };
 
 function Skill({ name, progress, color, delay }: Props) {
@@ -13,36 +42,20 @@ function Skill({ name, progress, color, delay }: Props) {
 			<div className='flex items-center justify-end w-1/4 overflow-x-hidden text-right h-full pr-2'>
 				<motion.span
 					className='w-full overflow-x-hidden truncate'
-					initial={{ opacity: 0 }}
-					animate={{
-						opacity: 1,
-						transition: { ease: 'linear' },
-					}}
-					viewport={{ once: true, amount: 0.5 }}>
+					variants={progressLabelAnimation}
+					initial='hidden'
+					animate='show'
+					viewport={viewportOptions}>
 					{name}
 				</motion.span>
 			</div>
 			<div className='w-3/4'>
 				<motion.div
 					className='skill-progress-bar'
-					initial={{ width: '0%' }}
-					viewport={{ once: true, amount: 0.5 }}
-					whileInView={{
-						width: [
-							'0%',
-							`${progress * 0.25}%`,
-							`${progress * 0.5}%`,
-							`${progress * 0.75}%`,
-							`${progress}%`,
-							`${progress * 1.1}%`,
-							`${progress}%`,
-						],
-						transition: {
-							ease: 'linear',
-							delay: delay * 0.3,
-							duration: 1,
-						},
-					}}
+					variants={progressAnimation(progress, delay)}
+					initial='hidden'
+					whileInView='show'
+					viewport={viewportOptions}
 					style={{
 						backgroundColor: `#${color}`,
 						width: `${progress}%`,

@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Technologies from './technologies';
 import Picture from '@/assets/images/spotify.png';
-import { Variants, motion, useAnimation } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 import {
 	delayDividerAnimation,
 	dividerAnimation,
-	infoAnimation,
+	viewportOptions,
 } from '@/utilities/animations';
 
 type Props = {
@@ -32,8 +32,8 @@ function ProjectCard({ delay }: Props) {
 	};
 
 	const buttonAnimate: Variants = {
-		hidden2: { opacity: 0, y: -50 },
-		show2: {
+		hidden: { opacity: 0, y: -50 },
+		show: {
 			opacity: 1,
 			y: 0,
 			transition: { ease: 'linear', duration: 0.5 },
@@ -45,16 +45,14 @@ function ProjectCard({ delay }: Props) {
 			className='flex flex-col flex-shrink-0 w-full h-full py-2 rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary'
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
-			viewport={{ once: true, amount: 'all' }}
-			transition={{ ease: 'linear', duration: 0.5 }}
-			exit={{ opacity: 0, transition: { duration: 0.25 } }}>
+			viewport={viewportOptions}
+			transition={{ ease: 'linear', duration: 0.5 }}>
 			<motion.div
 				className='flex flex-col flex-1'
 				initial='hidden'
 				whileInView='show'
-				viewport={{ once: true, amount: 'all' }}
-				transition={{ staggerChildren: 0.5, ease: 'linear' }}
-				exit='hidden'>
+				viewport={viewportOptions}
+				transition={{ staggerChildren: 0.5, ease: 'linear' }}>
 				<motion.div className='flex justify-center' variants={sectionAnimate}>
 					<Image src={Picture.src} alt='Spotify' width={150} height={150} />
 				</motion.div>
@@ -95,19 +93,17 @@ function ProjectCard({ delay }: Props) {
 					variants={delayDividerAnimation(delay)}
 					initial='hidden'
 					whileInView='show'
-					viewport={{ once: true, amount: 'all' }}
-					exit='hidden'></motion.div>
+					viewport={viewportOptions}></motion.div>
 				<motion.div
 					className='flex flex-row justify-center space-x-2 w-full h-full'
-					initial='hidden2'
-					whileInView='show2'
-					viewport={{ once: true, amount: 'all' }}
+					initial='hidden'
+					whileInView='show'
+					viewport={viewportOptions}
 					transition={{
 						staggerChildren: 0.5,
 						ease: 'linear',
 						delayChildren: 1,
-					}}
-					exit='hidden2'>
+					}}>
 					<motion.div variants={buttonAnimate}>
 						<Link href='#skills'>
 							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>

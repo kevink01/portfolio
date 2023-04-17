@@ -1,13 +1,14 @@
 import React from 'react';
 import Skill from './util/skill';
-import { motion } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
+import { viewportOptions } from '@/utilities/animations';
 
 function Skills() {
-	const skillAnimate = {
+	const skillAnimate: Variants = {
 		offscreen: { opacity: 0 },
 		onscreen: {
 			opacity: 1,
-			duration: 1,
+			transition: { ease: 'linear', staggerChildren: 0.2 },
 		},
 	};
 
@@ -19,10 +20,9 @@ function Skills() {
 			<div className='flex flex-col w-full h-full rounded-20 p-2 bg-gradient-to-b from-card/50 via-primary/10 to-primary overflow-y-auto'>
 				<motion.div
 					className='flex flex-col justify-between h-full w-full py-2 text-xs 1024:text-base 1536:text-lg 2560:text-xl'
-					initial={'offscreen'}
-					whileInView={'onscreen'}
-					viewport={{ once: true, amount: 0.5 }}
-					transition={{ staggerChildren: 0.3 }}>
+					initial='offscreen'
+					whileInView='onscreen'
+					viewport={viewportOptions}>
 					<motion.div variants={skillAnimate}>
 						<Skill name='TypeScript' progress={90} color='222bff' delay={0} />
 					</motion.div>

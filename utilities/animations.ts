@@ -1,5 +1,13 @@
 import { Variants } from 'framer-motion';
 
+export const viewportOptions: {
+	once: boolean;
+	amount: number | 'all' | 'some' | undefined;
+} = {
+	once: true,
+	amount: 'all',
+};
+
 export const dividerAnimation: Variants = {
 	hidden: { scaleX: '0%' },
 	show: {

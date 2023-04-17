@@ -9,9 +9,14 @@ type Props = {
 	delay: number;
 };
 
-const progressLabelAnimation: Variants = {
-	hidden: { opacity: 0 },
-	show: { opacity: 1, transition: { ease: 'linear', duration: 1 } },
+const progressLabelAnimation = (delay: number) => {
+	return {
+		hidden: { opacity: 0 },
+		show: {
+			opacity: 1,
+			transition: { ease: 'linear', duration: 1, delay: delay * 0.2 },
+		},
+	} as Variants;
 };
 
 const progressAnimation = (progress: number, delay: number) => {
@@ -42,7 +47,7 @@ function Skill({ name, progress, color, delay }: Props) {
 			<div className='flex items-center justify-end w-1/4 overflow-x-hidden text-right h-full pr-2'>
 				<motion.span
 					className='w-full overflow-x-hidden truncate'
-					variants={progressLabelAnimation}
+					variants={progressLabelAnimation(delay)}
 					initial='hidden'
 					animate='show'
 					viewport={viewportOptions}>

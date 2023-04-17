@@ -21,7 +21,7 @@ const progressLabelAnimation = (delay: number) => {
 
 const progressAnimation = (progress: number, delay: number) => {
 	return {
-		hidden: { width: '0%' },
+		hidden: { width: 0 },
 		show: {
 			width: [
 				'0%',
@@ -63,9 +63,15 @@ function Skill({ name, progress, color, delay }: Props) {
 					viewport={viewportOptions}
 					style={{
 						backgroundColor: `#${color}`,
-						width: `${progress}%`,
 					}}>
-					<span className='skill-value-label'>{progress}%</span>
+					<motion.span
+						className='skill-value-label'
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						viewport={viewportOptions}
+						transition={{ ease: 'linear', delay: delay * 0.2, duration: 0.5 }}>
+						{progress}%
+					</motion.span>
 				</motion.div>
 			</div>
 		</div>

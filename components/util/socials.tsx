@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
-import Resume from '@/public/images/resume.png';
+import Resume from '@/assets/images/resume.png';
 
 type Props = {
 	size: number;

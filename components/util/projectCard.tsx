@@ -1,24 +1,76 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Technologies from './technologies';
-import Picture from '@/public/images/spotify.png';
+import Picture from '@/assets/images/spotify.png';
+import { Variants, motion, useAnimation } from 'framer-motion';
+import {
+	delayDividerAnimation,
+	dividerAnimation,
+	infoAnimation,
+} from '@/utilities/animations';
 
-function ProjectCard() {
+type Props = {
+	delay: number;
+};
+
+function ProjectCard({ delay }: Props) {
+	const sectionAnimate: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 50,
+			transition: { ease: 'linear', duration: 0.5 },
+		},
+		show: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				ease: 'linear',
+				duration: 0.5,
+			},
+		},
+	};
+
+	const buttonAnimate: Variants = {
+		hidden2: { opacity: 0, y: -50 },
+		show2: {
+			opacity: 1,
+			y: 0,
+			transition: { ease: 'linear', duration: 0.5 },
+		},
+	};
+
 	return (
-		<div className='flex flex-col flex-shrink-0 w-full h-full py-2 rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary'>
-			<div className='flex flex-col flex-1'>
-				{/* TODO Image sizing */}
-				<div className='relative w-1/2 h-1/5 mx-auto'>
-					<Image src={Picture.src} fill alt='Spotify' />
-				</div>
-				<div className='w-full px-2 text-center text-xl'>
-					<p className='p-2'>Very long Project Title that will overflow</p>
-				</div>
-				<div className='h-1 bg-primary/75'></div>
+		<motion.div
+			className='flex flex-col flex-shrink-0 w-full h-full py-2 rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary'
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			viewport={{ once: true, amount: 'all' }}
+			transition={{ ease: 'linear', duration: 0.5 }}
+			exit={{ opacity: 0, transition: { duration: 0.25 } }}>
+			<motion.div
+				className='flex flex-col flex-1'
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true, amount: 'all' }}
+				transition={{ staggerChildren: 0.5, ease: 'linear' }}
+				exit='hidden'>
+				<motion.div className='flex justify-center' variants={sectionAnimate}>
+					<Image src={Picture.src} alt='Spotify' width={150} height={150} />
+				</motion.div>
+				<motion.div
+					className='w-full px-2 text-center text-xl'
+					variants={sectionAnimate}>
+					<p className='line-clamp-2'>
+						Very long Project Title that will overflow
+					</p>
+				</motion.div>
+				<motion.div
+					className='h-1 bg-primary/75'
+					variants={dividerAnimation}></motion.div>
 				<div className='relative flex-1'>
 					<div className='absolute inset-0 overflow-y-auto'>
-						<div>
+						<motion.div variants={sectionAnimate}>
 							<p className='tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl font-bold'>
 								Project description:
 							</p>
@@ -28,29 +80,51 @@ function ProjectCard() {
 								accusamus atque hic deleniti quos, ea quasi? Animi dolores ipsa
 								incidunt unde inventore necessitatibus maxime!
 							</p>
-						</div>
-						<div className='tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl font-bold'>
+						</motion.div>
+						<motion.div
+							className='tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl font-bold'
+							variants={sectionAnimate}>
 							<Technologies size={30} />
-						</div>
+						</motion.div>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 			<div className='space-y-1'>
-				<div className='h-1 bg-black/75'></div>
-				<div className='flex flex-row justify-center space-x-2 w-full h-full'>
-					<Link href='#skills'>
-						<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
-							Source code
-						</button>
-					</Link>
-					<Link href='#skills'>
-						<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
-							Live Demo
-						</button>
-					</Link>
-				</div>
+				<motion.div
+					className='h-1 bg-black/75'
+					variants={delayDividerAnimation(delay)}
+					initial='hidden'
+					whileInView='show'
+					viewport={{ once: true, amount: 'all' }}
+					exit='hidden'></motion.div>
+				<motion.div
+					className='flex flex-row justify-center space-x-2 w-full h-full'
+					initial='hidden2'
+					whileInView='show2'
+					viewport={{ once: true, amount: 'all' }}
+					transition={{
+						staggerChildren: 0.5,
+						ease: 'linear',
+						delayChildren: 1,
+					}}
+					exit='hidden2'>
+					<motion.div variants={buttonAnimate}>
+						<Link href='#skills'>
+							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
+								Source code
+							</button>
+						</Link>
+					</motion.div>
+					<motion.div variants={buttonAnimate}>
+						<Link href='#skills'>
+							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
+								Live Demo
+							</button>
+						</Link>
+					</motion.div>
+				</motion.div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

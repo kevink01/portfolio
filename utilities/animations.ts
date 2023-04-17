@@ -1,7 +1,9 @@
-export const dividerAnimation = {
-	hidden: { width: '0%' },
+import { Variants } from 'framer-motion';
+
+export const dividerAnimation: Variants = {
+	hidden: { scaleX: '0%' },
 	show: {
-		width: '100%',
+		scaleX: '100%',
 		transition: {
 			ease: 'linear',
 			duration: 1,
@@ -9,7 +11,7 @@ export const dividerAnimation = {
 	},
 };
 
-export const infoAnimation = {
+export const infoAnimation: Variants = {
 	hidden: { opacity: 0, x: -50, y: 50 },
 	show: {
 		opacity: 1,
@@ -20,4 +22,14 @@ export const infoAnimation = {
 			duration: 1,
 		},
 	},
+};
+
+export const delayDividerAnimation = (delay: number) => {
+	return {
+		...dividerAnimation,
+		show: {
+			scaleX: '100%',
+			transition: { ease: 'linear', duration: 1, delay: delay },
+		},
+	};
 };

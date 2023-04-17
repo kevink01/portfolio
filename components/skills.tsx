@@ -3,7 +3,7 @@ import Skill from './util/skill';
 import { motion } from 'framer-motion';
 
 function Skills() {
-	const textAnimate = {
+	const skillAnimate = {
 		offscreen: { opacity: 0 },
 		onscreen: {
 			opacity: 1,
@@ -23,28 +23,28 @@ function Skills() {
 					whileInView={'onscreen'}
 					viewport={{ once: true, amount: 0.5 }}
 					transition={{ staggerChildren: 0.3 }}>
-					<motion.div variants={textAnimate}>
+					<motion.div variants={skillAnimate}>
 						<Skill name='TypeScript' progress={90} color='222bff' delay={0} />
 					</motion.div>
-					<motion.div variants={textAnimate}>
+					<motion.div variants={skillAnimate}>
 						<Skill name='C++' progress={80} color='3b82f6' delay={1} />
 					</motion.div>
-					<motion.div variants={textAnimate}>
+					<motion.div variants={skillAnimate}>
 						<Skill name='Firebase' progress={60} color='eab308' delay={2} />
 					</motion.div>
-					<motion.div variants={textAnimate}>
+					<motion.div variants={skillAnimate}>
 						<Skill name='Java' progress={70} color='f97316' delay={3} />
 					</motion.div>
-					<motion.div variants={textAnimate}>
+					<motion.div variants={skillAnimate}>
 						<Skill name='TypeScript' progress={90} color='222bff' delay={4} />
 					</motion.div>
-					<motion.div variants={textAnimate}>
+					<motion.div variants={skillAnimate}>
 						<Skill name='C++' progress={80} color='3b82f6' delay={5} />
 					</motion.div>
-					<motion.div variants={textAnimate}>
+					<motion.div variants={skillAnimate}>
 						<Skill name='Firebase' progress={60} color='eab308' delay={6} />
 					</motion.div>
-					<motion.div variants={textAnimate}>
+					<motion.div variants={skillAnimate}>
 						<Skill name='Java' progress={70} color='f97316' delay={7} />
 					</motion.div>
 				</motion.div>

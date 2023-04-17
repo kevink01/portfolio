@@ -7,14 +7,23 @@ import {
 
 function Projects() {
 	const max: number = 3;
+	const [transitioning, setTransitioning] = useState<boolean>(false);
 	const [index, setIndex] = useState<number>(0);
 
 	const next = () => {
 		setIndex(index === max - 1 ? 0 : index + 1);
+		setTransitioning(true);
+		setTimeout(() => {
+			setTransitioning(false);
+		}, 500);
 	};
 
 	const prev = () => {
 		setIndex(index === 0 ? max - 1 : index - 1);
+		setTransitioning(true);
+		setTimeout(() => {
+			setTransitioning(false);
+		}, 500);
 	};
 
 	return (
@@ -24,7 +33,10 @@ function Projects() {
 			</h1>
 			<div className='flex-1 flex flex-row justify-center items-center w-full px-2 max-w-2xl'>
 				<div className='flex items-center mr-2'>
-					<button onClick={prev} className='carousel-button'>
+					<button
+						onClick={prev}
+						className='carousel-button'
+						disabled={transitioning}>
 						<ArrowLeftCircleIcon />
 					</button>
 				</div>
@@ -33,13 +45,16 @@ function Projects() {
 					<div
 						className='flex w-full h-full max-h-150 transition-transform ease-out duration-500'
 						style={{ transform: `translateX(-${index * 100}%)` }}>
-						<ProjectCard key={1} />
-						<ProjectCard key={2} />
-						<ProjectCard key={3} />
+						<ProjectCard key={1} delay={1} />
+						<ProjectCard key={2} delay={1.4} />
+						<ProjectCard key={3} delay={1.4} />
 					</div>
 				</div>
 				<div className='flex items-center ml-2'>
-					<button onClick={next} className='carousel-button'>
+					<button
+						onClick={next}
+						className='carousel-button'
+						disabled={transitioning}>
 						<ArrowRightCircleIcon />
 					</button>
 				</div>

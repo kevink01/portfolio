@@ -40,7 +40,7 @@
 	}
 
 	.carousel-button {
-		@apply w-10 1024:w-12 1536:w-14 2560:w-16 h-10 1024:h-12 1536:h-14 2560:h-16 motion-safe:transition-all ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125 motion-safe:hover:opacity-100 motion-reduce:opacity-100 opacity-50;
+		@apply w-10 1024:w-12 1536:w-14 2560:w-16 h-10 1024:h-12 1536:h-14 2560:h-16 motion-safe:transition-all ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125 motion-safe:hover:opacity-100 motion-reduce:opacity-100 opacity-50 disabled:opacity-25;
 	}
 
 	.social-link {

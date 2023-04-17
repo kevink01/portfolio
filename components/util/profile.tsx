@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import Kevin from '@/public/images/Kevin.jpg';
+import Kevin from '@/assets/images/Kevin.jpg';
 import Socials from './socials';
 
 function Profile() {

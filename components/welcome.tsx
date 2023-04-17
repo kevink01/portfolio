@@ -2,7 +2,6 @@ import React from 'react';
 import Profile from './util/profile';
 import Terminal from './util/terminal';
 import { motion } from 'framer-motion';
-import Test from './util/test';
 
 function Welcome() {
 	return (

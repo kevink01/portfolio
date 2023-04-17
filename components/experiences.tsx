@@ -7,15 +7,25 @@ import {
 
 function Experiences() {
 	const max: number = 3;
+	const [transitioning, setTransitioning] = useState<boolean>(false);
 	const [index, setIndex] = useState<number>(0);
 
 	const next = () => {
 		setIndex(index === max - 1 ? 0 : index + 1);
+		setTransitioning(true);
+		setTimeout(() => {
+			setTransitioning(false);
+		}, 500);
 	};
 
 	const prev = () => {
 		setIndex(index === 0 ? max - 1 : index - 1);
+		setTransitioning(true);
+		setTimeout(() => {
+			setTransitioning(false);
+		}, 500);
 	};
+
 	return (
 		<div className='flex flex-col items-center p-2 1920:space-y-10 w-screen h-screen text-white'>
 			<h1 className='py-1 1024:py-4 text-xl tablet:text-2xl 1024:text-3xl 1536:text-4xl 2560:text-5xl tracking-widest text-slate-300'>
@@ -23,7 +33,10 @@ function Experiences() {
 			</h1>
 			<div className='flex-1 flex flex-row justify-center items-center w-full px-2 max-w-2xl'>
 				<div className='flex justify-center mr-2'>
-					<button onClick={prev} className='carousel-button'>
+					<button
+						onClick={prev}
+						className='carousel-button'
+						disabled={transitioning}>
 						<ArrowLeftCircleIcon />
 					</button>
 				</div>
@@ -38,7 +51,10 @@ function Experiences() {
 					</div>
 				</div>
 				<div className='flex justify-center ml-2'>
-					<button onClick={next} className='carousel-button'>
+					<button
+						onClick={next}
+						className='carousel-button'
+						disabled={transitioning}>
 						<ArrowRightCircleIcon />
 					</button>
 				</div>

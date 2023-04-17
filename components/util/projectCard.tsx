@@ -7,6 +7,7 @@ import { Variants, motion } from 'framer-motion';
 import {
 	delayDividerAnimation,
 	dividerAnimation,
+	sectionAnimation,
 	viewportOptions,
 } from '@/utilities/animations';
 
@@ -15,22 +16,6 @@ type Props = {
 };
 
 function ProjectCard({ delay }: Props) {
-	const sectionAnimate: Variants = {
-		hidden: {
-			opacity: 0,
-			y: 50,
-			transition: { ease: 'linear', duration: 0.5 },
-		},
-		show: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				ease: 'linear',
-				duration: 0.5,
-			},
-		},
-	};
-
 	const buttonAnimate: Variants = {
 		hidden: { opacity: 0, y: -50 },
 		show: {
@@ -53,12 +38,12 @@ function ProjectCard({ delay }: Props) {
 				whileInView='show'
 				viewport={viewportOptions}
 				transition={{ staggerChildren: 0.5, ease: 'linear' }}>
-				<motion.div className='flex justify-center' variants={sectionAnimate}>
+				<motion.div className='flex justify-center' variants={sectionAnimation}>
 					<Image src={Picture.src} alt='Spotify' width={150} height={150} />
 				</motion.div>
 				<motion.div
 					className='w-full px-2 text-center text-xl'
-					variants={sectionAnimate}>
+					variants={sectionAnimation}>
 					<p className='line-clamp-2'>
 						Very long Project Title that will overflow
 					</p>
@@ -68,7 +53,7 @@ function ProjectCard({ delay }: Props) {
 					variants={dividerAnimation}></motion.div>
 				<div className='relative flex-1'>
 					<div className='absolute inset-0 overflow-y-auto'>
-						<motion.div variants={sectionAnimate}>
+						<motion.div variants={sectionAnimation}>
 							<p className='tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl font-bold'>
 								Project description:
 							</p>
@@ -81,7 +66,7 @@ function ProjectCard({ delay }: Props) {
 						</motion.div>
 						<motion.div
 							className='tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl font-bold'
-							variants={sectionAnimate}>
+							variants={sectionAnimation}>
 							<Technologies size={30} />
 						</motion.div>
 					</div>

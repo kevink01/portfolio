@@ -118,7 +118,7 @@ function Contact() {
 				viewport={{ once: true, amount: 'all' }}
 				transition={{ ease: 'linear', duration: 0.5 }}>
 				<motion.div
-					className='flex flex-row justify-between w-full max-w-2xl py-2 px-4 1024:px-0 overflow-x-hidden'
+					className='flex flex-row justify-between w-full max-w-2xl py-2 px-4 1024:px-2 overflow-x-hidden'
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}>

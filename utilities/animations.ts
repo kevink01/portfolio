@@ -56,3 +56,22 @@ export const sectionAnimation: Variants = {
 		},
 	},
 };
+
+export const profileAnimation = (direction: 1 | -1) => {
+	return {
+		hidden: {
+			opacity: 0,
+			x: 500 * direction,
+		},
+		show: {
+			opacity: [0, 0.1, 0.9, 1],
+			x: 0,
+			transition: {
+				type: 'spring',
+				stiffness: 100,
+				delay: 1,
+				duration: 1,
+			},
+		},
+	} as Variants;
+};

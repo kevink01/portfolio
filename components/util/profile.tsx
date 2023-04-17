@@ -3,6 +3,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import Kevin from '@/assets/images/Kevin.jpg';
 import Socials from './socials';
+import { profileAnimation } from '@/utilities/animations';
 
 function Profile() {
 	const [text] = useTypewriter({
@@ -20,57 +21,41 @@ function Profile() {
 	});
 
 	return (
-		<div className='flex flex-col tablet:flex-row 1024:flex-col items-center w-full h-full overflow-y-hidden'>
+		<motion.div
+			className='flex flex-col tablet:flex-row 1024:flex-col items-center w-full h-full overflow-y-hidden'
+			variants={profileAnimation(1)}
+			initial='hidden'
+			animate='show'>
 			<div className='flex justify-center items-center w-full h-full'>
 				<div className='relative flex items-center justify-center aspect-square min-h-32 h-4/5 max-h-150'>
-					<motion.div
-						className='absolute inset-0'
-						animate={{ scale: [1, 0.95, 0.9, 0.75, 0.5, 1] }}
-						transition={{ ease: 'linear', duration: 1.5 }}>
+					<div className='absolute inset-0'>
 						<motion.div
 							className='w-full h-full rounded-full border-2 border-primary'
 							animate={{ opacity: [0.1, 0.2, 0.25, 0.2, 0.1] }}
 							transition={{
 								duration: 3,
 								repeat: Infinity,
+								delay: 2,
 							}}></motion.div>
-					</motion.div>
-					<motion.div
-						className='absolute inset-5'
-						animate={{ scale: [1, 0.95, 0.9, 0.75, 0.5, 1] }}
-						transition={{ ease: 'linear', duration: 1.5 }}>
+					</div>
+					<div className='absolute inset-5'>
 						<motion.div
 							className='w-full h-full rounded-full border-2 border-primary'
 							animate={{ opacity: [0.9, 0.5, 0.1, 0.5, 0.9] }}
 							transition={{
 								duration: 3,
 								repeat: Infinity,
+								delay: 2,
 							}}></motion.div>
-					</motion.div>
+					</div>
 					<motion.img
 						className='w-auto h-2/3 rounded-full'
 						src={Kevin.src}
-						initial={{ opacity: 0 }}
-						animate={{
-							scale: [1, 0.95, 0.9, 0.75, 0.25, 1],
-							opacity: [0, 0.1, 0.2, 0.3, 0.5, 1],
-						}}
-						transition={{
-							ease: 'linear',
-							duration: 1.5,
-						}}></motion.img>
+						animate={{ opacity: [0, 0.1, 0.9, 1] }}
+						transition={{ ease: 'linear', duration: 2 }}></motion.img>
 				</div>
 			</div>
-			<motion.div
-				className='flex flex-col items-center justify-center w-full mb-1 1920:mb-5 space-y-1'
-				animate={{
-					scale: [1, 0.95, 0.9, 0.75, 0.25, 1],
-					opacity: [0, 0.1, 0.2, 0.3, 0.5, 1],
-				}}
-				transition={{
-					ease: 'linear',
-					duration: 1.5,
-				}}>
+			<div className='flex flex-col items-center justify-center w-full mb-1 1920:mb-5 space-y-1'>
 				<h1 className='flex items-end justify-center text-center px-2 text-xs mobile:text-base tablet:text-lg 1024:text-2xl 1536:text-3xl 2560:text-4xl text-white w-full h-10 1024:h-20'>
 					<span>{text}</span>
 					<Cursor cursorBlinking={true} cursorColor='#222BFF' />
@@ -89,8 +74,8 @@ function Profile() {
 						<Socials size={60} />
 					</div>
 				</div>
-			</motion.div>
-		</div>
+			</div>
+		</motion.div>
 	);
 }
 

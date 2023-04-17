@@ -30,7 +30,7 @@ function ExperienceCard() {
 			</motion.div>
 			<div className='relative flex-1 w-full'>
 				<motion.div
-					className='absolute flex flex-col inset-0 overflow-y-auto'
+					className='absolute flex flex-col inset-0 overflow-y-hidden'
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}

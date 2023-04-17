@@ -3,7 +3,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import Kevin from '@/assets/images/Kevin.jpg';
 import Socials from './socials';
-import { profileAnimation } from '@/utilities/animations';
+import { profileAnimation, viewportOptions } from '@/utilities/animations';
 
 function Profile() {
 	const [text] = useTypewriter({
@@ -25,7 +25,8 @@ function Profile() {
 			className='flex flex-col tablet:flex-row 1024:flex-col items-center w-full h-full overflow-y-hidden'
 			variants={profileAnimation(1)}
 			initial='hidden'
-			animate='show'>
+			whileInView='show'
+			viewport={viewportOptions}>
 			<div className='flex justify-center items-center w-full h-full'>
 				<div className='relative flex items-center justify-center aspect-square min-h-32 h-4/5 max-h-150'>
 					<div className='absolute inset-0'>

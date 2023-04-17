@@ -8,7 +8,7 @@ import {
 	PhoneIcon,
 	WrenchScrewdriverIcon,
 } from '@heroicons/react/24/solid';
-import { profileAnimation } from '@/utilities/animations';
+import { profileAnimation, viewportOptions } from '@/utilities/animations';
 
 function Terminal() {
 	return (
@@ -16,7 +16,8 @@ function Terminal() {
 			className='flex flex-col w-full h-full rounded-xl bg-[#262626] text-white'
 			variants={profileAnimation(-1)}
 			initial='hidden'
-			animate='show'>
+			whileInView='show'
+			viewport={viewportOptions}>
 			<div className='relative flex flex-row items-center w-full px-2 rounded-t-xl bg-[#2F2F2F]'>
 				<div className='absolute flex flex-row space-x-2 1536:space-x-3'>
 					<div className='terminal-icon bg-[#FE5E56]'></div>

@@ -75,3 +75,16 @@ export const profileAnimation = (direction: 1 | -1) => {
 		},
 	} as Variants;
 };
+
+export const contactAnimation: Variants = {
+	hidden: { opacity: 0, x: 500 },
+	show: {
+		opacity: 1,
+		x: 0,
+		transition: {
+			type: 'spring',
+			stiffness: 100,
+			duration: 1,
+		},
+	},
+};

@@ -154,13 +154,13 @@ function Contact() {
 						<Link
 							href="https://www.figma.com/file/okDNkHgGuEHoguZQ8VZRRU/Kevin-Kulich's-Web-Portfolio?t=gRQGzkHrlrEuHqcm-6"
 							target='_blank'>
-							<button className='flex flex-row items-center justify-between p-2 w-40 h-10 rounded-20 bg-secondary hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500'>
+							<button className='flex flex-row items-center justify-between p-2 w-40 h-10 rounded-20 bg-secondary motion-safe:hover:scale-105 hover:bg-secondaryHover motion-safe:transition ease-in-out motion-safe:duration-500'>
 								<Image src={Figma.src} width={24} height={24} alt='Figma' />
 								Figma Designs
 							</button>
 						</Link>
 						<Link href='https://github.com/kevink01/portfolio' target='_blank'>
-							<button className='flex flex-row items-center justify-between p-2 w-40 h-10 rounded-20 bg-secondary hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500'>
+							<button className='flex flex-row items-center justify-between p-2 w-40 h-10 rounded-20 bg-secondary motion-safe:hover:scale-105 hover:bg-secondaryHover motion-safe:transition ease-in-out motion-safe:duration-500'>
 								<Image src={Code.src} width={24} height={24} alt='Figma' />
 								Source code
 							</button>

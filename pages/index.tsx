@@ -4,7 +4,6 @@ import Projects from '@/components/projects';
 import Experiences from '@/components/experiences';
 import Skills from '@/components/skills';
 import Contact from '@/components/contact';
-import Test from '@/components/util/test';
 
 export default function Home() {
 	return (

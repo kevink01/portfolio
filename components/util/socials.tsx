@@ -40,7 +40,7 @@ function Socials({ size }: Props) {
 					target='_blank'
 					className={`w-[${size}px] h-[${size}px]`}>
 					<button
-						className='rounded-full bg-secondary motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-125 motion-safe:hover:opacity-70'
+						className='rounded-full bg-secondary motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-125 hover:opacity-70'
 						data-te-toggle='tooltip'
 						title='Download Resume'>
 						<Image src={Resume.src} width={size} height={size} alt='Resume' />

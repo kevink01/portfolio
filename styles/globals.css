@@ -20,7 +20,7 @@
 	}
 
 	.terminal-button {
-		@apply w-10 tablet:w-20 1024:w-24 1280:w-30 1536:w-36 1920:w-40 2560:w-48 h-10 2560:h-12 rounded-20 1920:text-lg 2560:text-xl bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover;
+		@apply w-10 tablet:w-20 1024:w-24 1280:w-30 1536:w-36 1920:w-40 2560:w-48 h-10 2560:h-12 rounded-20 1920:text-lg 2560:text-xl bg-secondary motion-safe:first-letter:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-110 hover:bg-secondaryHover truncate overflow-hidden;
 	}
 
 	.form-field-label {
@@ -36,7 +36,7 @@
 	}
 
 	.form-button {
-		@apply w-40 h-12 rounded-20 tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl bg-secondary hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 disabled:bg-secondary/50 disabled:scale-100;
+		@apply w-40 h-12 rounded-20 tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl bg-secondary motion-safe:hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 disabled:bg-secondary/50 disabled:scale-100 hover:bg-secondaryHover;
 	}
 
 	.carousel-button {
@@ -44,7 +44,7 @@
 	}
 
 	.social-link {
-		@apply w-1 h-1 rounded-full motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-125 motion-safe:hover:opacity-70;
+		@apply w-1 h-1 rounded-full motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-125 hover:opacity-70;
 	}
 
 	.skill-value-label {
@@ -53,9 +53,5 @@
 
 	.skill-progress-bar {
 		@apply rounded-r-xl motion-safe:hover:scale-[101%] motion-safe:hover:opacity-70 motion-safe:transition ease-in-out motion-safe:duration-500;
-	}
-
-	.skill-progress-label {
-		@apply flex justify-end items-start w-[10%] h-[25%] -skew-y-6 pr-2;
 	}
 }

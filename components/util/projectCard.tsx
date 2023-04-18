@@ -91,14 +91,14 @@ function ProjectCard({ delay }: Props) {
 					}}>
 					<motion.div variants={buttonAnimate}>
 						<Link href='#skills'>
-							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
+							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
 								Source code
 							</button>
 						</Link>
 					</motion.div>
 					<motion.div variants={buttonAnimate}>
 						<Link href='#skills'>
-							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary transition duration-500 ease-in-out hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
+							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
 								Live Demo
 							</button>
 						</Link>

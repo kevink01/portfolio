@@ -53,7 +53,7 @@ function Terminal() {
 			<div className='w-full h-1 bg-primary'></div>
 			<div className='flex flex-row justify-between items-center w-full h-16 px-2 rounded-b-xl'>
 				<Link href='#experience'>
-					<button className='terminal-button truncate overflow-hidden'>
+					<button className='terminal-button'>
 						<BuildingOfficeIcon
 							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto mx-2 h-3/5 1280:h-1/2'
 							aria-label='Experience'

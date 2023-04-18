@@ -53,39 +53,39 @@ function Terminal() {
 			<div className='w-full h-1 bg-primary'></div>
 			<div className='flex flex-row justify-between items-center w-full h-16 px-2 rounded-b-xl'>
 				<Link href='#experience'>
-					<button className='terminal-button'>
-						<p className='hidden tablet:inline'>Experience</p>
+					<button className='terminal-button truncate overflow-hidden'>
 						<BuildingOfficeIcon
-							className='inline tablet:hidden w-3/5 h-3/5'
+							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto mx-2 h-3/5 1280:h-1/2'
 							aria-label='Experience'
 						/>
+						<p className='hidden tablet:inline'>Experience</p>
 					</button>
 				</Link>
 				<Link href='#projects'>
 					<button className='terminal-button'>
-						<p className='hidden tablet:inline'>Projects</p>
 						<ComputerDesktopIcon
-							className='inline tablet:hidden w-3/5 h-3/5'
+							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto mx-2 h-3/5 1280:h-1/2'
 							aria-label='Projects'
 						/>
+						<p className='hidden tablet:inline'>Projects</p>
 					</button>
 				</Link>
 				<Link href='#skills'>
 					<button className='terminal-button'>
-						<p className='hidden tablet:inline'>Skills</p>
 						<WrenchScrewdriverIcon
-							className='inline tablet:hidden w-3/5 h-3/5'
+							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto mx-2 h-3/5 1280:h-1/2'
 							aria-label='Skills'
 						/>
+						<p className='hidden tablet:inline'>Skills</p>
 					</button>
 				</Link>
 				<Link href='#contact'>
 					<button className='terminal-button'>
-						<p className='hidden tablet:inline'>Contact</p>
 						<PhoneIcon
-							className='inline tablet:hidden w-3/5 h-3/5'
+							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto mx-2 h-3/5 1280:h-1/2'
 							aria-label='Skills'
 						/>
+						<p className='hidden tablet:inline'>Contact</p>
 					</button>
 				</Link>
 			</div>

@@ -22,13 +22,13 @@ function Profile() {
 
 	return (
 		<motion.div
-			className='flex flex-col tablet:flex-row 1024:flex-col items-center w-full h-full overflow-y-hidden'
+			className='flex flex-col items-center w-full h-full overflow-hidden'
 			variants={profileAnimation(1)}
 			initial='hidden'
 			whileInView='show'
 			viewport={viewportOptions}>
 			<div className='flex justify-center items-center w-full h-full'>
-				<div className='relative flex items-center justify-center aspect-square min-h-32 h-4/5 max-h-150'>
+				<div className='relative flex items-center justify-center aspect-square min-h-32 h-4/5 max-h-96 1536:max-h-150'>
 					<div className='absolute inset-0'>
 						<motion.div
 							className='w-full h-full rounded-full border-2 border-primary'
@@ -50,7 +50,7 @@ function Profile() {
 							}}></motion.div>
 					</div>
 					<motion.img
-						className='w-auto h-2/3 rounded-full'
+						className='w-auto h-2/3 tablet:h-1/2 1280:h-2/3 rounded-full'
 						src={Kevin.src}
 						animate={{ opacity: [0, 0.1, 0.9, 1] }}
 						transition={{ ease: 'linear', duration: 2 }}></motion.img>

@@ -16,18 +16,18 @@ export default function Home() {
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 
-				<link rel='apple' sizes='76x76' href='/apple.png' />
+				<link rel='apple' sizes='76x76' href='/portfolio-apple.png' />
 				<link
 					rel='icon'
 					type='image/png'
 					sizes='32x32'
-					href='/favicon-32.png'
+					href='/portfolio-favicon-32.png'
 				/>
 				<link
 					rel='icon'
 					type='image/png'
 					sizes='16x16'
-					href='/favicon-16.png'
+					href='/portfolio-favicon-16.png'
 				/>
 				<link rel='manifest' href='/site.webmanifest' />
 				<meta name='msapplication-TileColor' content='#da532c' />

@@ -2,11 +2,7 @@ import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
-import {
-	contactAnimation,
-	profileAnimation,
-	viewportOptions,
-} from '@/utilities/animations';
+import { contactAnimation, profileAnimation, viewportOptions } from '@/utilities/animations';
 import Figma from '@/assets/images/Figma.png';
 import Code from '@/assets/images/Code.png';
 import Image from 'next/image';
@@ -32,17 +28,17 @@ function Contact() {
 	};
 
 	return (
-		<div className='flex flex-col items-center justify-center w-screen h-screen text-white overflow-y-hidden'>
-			<div className='flex flex-col items-center justify-center flex-1 w-full px-4'>
+		<div className='flex flex-col overflow-y-hidden w-screen h-screen'>
+			<div className='flex-1 flex flex-col items-center w-full px-4'>
 				<motion.div
-					className='relative w-full max-w-2xl min-h-32 h-full max-h-240 my-4 bg-card rounded-20'
+					className='bg-card rounded-20 relative w-full max-w-2xl min-h-32 h-full max-h-240 my-4'
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					transition={{ ease: 'linear', duration: 0.5 }}
 					viewport={viewportOptions}>
-					<div className='absolute inset-y-0 inset-x-2 flex flex-col py-2 overflow-y-auto overflow-x-hidden'>
+					<div className='absolute inset-x-2 inset-y-0 flex flex-col overflow-x-hidden overflow-y-auto py-2'>
 						<motion.div
-							className='space-y-1 text-center'
+							className='text-center space-y-1'
 							initial={{ opacity: 0, x: 500 }}
 							whileInView={{
 								opacity: 1,
@@ -58,19 +54,19 @@ function Contact() {
 							<h1 className='hidden tablet:inline text-xl tablet:text-2xl 1024:text-3xl 1536:text-4xl 2560:text-5xl'>
 								Heard enough?
 							</h1>
-							<h3 className='mt-4 tablet:mt-0 text-lg tablet:text-xl 1024:text-2xl 1536:text-3xl 2560:text-4xl'>
+							<h3 className='tablet:mt-0 text-lg tablet:text-xl 1024:text-2xl 1536:text-3xl 2560:text-4xl mt-4'>
 								Contact me!
 							</h3>
 						</motion.div>
 						<motion.div
-							className='flex-1 w-9/10 h-full mx-auto pb-2'
+							className='flex-1 w-full h-full mx-auto px-4 pb-2'
 							initial='hidden'
 							whileInView='show'
 							viewport={{ once: true, amount: 'all' }}
 							transition={{ staggerChildren: 0.35, delayChildren: 1 }}>
 							<form
 								onSubmit={handleSubmit(sendEmail)}
-								className='flex flex-col space-y-2 w-full h-full p-5 rounded-20 bg-card'>
+								className='bg-card rounded-20 flex flex-col space-y-2 w-full h-full'>
 								<motion.div className='form-field' variants={contactAnimation}>
 									<label className='form-field-label'>Name</label>
 									<input
@@ -87,22 +83,20 @@ function Contact() {
 										{...register('subject', { required: true, maxLength: 50 })}
 										className='form-field-input'></input>
 								</motion.div>
-								<motion.div
-									className='flex flex-1 form-field'
-									variants={contactAnimation}>
+								<motion.div className='flex flex-1 form-field' variants={contactAnimation}>
 									<label className='form-field-label'>Message</label>
 									<textarea
 										placeholder='I liked your portfolio!'
 										{...register('message', { required: true })}
-										className='flex-1 min-h-10 form-message'></textarea>
+										className='form-field-input flex-1 min-h-10 resize-none'></textarea>
 								</motion.div>
-								<motion.div
-									className='flex justify-center items-end h-20 py-2'
-									variants={contactAnimation}>
+								<motion.div className='flex justify-center items-end h-20 py-2' variants={contactAnimation}>
 									<button
 										type='submit'
 										disabled={!isDirty || !isValid}
-										className='form-button'>
+										className='bg-secondary rounded-20 w-40 h-12 tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl
+													hover:bg-secondaryHover disabled:bg-secondary/50 disabled:hover:scale-100 
+													motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-105'>
 										Email
 									</button>
 								</motion.div>
@@ -112,27 +106,21 @@ function Contact() {
 				</motion.div>
 			</div>
 			<motion.div
-				className='flex justify-center w-full h-full max-h-32 bg-zinc-900'
+				className='bg-zinc-900 flex justify-center w-full h-full max-h-32'
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				viewport={{ once: true, amount: 'all' }}
 				transition={{ ease: 'linear', duration: 0.5 }}>
 				<motion.div
-					className='flex flex-row justify-between w-full max-w-2xl py-2 px-4 1024:px-2 overflow-x-hidden'
+					className='flex justify-between w-full max-w-2xl overflow-x-hidden px-4 1024:px-2 py-2'
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}>
-					<motion.div
-						className='flex flex-col justify-start'
-						variants={profileAnimation(1)}>
-						<Link
-							href='https://www.linkedin.com/in/kevin-kulich/'
-							target='_blank'>
+					<motion.div className='flex flex-col justify-start' variants={profileAnimation(1)}>
+						<Link href='https://www.linkedin.com/in/kevin-kulich/' target='_blank'>
 							<button className='flex items-center space-x-2 h-12 border-b-2 border-gray-500'>
-								<UserCircleIcon className='h-2/3 text-secondary' />
-								<span className='flex items-center h-full tracking-wider'>
-									LinkedIn
-								</span>
+								<UserCircleIcon className='text-secondary h-2/3' />
+								<span className='tracking-wide'>LinkedIn</span>
 							</button>
 						</Link>
 
@@ -141,27 +129,23 @@ function Contact() {
 							onClick={() => {
 								window.location.href = 'mailto:kakulich01@gmail.com';
 							}}>
-							<AtSymbolIcon className='h-2/3 text-secondary' />
-							<span className='flex items-center h-full tracking-wider'>
-								kakulich01@gmail.com
-							</span>
+							<AtSymbolIcon className='text-secondary h-2/3' />
+							<span className='tracking-wide'>kakulich01@gmail.com</span>
 						</button>
 					</motion.div>
-					<motion.div
-						className='flex flex-col items-center justify-start space-y-4'
-						variants={profileAnimation(-1)}>
+					<motion.div className='flex flex-col justify-start space-y-4' variants={profileAnimation(-1)}>
 						{/* TODO Figma link */}
 						<Link
 							href="https://www.figma.com/file/okDNkHgGuEHoguZQ8VZRRU/Kevin-Kulich's-Web-Portfolio?t=gRQGzkHrlrEuHqcm-6"
 							target='_blank'>
-							<button className='flex flex-row items-center justify-between p-2 w-40 h-10 rounded-20 bg-secondary motion-safe:hover:scale-105 hover:bg-secondaryHover motion-safe:transition ease-in-out motion-safe:duration-500'>
-								<Image src={Figma.src} width={24} height={24} alt='Figma' />
+							<button className='bg-secondary rounded-20 flex w-40 h-10 p-2 hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
+								<Image className='mr-1' src={Figma.src} width={24} height={24} alt='Figma' />
 								Figma Designs
 							</button>
 						</Link>
 						<Link href='https://github.com/kevink01/portfolio' target='_blank'>
-							<button className='flex flex-row items-center justify-between p-2 w-40 h-10 rounded-20 bg-secondary motion-safe:hover:scale-105 hover:bg-secondaryHover motion-safe:transition ease-in-out motion-safe:duration-500'>
-								<Image src={Code.src} width={24} height={24} alt='Figma' />
+							<button className='bg-secondary rounded-20 flex w-40 h-10 p-2 hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
+								<Image className='mr-1' src={Code.src} width={24} height={24} alt='Figma' />
 								Source code
 							</button>
 						</Link>

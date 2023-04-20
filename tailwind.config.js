@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		'./app/**/*.{js,ts,jsx,tsx}',
-		'./pages/**/*.{js,ts,jsx,tsx}',
-		'./components/**/*.{js,ts,jsx,tsx}',
-	],
+	content: ['./app/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		screens: {
 			// Credit: https://screensizemap.com/
@@ -69,6 +65,7 @@ module.exports = {
 				32: '8rem',
 			},
 			scale: {
+				98: '98%',
 				102: '102%',
 			},
 			width: {

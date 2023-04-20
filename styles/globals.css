@@ -3,55 +3,40 @@
 @tailwind utilities;
 
 @layer components {
-	.main {
-		/* Solution for snapping: https://css-tricks.com/practical-css-scroll-snapping/ */
-		@apply basis-2/4 h-screen overflow-scroll scroll-smooth snap-y snap-mandatory font-mono bg-[#121212] select-none;
+	.section {
+		@apply overflow-y-hidden snap-center snap-always;
 	}
 
-	.section {
-		@apply snap-center snap-always overflow-y-hidden;
+	.social-link {
+		@apply rounded-full w-1 h-1 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125;
+	}
+
+	.terminal-icon {
+		@apply rounded-full w-2 mobile:w-3 tablet:w-4 2560:w-5 h-2 mobile:h-3 tablet:h-4 2560:h-5;
+	}
+
+	.terminal-button {
+		@apply bg-secondary text-card overflow-hidden rounded-20 w-10 tablet:w-20 1024:w-24 1280:w-30 1536:w-36 1920:w-40 2560:w-48 h-10 2560:h-12 
+				1920:text-lg 2560:text-xl truncate 
+				hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110;
+	}
+
+	.carousel-button {
+		@apply w-10 1024:w-12 1536:w-14 2560:w-16 h-10 1024:h-12 1536:h-14 2560:h-16 
+				opacity-50 motion-reduce:opacity-100 motion-safe:hover:opacity-100 disabled:opacity-25
+				motion-safe:transition-all motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125;
 	}
 
 	.form-field {
 		@apply flex flex-col space-y-2;
 	}
-	.terminal-icon {
-		@apply w-2 mobile:w-3 tablet:w-4 2560:w-5 h-2 mobile:h-3 tablet:h-4 2560:h-5 rounded-full;
-	}
-
-	.terminal-button {
-		@apply w-10 tablet:w-20 1024:w-24 1280:w-30 1536:w-36 1920:w-40 2560:w-48 h-10 2560:h-12 rounded-20 1920:text-lg 2560:text-xl bg-secondary motion-safe:first-letter:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-110 hover:bg-secondaryHover truncate overflow-hidden;
-	}
 
 	.form-field-label {
-		@apply font-serif text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl tracking-widest;
+		@apply font-serif tracking-widest text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl;
 	}
 
 	.form-field-input {
-		@apply px-2 py-2 rounded-lg bg-zinc-700 motion-safe:hover:scale-95 motion-safe:focus:scale-105 1024:motion-safe:focus:scale-102 motion-safe:transition ease-in-out motion-safe:duration-500 focus:outline-none;
-	}
-
-	.form-message {
-		@apply form-field-input resize-none;
-	}
-
-	.form-button {
-		@apply w-40 h-12 rounded-20 tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl bg-secondary motion-safe:hover:scale-105 motion-safe:transition ease-in-out motion-safe:duration-500 disabled:bg-secondary/50 disabled:scale-100 hover:bg-secondaryHover;
-	}
-
-	.carousel-button {
-		@apply w-10 1024:w-12 1536:w-14 2560:w-16 h-10 1024:h-12 1536:h-14 2560:h-16 motion-safe:transition-all ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125 motion-safe:hover:opacity-100 motion-reduce:opacity-100 opacity-50 disabled:opacity-25;
-	}
-
-	.social-link {
-		@apply w-1 h-1 rounded-full motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-125 hover:opacity-70;
-	}
-
-	.skill-value-label {
-		@apply flex justify-end items-center h-full pr-5 text-xl;
-	}
-
-	.skill-progress-bar {
-		@apply rounded-r-xl motion-safe:hover:scale-[101%] motion-safe:hover:opacity-70 motion-safe:transition ease-in-out motion-safe:duration-500;
+		@apply bg-zinc-700 rounded-lg px-2 py-2 focus:outline-none
+				motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-98 motion-safe:focus:scale-102;
 	}
 }

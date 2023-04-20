@@ -4,12 +4,7 @@ import Link from 'next/link';
 import Technologies from './technologies';
 import Picture from '@/assets/images/spotify.png';
 import { Variants, motion } from 'framer-motion';
-import {
-	delayDividerAnimation,
-	dividerAnimation,
-	sectionAnimation,
-	viewportOptions,
-} from '@/utilities/animations';
+import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
 
 type Props = {
 	delay: number;
@@ -27,7 +22,7 @@ function ProjectCard({ delay }: Props) {
 
 	return (
 		<motion.div
-			className='flex flex-col flex-shrink-0 w-full h-full py-2 rounded-20 bg-gradient-to-b from-card/50 via-primary/10 to-primary'
+			className='bg-gradient-to-b from-card/50 via-primary/10 to-primary rounded-20 flex flex-col flex-shrink-0 w-full h-full py-2'
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			viewport={viewportOptions}
@@ -41,31 +36,22 @@ function ProjectCard({ delay }: Props) {
 				<motion.div className='flex justify-center' variants={sectionAnimation}>
 					<Image src={Picture.src} alt='Spotify' width={150} height={150} />
 				</motion.div>
-				<motion.div
-					className='w-full px-2 text-center text-xl'
-					variants={sectionAnimation}>
-					<p className='line-clamp-2'>
-						Very long Project Title that will overflow
-					</p>
+				<motion.div className='text-center w-full px-2 text-xl' variants={sectionAnimation}>
+					<p className='line-clamp-2'>Very long Project Title that will overflow</p>
 				</motion.div>
-				<motion.div
-					className='h-1 bg-primary/75'
-					variants={dividerAnimation}></motion.div>
+				<motion.div className='bg-primary/75 h-1' variants={dividerAnimation}></motion.div>
 				<div className='relative flex-1'>
 					<div className='absolute inset-0 overflow-y-auto'>
 						<motion.div variants={sectionAnimation}>
-							<p className='tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl font-bold'>
-								Project description:
-							</p>
+							<p className='font-bold tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl'>Project description:</p>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Consectetur repudiandae placeat error asperiores quod tempore
-								accusamus atque hic deleniti quos, ea quasi? Animi dolores ipsa
-								incidunt unde inventore necessitatibus maxime!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repudiandae placeat error
+								asperiores quod tempore accusamus atque hic deleniti quos, ea quasi? Animi dolores ipsa incidunt unde
+								inventore necessitatibus maxime!
 							</p>
 						</motion.div>
 						<motion.div
-							className='tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl font-bold'
+							className='font-bold tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl'
 							variants={sectionAnimation}>
 							<Technologies size={30} />
 						</motion.div>
@@ -74,13 +60,13 @@ function ProjectCard({ delay }: Props) {
 			</motion.div>
 			<div className='space-y-1'>
 				<motion.div
-					className='h-1 bg-black/75'
+					className='bg-black/75 h-1'
 					variants={delayDividerAnimation(delay)}
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}></motion.div>
 				<motion.div
-					className='flex flex-row justify-center space-x-2 w-full h-full'
+					className='flex justify-center space-x-2 1024:space-x-4 w-full h-full'
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}
@@ -91,14 +77,20 @@ function ProjectCard({ delay }: Props) {
 					}}>
 					<motion.div variants={buttonAnimate}>
 						<Link href='#skills'>
-							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
+							<button
+								className='bg-secondary rounded-20 w-30 tablet:w-40 1536:w-44 h-10 2560:h-12
+											tablet:text-lg 1024:text-lg 1536:text-xl
+											hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
 								Source code
 							</button>
 						</Link>
 					</motion.div>
 					<motion.div variants={buttonAnimate}>
 						<Link href='#skills'>
-							<button className='w-20 tablet:w-30 1536:w-40 2560:w-60 h-10 2560:h-12 rounded-20 bg-secondary motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-110 hover:bg-secondaryHover text-sm tablet:text-base 1024:text-lg 1536:text-xl 2560:text-2xl'>
+							<button
+								className='bg-secondary rounded-20 w-30 tablet:w-40 1536:w-44 h-10 2560:h-12
+											tablet:text-lg 1024:text-lg 1536:text-xl
+											hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
 								Live Demo
 							</button>
 						</Link>

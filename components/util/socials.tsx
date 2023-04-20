@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import Resume from '@/assets/images/resume.png';
 
@@ -10,7 +9,7 @@ type Props = {
 
 function Socials({ size }: Props) {
 	return (
-		<div className='flex flex-row py-4 tablet:py-2 px-2 space-x-1 mobile:space-x-2 1024:space-x-4'>
+		<div className='flex flex-row space-x-1 mobile:space-x-2 1024:space-x-4 px-2 py-4 tablet:py-2'>
 			<div className='w-px h-px'></div> {/* Spacing */}
 			<SocialIcon
 				url='https://www.linkedin.com/in/kevin-kulich/'
@@ -22,25 +21,21 @@ function Socials({ size }: Props) {
 			<SocialIcon
 				url='https://github.com/kevink01'
 				target='_blank'
-				style={{ height: size, width: size }}
+				style={{ width: size, height: size }}
 				bgColor='#B77A03'
 				className='social-link'
 			/>
 			<SocialIcon
 				network='email'
 				url='#contact'
-				style={{ height: size, width: size }}
+				style={{ width: size, height: size }}
 				bgColor='#B77A03'
 				className='social-link'
 			/>
-			<div style={{ height: size, width: size }}>
-				<Link
-					download
-					href={`/Kevin Kulich Resume.pdf`}
-					target='_blank'
-					className={`w-[${size}px] h-[${size}px]`}>
+			<div style={{ width: size, height: size }}>
+				<Link download href={`/Kevin Kulich Resume.pdf`} target='_blank'>
 					<button
-						className='rounded-full bg-secondary motion-safe:transition motion-safe:duration-500 ease-in-out motion-safe:hover:scale-125 hover:opacity-70'
+						className='bg-secondary rounded-full hover:opacity-70 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125'
 						data-te-toggle='tooltip'
 						title='Download Resume'>
 						<Image src={Resume.src} width={size} height={size} alt='Resume' />

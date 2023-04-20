@@ -43,10 +43,10 @@ const progressAnimation = (progress: number, delay: number) => {
 
 function Skill({ name, progress, color, delay }: Props) {
 	return (
-		<div className='flex flex-row space-x-3'>
-			<div className='flex items-center justify-end w-1/4 overflow-x-hidden text-right h-full pr-2'>
+		<div className='flex items-center space-x-3'>
+			<div className='flex justify-end items-center text-right align-bottom overflow-x-hidden w-1/4 h-full pr-2'>
 				<motion.span
-					className='w-full overflow-x-hidden truncate'
+					className='overflow-x-hidden truncate w-full'
 					variants={progressLabelAnimation(delay)}
 					initial='hidden'
 					animate='show'
@@ -56,7 +56,7 @@ function Skill({ name, progress, color, delay }: Props) {
 			</div>
 			<div className='w-3/4'>
 				<motion.div
-					className='skill-progress-bar'
+					className='rounded-l-md rounded-r-xl motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-[101%] motion-safe:hover:opacity-50'
 					variants={progressAnimation(progress, delay)}
 					initial='hidden'
 					whileInView='show'
@@ -65,7 +65,7 @@ function Skill({ name, progress, color, delay }: Props) {
 						backgroundColor: `#${color}`,
 					}}>
 					<motion.span
-						className='skill-value-label'
+						className='flex justify-end items-center h-full pr-5 text-xl'
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						viewport={viewportOptions}

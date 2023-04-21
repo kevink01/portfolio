@@ -5,26 +5,13 @@ export const viewportOptions: {
 	amount: number | 'all' | 'some' | undefined;
 } = {
 	once: true,
-	amount: 'all',
+	amount: 0.1,
 };
 
 export const dividerAnimation: Variants = {
 	hidden: { scaleX: '0%' },
 	show: {
 		scaleX: '100%',
-		transition: {
-			ease: 'linear',
-			duration: 1,
-		},
-	},
-};
-
-export const infoAnimation: Variants = {
-	hidden: { opacity: 0, x: -50, y: 50 },
-	show: {
-		opacity: 1,
-		x: 0,
-		y: 0,
 		transition: {
 			ease: 'linear',
 			duration: 1,
@@ -57,11 +44,11 @@ export const sectionAnimation: Variants = {
 	},
 };
 
-export const profileAnimation = (direction: 1 | -1) => {
+export const springAnimation = (direction: 1 | -1, delay: number | null) => {
 	return {
 		hidden: {
 			opacity: 0,
-			x: 500 * direction,
+			x: 250 * direction,
 		},
 		show: {
 			opacity: [0, 0.1, 0.9, 1],
@@ -69,22 +56,9 @@ export const profileAnimation = (direction: 1 | -1) => {
 			transition: {
 				type: 'spring',
 				stiffness: 100,
-				delay: 1,
+				delay: delay,
 				duration: 1,
 			},
 		},
 	} as Variants;
-};
-
-export const contactAnimation: Variants = {
-	hidden: { opacity: 0, x: 500 },
-	show: {
-		opacity: 1,
-		x: 0,
-		transition: {
-			type: 'spring',
-			stiffness: 100,
-			duration: 1,
-		},
-	},
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
-import { motion } from 'framer-motion';
-import { contactAnimation, profileAnimation, viewportOptions } from '@/utilities/animations';
+import { Variants, motion } from 'framer-motion';
+import { springAnimation, viewportOptions } from '@/utilities/animations';
 import Figma from '@/assets/images/Figma.png';
 import Code from '@/assets/images/Code.png';
 import Image from 'next/image';
@@ -27,6 +27,19 @@ function Contact() {
 		reset();
 	};
 
+	const contactAnimation: Variants = {
+		hidden: { opacity: 0, x: 250 },
+		show: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				type: 'spring',
+				stiffness: 100,
+				duration: 1,
+			},
+		},
+	};
+
 	return (
 		<div className='flex flex-col overflow-y-hidden w-screen h-screen'>
 			<div className='flex-1 flex flex-col items-center w-full px-4'>
@@ -36,21 +49,13 @@ function Contact() {
 					whileInView={{ opacity: 1 }}
 					transition={{ ease: 'linear', duration: 0.5 }}
 					viewport={viewportOptions}>
-					<div className='absolute inset-x-2 inset-y-0 flex flex-col overflow-x-hidden overflow-y-auto py-2'>
-						<motion.div
-							className='text-center space-y-1'
-							initial={{ opacity: 0, x: 500 }}
-							whileInView={{
-								opacity: 1,
-								x: 0,
-							}}
-							viewport={{ once: true, amount: 'some' }}
-							transition={{
-								type: 'spring',
-								stiffness: 100,
-								duration: 1,
-								delay: 0.5,
-							}}>
+					<motion.div
+						className='absolute inset-x-2 inset-y-0 flex flex-col overflow-x-hidden overflow-y-auto py-2'
+						initial='hidden'
+						whileInView='show'
+						viewport={viewportOptions}
+						transition={{ ease: 'linear', staggerChildren: 0.5 }}>
+						<motion.div className='text-center space-y-1' variants={contactAnimation}>
 							<h1 className='hidden tablet:inline text-xl tablet:text-2xl 1024:text-3xl 1536:text-4xl 2560:text-5xl'>
 								Heard enough?
 							</h1>
@@ -58,12 +63,7 @@ function Contact() {
 								Contact me!
 							</h3>
 						</motion.div>
-						<motion.div
-							className='flex-1 w-full h-full mx-auto px-4 pb-2'
-							initial='hidden'
-							whileInView='show'
-							viewport={{ once: true, amount: 'all' }}
-							transition={{ staggerChildren: 0.35, delayChildren: 1 }}>
+						<motion.div className='flex-1 w-full h-full mx-auto px-4 pb-2'>
 							<form
 								onSubmit={handleSubmit(sendEmail)}
 								className='bg-card rounded-20 flex flex-col space-y-2 w-full h-full'>
@@ -100,21 +100,21 @@ function Contact() {
 								</motion.div>
 							</form>
 						</motion.div>
-					</div>
+					</motion.div>
 				</motion.div>
 			</div>
 			<motion.div
 				className='bg-zinc-900 flex justify-center w-full h-full max-h-32'
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
-				viewport={{ once: true, amount: 'all' }}
-				transition={{ ease: 'linear', duration: 0.5 }}>
+				viewport={viewportOptions}
+				transition={{ duration: 0.5, ease: 'linear' }}>
 				<motion.div
 					className='flex justify-between w-full max-w-2xl overflow-x-hidden px-4 1024:px-2 py-2'
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}>
-					<motion.div className='flex flex-col justify-start' variants={profileAnimation(1)}>
+					<motion.div className='flex flex-col justify-start' variants={springAnimation(1, 0.5)}>
 						<Link href='https://www.linkedin.com/in/kevin-kulich/' target='_blank'>
 							<button className='flex items-center space-x-2 h-12 border-b-2 border-gray-500'>
 								<UserCircleIcon className='text-secondary h-2/3' />
@@ -131,7 +131,7 @@ function Contact() {
 							<span className='tracking-wide'>kakulich01@gmail.com</span>
 						</button>
 					</motion.div>
-					<motion.div className='flex flex-col justify-start space-y-4' variants={profileAnimation(-1)}>
+					<motion.div className='flex flex-col justify-start space-y-4' variants={springAnimation(-1, 0.5)}>
 						{/* TODO Figma link */}
 						<Link
 							href="https://www.figma.com/file/okDNkHgGuEHoguZQ8VZRRU/Kevin-Kulich's-Web-Portfolio?t=gRQGzkHrlrEuHqcm-6"

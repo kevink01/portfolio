@@ -9,7 +9,7 @@ type Props = {
 
 function Socials({ size }: Props) {
 	return (
-		<div className='flex flex-row space-x-1 mobile:space-x-2 1024:space-x-4 px-2 py-4 tablet:py-2'>
+		<div className='flex flex-row space-x-1 mobile:space-x-2 1024:space-x-4 px-2 py-2 tablet:py-2'>
 			<div className='w-px h-px'></div> {/* Spacing */}
 			<SocialIcon
 				url='https://www.linkedin.com/in/kevin-kulich/'

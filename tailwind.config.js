@@ -6,6 +6,7 @@ module.exports = {
 			// Credit: https://screensizemap.com/
 			mobile: '320px',
 			tablet: '480px',
+			680: '680px',
 			1024: '1024px',
 			1280: '1280px',
 			1536: '1536px',

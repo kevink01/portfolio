@@ -1,15 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
-import { Cursor } from 'react-simple-typewriter';
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { BuildingOfficeIcon, ComputerDesktopIcon, PhoneIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/solid';
-import { profileAnimation, viewportOptions } from '@/utilities/animations';
+import { springAnimation, viewportOptions } from '@/utilities/animations';
 
 function Terminal() {
+	const [text] = useTypewriter({
+		words: [
+			'System.out.println("Hello World!");',
+			'My name is Kevin Kulich!',
+			'<Full-stack-developer/>',
+			"console.log('TypeScript enjoyer')",
+			'🎱-ball enthusiast',
+		],
+		loop: false,
+		typeSpeed: 50,
+		deleteSpeed: 20,
+		delaySpeed: 2000,
+	});
 	return (
 		<motion.div
 			className='bg-[#262626] text-white rounded-xl flex flex-col w-full h-full'
-			variants={profileAnimation(-1)}
+			variants={springAnimation(-1, 1)}
 			initial='hidden'
 			whileInView='show'
 			viewport={viewportOptions}>
@@ -39,8 +52,9 @@ function Terminal() {
 				</p>
 			</div>
 			<div className='text-xs mobile:text-base tablet:text-lg 1024:text-xl 1920:text-2xl'>
-				<span>$</span>
-				<Cursor cursorColor='#222BFF' />
+				<span className='text-primary'>$ </span>
+				<span>{text}</span>
+				<Cursor cursorBlinking={true} cursorColor='#222BFF' />
 			</div>
 			<div className='w-full h-1 bg-primary'></div>
 			<div className='rounded-b-xl flex flex-row justify-between items-center w-full h-16 px-4'>

@@ -10,13 +10,13 @@ function ExperienceCard() {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			viewport={viewportOptions}
-			transition={{ ease: 'linear', duration: 0.5 }}>
+			transition={{ duration: 0.5, ease: 'linear' }}>
 			<motion.div
 				className='flex flex-col text-center py-2'
 				initial='hidden'
 				whileInView='show'
 				viewport={viewportOptions}
-				transition={{ staggerChildren: 0.5, ease: 'linear' }}>
+				transition={{ ease: 'linear', staggerChildren: 0.5 }}>
 				<motion.p className='pb-1' variants={sectionAnimation}>
 					Information Technology Intern and Consultant blah blah
 				</motion.p>
@@ -29,9 +29,9 @@ function ExperienceCard() {
 					whileInView='show'
 					viewport={viewportOptions}
 					transition={{
-						staggerChildren: 0.5,
 						ease: 'linear',
 						delayChildren: 1,
+						staggerChildren: 0.5,
 					}}>
 					<motion.div className='w-full' variants={sectionAnimation}>
 						<p className='italic tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl'>

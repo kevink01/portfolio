@@ -16,7 +16,7 @@
 	}
 
 	.terminal-button {
-		@apply bg-secondary text-card overflow-hidden rounded-20 w-10 tablet:w-20 1024:w-24 1280:w-32 1536:w-36 1920:w-40 2560:w-48 h-10 2560:h-12 1920:text-lg 2560:text-xl truncate hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110;
+		@apply bg-secondary text-card overflow-hidden rounded-20 w-10 tablet:w-20 680:w-28 1024:w-24 1280:w-32 1536:w-36 1920:w-40 2560:w-48 h-10 2560:h-12 1920:text-lg 2560:text-xl truncate hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110;
 	}
 
 	.carousel-button {

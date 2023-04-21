@@ -16,7 +16,7 @@ function ProjectCard({ delay }: Props) {
 		show: {
 			opacity: 1,
 			y: 0,
-			transition: { ease: 'linear', duration: 0.5 },
+			transition: { duration: 0.5, ease: 'linear' },
 		},
 	};
 
@@ -26,14 +26,14 @@ function ProjectCard({ delay }: Props) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			viewport={viewportOptions}
-			transition={{ ease: 'linear', duration: 0.5 }}>
+			transition={{ duration: 0.5, ease: 'linear' }}>
 			<div className='absolute inset-x-0.5 inset-y-0 flex flex-col overflow-y-auto py-2'>
 				<motion.div
 					className='flex flex-col flex-1'
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}
-					transition={{ staggerChildren: 0.5, ease: 'linear' }}>
+					transition={{ ease: 'linear', staggerChildren: 0.5 }}>
 					<motion.div className='flex justify-center' variants={sectionAnimation}>
 						<Image src={Picture.src} alt='Spotify' width={150} height={150} />
 					</motion.div>

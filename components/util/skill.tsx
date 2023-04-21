@@ -14,7 +14,7 @@ const progressLabelAnimation = (delay: number) => {
 		hidden: { opacity: 0 },
 		show: {
 			opacity: 1,
-			transition: { ease: 'linear', duration: 1, delay: delay * 0.2 },
+			transition: { delay: delay * 0.2, duration: 1, ease: 'linear' },
 		},
 	} as Variants;
 };
@@ -33,9 +33,9 @@ const progressAnimation = (progress: number, delay: number) => {
 				`${progress}%`,
 			],
 			transition: {
-				ease: 'linear',
 				delay: delay * 0.2,
 				duration: 1,
+				ease: 'linear',
 			},
 		},
 	} as Variants;
@@ -49,7 +49,7 @@ function Skill({ name, progress, color, delay }: Props) {
 					className='overflow-x-hidden truncate w-full'
 					variants={progressLabelAnimation(delay)}
 					initial='hidden'
-					animate='show'
+					whileInView='show'
 					viewport={viewportOptions}>
 					{name}
 				</motion.span>
@@ -69,7 +69,7 @@ function Skill({ name, progress, color, delay }: Props) {
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						viewport={viewportOptions}
-						transition={{ ease: 'linear', delay: delay * 0.2, duration: 0.5 }}>
+						transition={{ delay: delay * 0.2, duration: 0.5, ease: 'linear' }}>
 						{progress}%
 					</motion.span>
 				</motion.div>

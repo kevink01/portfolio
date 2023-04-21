@@ -1,7 +1,6 @@
-import React from 'react';
-import Profile from './util/profile';
-import Terminal from './util/terminal';
 import { motion } from 'framer-motion';
+import Profile from './WelcomeProfile';
+import Terminal from './WelcomeTerminal';
 import { viewportOptions } from '@/utilities/animations';
 
 function Welcome() {

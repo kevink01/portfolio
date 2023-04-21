@@ -1,6 +1,5 @@
-import React from 'react';
-import Technologies from './technologies';
 import { motion } from 'framer-motion';
+import Technologies from './Technologies';
 import { dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
 
 function ExperienceCard() {

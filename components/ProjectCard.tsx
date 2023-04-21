@@ -1,10 +1,9 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Technologies from './technologies';
-import Picture from '@/assets/images/spotify.png';
 import { Variants, motion } from 'framer-motion';
 import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
+import Technologies from './Technologies';
+import Picture from '@/public/images/spotify.png';
 
 type Props = {
 	delay: number;

@@ -1,6 +1,5 @@
-import { viewportOptions } from '@/utilities/animations';
 import { Variants, motion } from 'framer-motion';
-import React from 'react';
+import { viewportOptions } from '@/utilities/animations';
 
 type Props = {
 	name: string;

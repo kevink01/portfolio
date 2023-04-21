@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import ProjectCard from './util/projectCard';
+import { useState } from 'react';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
+import ProjectCard from './ProjectCard';
 
 function Projects() {
 	const max: number = 3;

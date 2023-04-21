@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import ExperienceCard from './util/experiencecard';
+import { useState } from 'react';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
+import ExperienceCard from './ExperienceCard';
 
 function Experiences() {
 	const max: number = 3;

@@ -1,6 +1,5 @@
-import React from 'react';
-import Skill from './util/skill';
 import { motion } from 'framer-motion';
+import Skill from './Skill';
 import { viewportOptions } from '@/utilities/animations';
 
 function Skills() {

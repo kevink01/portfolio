@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import Kevin from '@/assets/images/Kevin.jpg';
-import Socials from './socials';
+import Socials from './Socials';
+import Kevin from '@/public/images/Kevin.jpg';
 import { springAnimation, viewportOptions } from '@/utilities/animations';
 
 function Profile() {

@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
-import VScode from '@/assets/images/vscode.png';
+import VScode from '@/public/images/vscode.png';
 
 type Props = {
 	size: number;

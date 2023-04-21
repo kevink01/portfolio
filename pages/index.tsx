@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Welcome from '@/components/welcome';
-import Projects from '@/components/projects';
-import Experiences from '@/components/experiences';
-import Skills from '@/components/skills';
-import Contact from '@/components/contact';
+import Welcome from '@/components/Welcome';
+import Experiences from '@/components/Experiences';
+import Projects from '@/components/Projects';
+import Skills from '@/components/Skills';
+import Contact from '@/components/Contact';
 
 export default function Home() {
 	return (

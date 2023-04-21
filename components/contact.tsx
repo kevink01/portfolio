@@ -1,12 +1,11 @@
-import React from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
-import { Variants, motion } from 'framer-motion';
-import { springAnimation, viewportOptions } from '@/utilities/animations';
-import Figma from '@/assets/images/Figma.png';
-import Code from '@/assets/images/Code.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Variants, motion } from 'framer-motion';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
+import { springAnimation, viewportOptions } from '@/utilities/animations';
+import Code from '@/public/images/Code.png';
+import Figma from '@/public/images/Figma.png';
 
 type Inputs = {
 	name: string;

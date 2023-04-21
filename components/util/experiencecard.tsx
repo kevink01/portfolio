@@ -24,7 +24,7 @@ function ExperienceCard() {
 			</motion.div>
 			<div className='relative flex-1 w-full'>
 				<motion.div
-					className='absolute inset-0 flex flex-col overflow-y-hidden'
+					className='absolute inset-x-0.5 inset-y-0 flex flex-col overflow-y-auto'
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}
@@ -54,8 +54,8 @@ function ExperienceCard() {
 					</motion.div>
 					<motion.div className='flex flex-col w-full h-full' variants={sectionAnimation}>
 						<p className='font-bold tablet:text-lg 1024:text-xl 1536:text-2xl'>Responsibilities:</p>
-						<div className='relative flex-1'>
-							<div className='absolute inset-x-0 top-0.5 bottom-1 overflow-y-auto w-full'>
+						<div className='relative flex-1 min-h-32'>
+							<div className='absolute inset-x-2 top-0.5 bottom-1 overflow-y-auto'>
 								<ul className='marker:text-white list-disc list-outside pl-4 1024:pl-6 pr-2 text-sm tablet:text-base 1024:text-lg 1536:text-xl'>
 									<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
 									<li>

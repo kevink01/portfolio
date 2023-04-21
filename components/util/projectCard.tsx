@@ -77,20 +77,14 @@ function ProjectCard({ delay }: Props) {
 					}}>
 					<motion.div variants={buttonAnimate}>
 						<Link href='#skills'>
-							<button
-								className='bg-secondary rounded-20 w-30 tablet:w-40 1536:w-44 h-10 2560:h-12
-											tablet:text-lg 1024:text-lg 1536:text-xl
-											hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
+							<button className='bg-secondary rounded-20 w-28 tablet:w-40 1536:w-44 h-10 2560:h-12 tablet:text-lg 1024:text-lg 1536:text-xl hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
 								Source code
 							</button>
 						</Link>
 					</motion.div>
 					<motion.div variants={buttonAnimate}>
 						<Link href='#skills'>
-							<button
-								className='bg-secondary rounded-20 w-30 tablet:w-40 1536:w-44 h-10 2560:h-12
-											tablet:text-lg 1024:text-lg 1536:text-xl
-											hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
+							<button className='bg-secondary rounded-20 w-28 tablet:w-40 1536:w-44 h-10 2560:h-12 tablet:text-lg 1024:text-lg 1536:text-xl hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
 								Live Demo
 							</button>
 						</Link>

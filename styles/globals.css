@@ -16,15 +16,11 @@
 	}
 
 	.terminal-button {
-		@apply bg-secondary text-card overflow-hidden rounded-20 w-10 tablet:w-20 1024:w-24 1280:w-30 1536:w-36 1920:w-40 2560:w-48 h-10 2560:h-12 
-				1920:text-lg 2560:text-xl truncate 
-				hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110;
+		@apply bg-secondary text-card overflow-hidden rounded-20 w-10 tablet:w-20 1024:w-24 1280:w-32 1536:w-36 1920:w-40 2560:w-48 h-10 2560:h-12 1920:text-lg 2560:text-xl truncate hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110;
 	}
 
 	.carousel-button {
-		@apply w-10 1024:w-12 1536:w-14 2560:w-16 h-10 1024:h-12 1536:h-14 2560:h-16 
-				opacity-50 motion-reduce:opacity-100 motion-safe:hover:opacity-100 disabled:opacity-25
-				motion-safe:transition-all motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125;
+		@apply w-10 1024:w-12 1280:w-14 2560:w-16 h-10 1024:h-12 1536:h-14 2560:h-16 opacity-50 motion-reduce:opacity-100 motion-safe:hover:opacity-100 disabled:opacity-25 motion-safe:transition-all motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125;
 	}
 
 	.form-field {
@@ -36,7 +32,6 @@
 	}
 
 	.form-field-input {
-		@apply bg-zinc-700 rounded-lg px-2 py-2 focus:outline-none
-				motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-98 motion-safe:focus:scale-102;
+		@apply bg-zinc-700 rounded-lg px-2 py-2 focus:outline-none motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-98 motion-safe:focus:scale-102;
 	}
 }

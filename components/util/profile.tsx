@@ -27,7 +27,7 @@ function Profile() {
 			whileInView='show'
 			viewport={viewportOptions}>
 			<div className='flex justify-center items-center w-full h-full'>
-				<div className='relative flex justify-center items-center aspect-square min-h-32 h-4/5 max-h-96 1536:max-h-150'>
+				<div className='relative flex justify-center items-center aspect-square min-h-32 h-4/5 max-h-96 1536:max-h-144'>
 					<div className='absolute inset-0'>
 						<motion.div
 							className='w-full h-full rounded-full border-2 border-primary'

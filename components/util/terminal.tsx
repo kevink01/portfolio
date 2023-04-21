@@ -43,41 +43,49 @@ function Terminal() {
 				<Cursor cursorColor='#222BFF' />
 			</div>
 			<div className='w-full h-1 bg-primary'></div>
-			<div className='rounded-b-xl flex flex-row justify-between items-center w-full h-16 px-2'>
+			<div className='rounded-b-xl flex flex-row justify-between items-center w-full h-16 px-4'>
 				<Link href='#experience'>
 					<button className='terminal-button'>
-						<BuildingOfficeIcon
-							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto h-3/5 1280:h-1/2 mx-2'
-							aria-label='Experience'
-						/>
-						<p className='hidden tablet:inline'>Experience</p>
+						<div className='flex justify-center items-center w-full h-full'>
+							<BuildingOfficeIcon
+								className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto h-3/5 1280:h-1/2 mx-2'
+								aria-label='Experience'
+							/>
+							<p className='hidden tablet:inline truncate p-2 1280:p-0 1280:pr-1'>Experience</p>
+						</div>
 					</button>
 				</Link>
 				<Link href='#projects'>
 					<button className='terminal-button'>
-						<ComputerDesktopIcon
-							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto h-3/5 1280:h-1/2 mx-2'
-							aria-label='Projects'
-						/>
-						<p className='hidden tablet:inline'>Projects</p>
+						<div className='flex justify-center items-center w-full h-full'>
+							<ComputerDesktopIcon
+								className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto h-3/5 1280:h-1/2 mx-2'
+								aria-label='Projects'
+							/>
+							<p className='hidden tablet:inline truncate p-2 1280:p-0 1280:pr-1'>Projects</p>
+						</div>
 					</button>
 				</Link>
 				<Link href='#skills'>
 					<button className='terminal-button'>
-						<WrenchScrewdriverIcon
-							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto h-3/5 1280:h-1/2 mx-2'
-							aria-label='Skills'
-						/>
-						<p className='hidden tablet:inline'>Skills</p>
+						<div className='flex justify-center items-center w-full h-full'>
+							<WrenchScrewdriverIcon
+								className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto h-3/5 1280:h-1/2 mx-2'
+								aria-label='Skills'
+							/>
+							<p className='hidden tablet:inline truncate p-2 1280:p-0 1280:pr-1'>Skills</p>
+						</div>
 					</button>
 				</Link>
 				<Link href='#contact'>
 					<button className='terminal-button'>
-						<PhoneIcon
-							className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto h-3/5 1280:h-1/2 mx-2'
-							aria-label='Skills'
-						/>
-						<p className='hidden tablet:inline'>Contact</p>
+						<div className='flex justify-center items-center w-full h-full'>
+							<PhoneIcon
+								className='inline tablet:hidden 1280:inline w-3/5 1280:w-auto h-3/5 1280:h-1/2 mx-2'
+								aria-label='Skills'
+							/>
+							<p className='hidden tablet:inline truncate p-2 1280:p-0 1280:pr-1'>Contact</p>
+						</div>
 					</button>
 				</Link>
 			</div>

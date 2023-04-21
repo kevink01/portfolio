@@ -94,9 +94,7 @@ function Contact() {
 									<button
 										type='submit'
 										disabled={!isDirty || !isValid}
-										className='bg-secondary rounded-20 w-40 h-12 tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl
-													hover:bg-secondaryHover disabled:bg-secondary/50 disabled:hover:scale-100 
-													motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-105'>
+										className='bg-secondary rounded-20 w-40 h-12 tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl hover:bg-secondaryHover disabled:bg-secondary/50 disabled:hover:scale-100 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-105'>
 										Email
 									</button>
 								</motion.div>

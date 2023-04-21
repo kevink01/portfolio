@@ -37,7 +37,7 @@ function Projects() {
 				{/* Tutorial found on: https://youtu.be/XJSOgV4VELk*/}
 				<div className='relative flex-1 flex flex-row items-center overflow-hidden h-full'>
 					<div
-						className='flex w-full h-full max-h-150 motion-safe:transition-transform motion-safe:ease-out motion-safe:duration-500'
+						className='flex w-full h-full max-h-176 motion-safe:transition-transform motion-safe:ease-out motion-safe:duration-500'
 						style={{ transform: `translateX(-${index * 100}%)` }}>
 						<ProjectCard key={1} delay={1} />
 						<ProjectCard key={2} delay={1.4} />

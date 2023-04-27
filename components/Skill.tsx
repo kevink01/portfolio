@@ -1,5 +1,6 @@
 import { Variants, motion } from 'framer-motion';
 import { viewportOptions } from '@/utilities/animations';
+import fontColorContrast from 'font-color-contrast';
 
 type Props = {
 	name: string;
@@ -65,6 +66,7 @@ function Skill({ name, progress, color, delay }: Props) {
 					}}>
 					<motion.span
 						className='flex justify-end items-center h-full pr-5 text-xl'
+						style={{ color: fontColorContrast(color) }}
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						viewport={viewportOptions}

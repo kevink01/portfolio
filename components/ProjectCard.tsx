@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Variants, motion } from 'framer-motion';
 import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
 import Technologies from './Technologies';
-import Picture from '@/public/images/spotify.png';
+import Picture from '@/public/images/Discord.png';
 
 type Props = {
 	delay: number;
@@ -34,7 +34,7 @@ function ProjectCard({ delay }: Props) {
 					viewport={viewportOptions}
 					transition={{ ease: 'linear', staggerChildren: 0.5 }}>
 					<motion.div className='flex justify-center' variants={sectionAnimation}>
-						<Image src={Picture.src} alt='Spotify' width={150} height={150} />
+						<Image className='rounded-2xl' src={Picture.src} alt='Spotify' width={150} height={150} />
 					</motion.div>
 					<motion.div className='text-center w-full px-2 text-xl' variants={sectionAnimation}>
 						<p className='line-clamp-2'>Very long Project Title that will overflow</p>

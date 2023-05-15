@@ -7,7 +7,7 @@ import Contact from '@/components/Contact';
 
 export default function Home() {
 	return (
-		<div className='bg-[#121212] font-mono overflow-scroll h-screen scroll-smooth snap-y snap-mandatory basis-2/4 select-none'>
+		<div className='bg-[#121212] font-mono overflow-scroll h-screen scrollbar scrollbar-track-gray-900 scrollbar-thumb-primary scroll-smooth snap-y snap-mandatory basis-2/4 select-none'>
 			{/* ^^ Solution for snapping: https://css-tricks.com/practical-css-scroll-snapping/ ^^ */}
 			<Head>
 				<title>Kevin Kulich&apos;s Portfolio</title>

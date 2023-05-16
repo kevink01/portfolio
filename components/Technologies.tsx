@@ -1,22 +1,22 @@
 import Image from 'next/image';
-import VScode from '@/public/images/vscode.png';
+import { createURL } from '@/sanity';
+import { Skill } from '@/typings';
 
 type Props = {
 	size: number;
+	technologies: Skill[];
 };
 
-function Technologies({ size }: Props) {
+function Technologies({ size, technologies }: Props) {
 	return (
 		<div>
 			<p>Technologies used:</p>
 			<div className='flex flex-row flex-wrap mobile:justify-start space-x-1 1920:space-x-2 w-full'>
-				<Image src={VScode.src} width={size} height={size} alt='Tech' />
-				<Image src={VScode.src} width={size} height={size} alt='Tech' />
-				<Image src={VScode.src} width={size} height={size} alt='Tech' />
-				<Image src={VScode.src} width={size} height={size} alt='Tech' />
-				<Image src={VScode.src} width={size} height={size} alt='Tech' />
-				<Image src={VScode.src} width={size} height={size} alt='Tech' />
-				<Image src={VScode.src} width={size} height={size} alt='Tech' />
+				{technologies?.map((technology) => {
+					return (
+						<Image key={technology._id} src={createURL(technology.image).url()} width={size} height={size} alt='Tech' />
+					);
+				})}
 			</div>
 		</div>
 	);

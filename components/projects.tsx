@@ -1,9 +1,14 @@
 import { useState } from 'react';
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
 import ProjectCard from './ProjectCard';
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
+import { Project } from '@/typings';
 
-function Projects() {
-	const max: number = 3;
+type Props = {
+	projects: Project[];
+};
+
+function Projects({ projects }: Props) {
+	const max: number = projects.length;
 	const [transitioning, setTransitioning] = useState<boolean>(false);
 	const [index, setIndex] = useState<number>(0);
 
@@ -39,9 +44,12 @@ function Projects() {
 					<div
 						className='flex w-full h-full max-h-176 motion-safe:transition-transform motion-safe:ease-out motion-safe:duration-500'
 						style={{ transform: `translateX(-${index * 100}%)` }}>
-						<ProjectCard key={1} delay={1} />
+						{projects.map((project, i) => {
+							return <ProjectCard key={project._id} delay={i === 0 ? 1 : 1.4} project={project} />;
+						})}
+						{/* <ProjectCard key={1} delay={1} />
 						<ProjectCard key={2} delay={1.4} />
-						<ProjectCard key={3} delay={1.4} />
+						<ProjectCard key={3} delay={1.4} /> */}
 					</div>
 				</div>
 				<div className='flex ml-2'>

@@ -1,9 +1,14 @@
 import { useState } from 'react';
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
 import ExperienceCard from './ExperienceCard';
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
+import { Experience } from '@/typings';
 
-function Experiences() {
-	const max: number = 3;
+type Props = {
+	experiences: Experience[];
+};
+
+function Experiences({ experiences }: Props) {
+	const max: number = experiences?.length;
 	const [transitioning, setTransitioning] = useState<boolean>(false);
 	const [index, setIndex] = useState<number>(0);
 
@@ -39,9 +44,9 @@ function Experiences() {
 					<div
 						className={`flex w-full h-full max-h-176 motion-safe:transition-transform motion-safe:ease-out motion-safe:duration-500`}
 						style={{ transform: `translateX(-${index * 100}%)` }}>
-						<ExperienceCard />
-						<ExperienceCard />
-						<ExperienceCard />
+						{experiences?.map((experience) => {
+							return <ExperienceCard key={experience._id} experience={experience} />;
+						})}
 					</div>
 				</div>
 				<div className='flex ml-2'>

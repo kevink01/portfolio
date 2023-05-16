@@ -2,17 +2,16 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { BuildingOfficeIcon, ComputerDesktopIcon, PhoneIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/solid';
+import { PageInfo } from '@/typings';
 import { springAnimation, viewportOptions } from '@/utilities/animations';
 
-function Terminal() {
+type Props = {
+	pageInfo: PageInfo;
+};
+
+function Terminal({ pageInfo }: Props) {
 	const [text] = useTypewriter({
-		words: [
-			'System.out.println("Hello World!");',
-			'My name is Kevin Kulich!',
-			'<Full-stack-developer/>',
-			"console.log('TypeScript enjoyer')",
-			'🎱-ball enthusiast',
-		],
+		words: pageInfo?.typings ?? ['My name is Kevin!', 'Enjoy my profile!'],
 		loop: false,
 		typeSpeed: 50,
 		deleteSpeed: 20,
@@ -32,23 +31,13 @@ function Terminal() {
 					<div className='bg-[#26C940] terminal-icon'></div>
 				</div>
 				<span className='flex justify-center items-center w-full text-xs mobile:text-base tablet:text-lg 1024:text-2xl 1536:text-3xl 2560:text-4xl'>
-					Kevin Kulich
+					{pageInfo.name}
 				</span>
 			</div>
 			<div className='1920:flex flex-1 1920:flex-col space-y-1 1920:space-y-2 overflow-y-auto w-full h-3/4 1024:h-auto pt-px px-px 1920:px-2 text-xs mobile:text-base tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl'>
-				<p>
-					Hello, my name is Kevin Kulich and I&apos;m currently a 3rd year computer science major at Michigan
-					Technological University, with a minor in Mathematics.
-				</p>
-				<p>
-					I have been a programmer for over 4 years, with a passion for front-end development. I have a wide range of
-					programming languages that I&apos;m familiar with, including Python (my first language), Java, and TypeScript
-					(my favorite language). I like to program some personal projects on the side to express my interests in
-					programming.
-				</p>
-				<p>
-					Besides programming personal projects, I enjoy playing bowling and pool, watching sitcoms, and going on hikes.
-				</p>
+				{pageInfo?.bio.map((section, i) => {
+					return <p key={`bio-${i}`}>{section}</p>;
+				})}
 			</div>
 			<div className='text-xs mobile:text-base tablet:text-lg 1024:text-xl 1920:text-2xl'>
 				<span className='text-primary'>$ </span>

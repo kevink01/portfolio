@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import Profile from './WelcomeProfile';
 import Terminal from './WelcomeTerminal';
+import { PageInfo } from '@/typings';
 import { viewportOptions } from '@/utilities/animations';
 
-function Welcome() {
+type Props = {
+	pageInfo: PageInfo;
+};
+
+function Welcome({ pageInfo }: Props) {
 	return (
 		<div className='flex items-center justify-center h-screen'>
 			<motion.div
@@ -13,10 +18,10 @@ function Welcome() {
 				viewport={viewportOptions}
 				transition={{ duration: 1, ease: 'linear' }}>
 				<div className='flex jusitfy-center items-center overflow-hidden w-full 1024:w-2/5 h-1/2 1024:h-full'>
-					<Profile />
+					<Profile pageInfo={pageInfo} />
 				</div>
 				<div className='flex justify-center items-center overflow-hidden w-full 1024:w-3/5 h-1/2 1024:h-full p-2'>
-					<Terminal />
+					<Terminal pageInfo={pageInfo} />
 				</div>
 			</motion.div>
 		</div>

@@ -4,8 +4,17 @@ import Experiences from '@/components/Experiences';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
+import { Experience, PageInfo, Project, Skill } from '@/typings';
+import { getExperiences, getPageInfo, getProjects, getSkills } from '@/util';
 
-export default function Home() {
+type Props = {
+	experiences: Experience[];
+	pageInfo: PageInfo;
+	projects: Project[];
+	skills: Skill[];
+};
+
+export default function Home({ experiences, pageInfo, projects, skills }: Props) {
 	return (
 		<div className='bg-[#121212] font-mono overflow-scroll h-screen scrollbar scrollbar-track-gray-900 scrollbar-thumb-primary scroll-smooth snap-y snap-mandatory basis-2/4 select-none'>
 			{/* ^^ Solution for snapping: https://css-tricks.com/practical-css-scroll-snapping/ ^^ */}
@@ -23,22 +32,39 @@ export default function Home() {
 			<main className='text-white'>
 				<div className='h-px'></div> {/* Header for snapping */}
 				<section id='home' className='section'>
-					<Welcome />
+					<Welcome pageInfo={pageInfo} />
 				</section>
 				<section id='experience' className='section'>
-					<Experiences />
+					<Experiences experiences={experiences} />
 				</section>
 				<section id='projects' className='section'>
-					<Projects />
+					<Projects projects={projects} />
 				</section>
 				<section id='skills' className='section'>
-					<Skills />
+					<Skills skills={skills} />
 				</section>
 				<section id='contact' className='section'>
-					<Contact />
+					<Contact pageInfo={pageInfo} />
 				</section>
 				<div className='h-px'></div> {/* Footer for snapping */}
 			</main>
 		</div>
 	);
+}
+
+export async function getStaticProps() {
+	const experiences = await getExperiences();
+	const pageInfo = await getPageInfo();
+	const projects = await getProjects();
+	const skills = await getSkills();
+
+	return {
+		props: {
+			experiences,
+			pageInfo,
+			projects,
+			skills,
+		},
+		revalidate: 60,
+	};
 }

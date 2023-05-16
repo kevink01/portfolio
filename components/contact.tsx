@@ -3,9 +3,10 @@ import Link from 'next/link';
 import { Variants, motion } from 'framer-motion';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
-import { springAnimation, viewportOptions } from '@/utilities/animations';
 import Code from '@/public/images/Code.png';
 import Figma from '@/public/images/Figma.png';
+import { PageInfo } from '@/typings';
+import { springAnimation, viewportOptions } from '@/utilities/animations';
 
 type Inputs = {
 	name: string;
@@ -13,7 +14,11 @@ type Inputs = {
 	message: string;
 };
 
-function Contact() {
+type Props = {
+	pageInfo: PageInfo;
+};
+
+function Contact({ pageInfo }: Props) {
 	const {
 		handleSubmit,
 		register,
@@ -22,7 +27,7 @@ function Contact() {
 	} = useForm<Inputs>();
 
 	const sendEmail: SubmitHandler<Inputs> = (data) => {
-		window.location.href = `mailto:kakulich01@gmail.com?subject=${data.subject}&body=${data.message}`;
+		window.location.href = `mailto:${pageInfo.email}?subject=${data.subject}&body=${data.message}`;
 		reset();
 	};
 
@@ -124,23 +129,23 @@ function Contact() {
 						<button
 							className='flex items-center space-x-2 h-12 border-b-2 border-gray-500'
 							onClick={() => {
-								window.location.href = 'mailto:kakulich01@gmail.com';
+								window.location.href = `mailto:${pageInfo.email}`;
 							}}>
 							<AtSymbolIcon className='text-secondary h-2/3' />
-							<span className='tracking-wide'>kakulich01@gmail.com</span>
+							<span className='tracking-wide'>{pageInfo.email}</span>
 						</button>
 					</motion.div>
 					<motion.div className='flex flex-col justify-start space-y-4' variants={springAnimation(-1, 0.5)}>
 						{/* TODO Figma link */}
-						<Link
-							href="https://www.figma.com/file/okDNkHgGuEHoguZQ8VZRRU/Kevin-Kulich's-Web-Portfolio?t=gRQGzkHrlrEuHqcm-6"
-							target='_blank'>
-							<button className='bg-secondary rounded-20 flex w-40 h-10 p-2 hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
-								<Image className='mr-1' src={Figma.src} width={24} height={24} alt='Figma' />
-								Figma Designs
-							</button>
-						</Link>
-						<Link href='https://github.com/kevink01/portfolio' target='_blank'>
+						{pageInfo?.figmaURL && (
+							<Link href={pageInfo.figmaURL} target='_blank'>
+								<button className='bg-secondary rounded-20 flex w-40 h-10 p-2 hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
+									<Image className='mr-1' src={Figma.src} width={24} height={24} alt='Figma' />
+									Figma Designs
+								</button>
+							</Link>
+						)}
+						<Link href={pageInfo.sourceCodeURL} target='_blank'>
 							<button className='bg-secondary rounded-20 flex w-40 h-10 p-2 hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
 								<Image className='mr-1' src={Code.src} width={24} height={24} alt='Figma' />
 								Source code

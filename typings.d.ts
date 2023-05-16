@@ -42,6 +42,7 @@ export interface PageInfo extends SanityBody {
 	name: string;
 	profilePic: Image;
 	resume: File;
+	resumeURL: string;
 	socials: Social[];
 	sourceCodeURL: string;
 	typings: string[];

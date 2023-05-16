@@ -1,6 +1,5 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { sanityClient } from '@/sanity';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { sanityClient } from '@/sanity';
 import { groq } from 'next-sanity';
 import { Project } from 'typings';
 
@@ -16,6 +15,10 @@ type Data = {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-	const projects: Project[] = await sanityClient.fetch(query);
-	res.status(200).json({ projects });
+	try {
+		const projects: Project[] = await sanityClient.fetch(query);
+		res.status(200).json({ projects });
+	} catch {
+		res.status(400).json({ projects: [] });
+	}
 }

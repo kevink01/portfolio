@@ -44,15 +44,17 @@ export const sectionAnimation: Variants = {
 	},
 };
 
-export const springAnimation = (direction: 1 | -1, delay: number | null) => {
+export const springAnimation = (direction: -1 | 1 | 2, delay: number | null) => {
 	return {
 		hidden: {
 			opacity: 0,
-			x: 250 * direction,
+			x: direction !== 2 ? 250 * direction : 0,
+			y: direction === 2 ? -50 * Math.abs(direction - 1) : 0,
 		},
 		show: {
 			opacity: [0, 0.1, 0.9, 1],
 			x: 0,
+			y: 0,
 			transition: {
 				type: 'spring',
 				stiffness: 100,

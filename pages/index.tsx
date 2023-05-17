@@ -30,7 +30,7 @@ export default function Home({ experiences, pageInfo, projects, skills }: Props)
 				<meta name='theme-color' content='#ffffff' />
 			</Head>
 			<main className='text-white'>
-				<div className='h-px'></div> {/* Header for snapping */}
+				<div className='h-px' id='header'></div> {/* Header for snapping */}
 				<section id='home' className='section'>
 					<Welcome pageInfo={pageInfo} />
 				</section>
@@ -46,7 +46,7 @@ export default function Home({ experiences, pageInfo, projects, skills }: Props)
 				<section id='contact' className='section'>
 					<Contact pageInfo={pageInfo} />
 				</section>
-				<div className='h-px'></div> {/* Footer for snapping */}
+				<div className='h-px' id='footer'></div> {/* Footer for snapping */}
 			</main>
 		</div>
 	);

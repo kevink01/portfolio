@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Variants, motion } from 'framer-motion';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
+import { ArrowLongUpIcon, AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import Code from '@/public/images/Code.png';
 import Figma from '@/public/images/Figma.png';
 import { PageInfo } from '@/typings';
@@ -122,7 +122,7 @@ function Contact({ pageInfo }: Props) {
 						<Link href='https://www.linkedin.com/in/kevin-kulich/' target='_blank'>
 							<button className='flex items-center space-x-2 h-12 border-b-2 border-gray-500'>
 								<UserCircleIcon className='text-secondary h-2/3' />
-								<span className='tracking-wide'>LinkedIn</span>
+								<span className='tracking-wide text-sm'>LinkedIn</span>
 							</button>
 						</Link>
 
@@ -132,21 +132,32 @@ function Contact({ pageInfo }: Props) {
 								window.location.href = `mailto:${pageInfo.email}`;
 							}}>
 							<AtSymbolIcon className='text-secondary h-2/3' />
-							<span className='tracking-wide'>{pageInfo.email}</span>
+							<span className='hidden tablet:inline tracking-wide text-sm'>{pageInfo.email}</span>
+							<span className='inline tablet:hidden tracking-wide text-sm'>email</span>
 						</button>
+					</motion.div>
+					<motion.div className='flex items-center h-full' variants={springAnimation(2, 0.5)}>
+						<div className='flex items-center justify-center w-12 tablet:w-16 1280:w-16 h-12 tablet:h-16 1280:h-16 bg-gray-900 rounded-full'>
+							<Link href='#' onClick={() => document.getElementById('header')?.scrollIntoView()}>
+								<button className='animate-bounce'>
+									<ArrowLongUpIcon className='inline tablet:hidden text-white' width={30} height={30} />
+									<ArrowLongUpIcon className='hidden tablet:inline text-white' width={40} height={40} />
+								</button>
+							</Link>
+						</div>
 					</motion.div>
 					<motion.div className='flex flex-col justify-start space-y-4' variants={springAnimation(-1, 0.5)}>
 						{/* TODO Figma link */}
 						{pageInfo?.figmaURL && (
 							<Link href={pageInfo.figmaURL} target='_blank'>
-								<button className='bg-secondary rounded-20 flex w-40 h-10 p-2 hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
+								<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-sm mobile:text-base hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
 									<Image className='mr-1' src={Figma.src} width={24} height={24} alt='Figma' />
 									Figma Designs
 								</button>
 							</Link>
 						)}
 						<Link href={pageInfo.sourceCodeURL} target='_blank'>
-							<button className='bg-secondary rounded-20 flex w-40 h-10 p-2 hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
+							<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-sm mobile:text-base hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
 								<Image className='mr-1' src={Code.src} width={24} height={24} alt='Figma' />
 								Source code
 							</button>

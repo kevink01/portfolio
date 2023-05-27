@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Variants, motion } from 'framer-motion';
-import Technologies from './Technologies';
+import Technologies from './technologies';
 import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
 import { createURL } from '@/sanity';
 import { Project } from '@/typings';

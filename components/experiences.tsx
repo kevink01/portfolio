@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ExperienceCard from './ExperienceCard';
+import ExperienceCard from './experienceCard';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
 import { Experience } from '@/typings';
 

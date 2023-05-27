@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import Profile from './WelcomeProfile';
-import Terminal from './WelcomeTerminal';
+import Profile from './welcomeProfile';
+import Terminal from './welcomeTerminal';
 import { PageInfo } from '@/typings';
 import { viewportOptions } from '@/utilities/animations';
 

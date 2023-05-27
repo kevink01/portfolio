@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Technologies from './Technologies';
+import Technologies from './technologies';
 import { Experience } from '@/typings';
 import { dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
 

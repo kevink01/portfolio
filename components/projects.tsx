@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ProjectCard from './ProjectCard';
+import ProjectCard from './projectCard';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
 import { Project } from '@/typings';
 

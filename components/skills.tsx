@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Skill from './Skill';
+import Skill from './skill';
 import { Skill as SkillType } from '@/typings';
 import { viewportOptions } from '@/utilities/animations';
 

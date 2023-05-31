@@ -34,4 +34,8 @@
 	.form-field-input {
 		@apply bg-zinc-700 rounded-lg px-2 py-2 focus:outline-none motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-98 motion-safe:focus:scale-102;
 	}
+
+	.tooltip {
+		@apply absolute top-full right-0 text-center whitespace-nowrap bg-gray-700 rounded-20 p-2 mt-1 group-hover:visible group-hover:opacity-100 transition duration-500;
+	}
 }

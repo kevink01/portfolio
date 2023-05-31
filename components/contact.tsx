@@ -6,7 +6,7 @@ import { ArrowLongUpIcon, AtSymbolIcon, UserCircleIcon } from '@heroicons/react/
 import Code from '@/public/images/Code.png';
 import Figma from '@/public/images/Figma.png';
 import { PageInfo } from '@/typings';
-import { springAnimation, viewportOptions } from '@/utilities/animations';
+import { springAnimation, viewportOptions } from '@/util/animations';
 
 type Inputs = {
 	name: string;

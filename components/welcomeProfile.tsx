@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { createURL } from '@/sanity';
 import Socials from './socials';
 import { PageInfo } from '@/typings';
-import { springAnimation, viewportOptions } from '@/utilities/animations';
+import { springAnimation, viewportOptions } from '@/util/animations';
 
 type Props = {
 	pageInfo: PageInfo;

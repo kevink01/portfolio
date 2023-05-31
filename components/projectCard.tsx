@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Variants, motion } from 'framer-motion';
-import { Tooltip } from 'react-tooltip';
+import { CalendarDaysIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
 import Technologies from './technologies';
-import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
+import Tooltip from './tooltip';
+import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/util/animations';
 import { createURL } from '@/sanity';
 import { Project } from '@/typings';
-import { CalendarDaysIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
 
 type Props = {
 	delay: number;
@@ -24,9 +24,6 @@ function ProjectCard({ delay, project }: Props) {
 		},
 	};
 
-	const [progressOpen, setProgressOpen] = useState<boolean>(false);
-	const [completedOpen, setCompletedOpen] = useState<boolean>(false);
-
 	return (
 		<motion.div
 			className='relative bg-gradient-to-b from-card/10 via-primary/30 to-primary rounded-20 flex flex-col flex-shrink-0 w-full h-full py-2'
@@ -35,28 +32,16 @@ function ProjectCard({ delay, project }: Props) {
 			viewport={viewportOptions}
 			transition={{ duration: 0.5, ease: 'linear' }}>
 			{(project.isCompleted || project.isInProgress) && (
-				<div className='absolute top-2 right-4 tablet:right-2 z-10 text-primary'>
+				<div className='absolute top-2 right-4 tablet:right-2 z-10'>
 					{project.isInProgress && (
-						<>
-							<CalendarDaysIcon
-								height={32}
-								data-tooltip-id={`progress-tooltip-${project._id}`}
-								data-tooltip-content='In progress'
-								onClick={() => setProgressOpen((prev) => !prev)}
-							/>
-							<Tooltip id={`progress-tooltip-${project._id}`} place='bottom' clickable={true} isOpen={progressOpen} />
-						</>
+						<Tooltip text='In progress'>
+							<CalendarDaysIcon height={32} className='text-primary' />
+						</Tooltip>
 					)}
 					{project.isCompleted && (
-						<>
-							<CheckCircleIcon
-								height={32}
-								data-tooltip-id={`completed-tooltip-${project._id}`}
-								data-tooltip-content='Is completed'
-								onClick={() => setCompletedOpen((prev) => !prev)}
-							/>
-							<Tooltip id={`completed-tooltip-${project._id}`} place='bottom' clickable={true} isOpen={completedOpen} />
-						</>
+						<Tooltip text='Is completed'>
+							<CheckCircleIcon height={32} className='text-primary' />
+						</Tooltip>
 					)}
 				</div>
 			)}

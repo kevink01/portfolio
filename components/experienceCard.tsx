@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Technologies from './technologies';
 import { Experience } from '@/typings';
-import { dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
+import { dividerAnimation, sectionAnimation, viewportOptions } from '@/util/animations';
 
 type Props = {
 	experience: Experience;

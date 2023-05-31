@@ -1,6 +1,6 @@
 import fontColorContrast from 'font-color-contrast';
 import { Variants, motion } from 'framer-motion';
-import { viewportOptions } from '@/utilities/animations';
+import { viewportOptions } from '@/util/animations';
 import { Skill } from '@/typings';
 import { createURL } from '@/sanity';
 

@@ -7,8 +7,6 @@ import Contact from '@/components/contact';
 import { Experience, PageInfo, Project, Skill } from '@/typings';
 import { getExperiences, getPageInfo, getProjects, getSkills } from '@/util';
 
-import 'react-tooltip/dist/react-tooltip.css'; // Tooltip CSS
-
 type Props = {
 	experiences: Experience[];
 	pageInfo: PageInfo;

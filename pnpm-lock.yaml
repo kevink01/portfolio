@@ -49,6 +49,9 @@ dependencies:
   react-social-icons:
     specifier: ^5.15.0
     version: 5.15.0(react@18.2.0)
+  react-tooltip:
+    specifier: ^5.13.1
+    version: 5.13.1(react-dom@18.2.0)(react@18.2.0)
   typescript:
     specifier: 5.0.3
     version: 5.0.3
@@ -5196,6 +5199,18 @@ packages:
     dependencies:
       prop-types: 15.8.1
       react: 18.2.0
+    dev: false
+
+  /react-tooltip@5.13.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-9NstDFdjyy6cIH9zjeT70zXTHlW/TIGCOWQmhkAyqLFeQioLg1FXvb9ec7AxSpn0zyFUkFSLdFYxZRuewti3Aw==}
+    peerDependencies:
+      react: '>=16.14.0'
+      react-dom: '>=16.14.0'
+    dependencies:
+      '@floating-ui/dom': 1.2.8
+      classnames: 2.3.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react@18.2.0:

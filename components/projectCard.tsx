@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Variants, motion } from 'framer-motion';
+import { Tooltip } from 'react-tooltip';
 import Technologies from './technologies';
 import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/utilities/animations';
 import { createURL } from '@/sanity';
 import { Project } from '@/typings';
+import { CalendarDaysIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
 
 type Props = {
 	delay: number;
@@ -21,6 +24,9 @@ function ProjectCard({ delay, project }: Props) {
 		},
 	};
 
+	const [progressOpen, setProgressOpen] = useState<boolean>(false);
+	const [completedOpen, setCompletedOpen] = useState<boolean>(false);
+
 	return (
 		<motion.div
 			className='relative bg-gradient-to-b from-card/10 via-primary/30 to-primary rounded-20 flex flex-col flex-shrink-0 w-full h-full py-2'
@@ -28,6 +34,32 @@ function ProjectCard({ delay, project }: Props) {
 			whileInView={{ opacity: 1 }}
 			viewport={viewportOptions}
 			transition={{ duration: 0.5, ease: 'linear' }}>
+			{(project.isCompleted || project.isInProgress) && (
+				<div className='absolute top-2 right-4 tablet:right-2 z-10 text-primary'>
+					{project.isInProgress && (
+						<>
+							<CalendarDaysIcon
+								height={32}
+								data-tooltip-id={`progress-tooltip-${project._id}`}
+								data-tooltip-content='In progress'
+								onClick={() => setProgressOpen((prev) => !prev)}
+							/>
+							<Tooltip id={`progress-tooltip-${project._id}`} place='bottom' clickable={true} isOpen={progressOpen} />
+						</>
+					)}
+					{project.isCompleted && (
+						<>
+							<CheckCircleIcon
+								height={32}
+								data-tooltip-id={`completed-tooltip-${project._id}`}
+								data-tooltip-content='Is completed'
+								onClick={() => setCompletedOpen((prev) => !prev)}
+							/>
+							<Tooltip id={`completed-tooltip-${project._id}`} place='bottom' clickable={true} isOpen={completedOpen} />
+						</>
+					)}
+				</div>
+			)}
 			<div className='absolute inset-x-0.5 inset-y-0 flex flex-col overflow-y-auto py-2'>
 				<motion.div
 					className='flex flex-col flex-1'

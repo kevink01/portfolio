@@ -47,9 +47,6 @@ function Projects({ projects }: Props) {
 						{projects.map((project, i) => {
 							return <ProjectCard key={project._id} delay={i === 0 ? 1 : 1.4} project={project} />;
 						})}
-						{/* <ProjectCard key={1} delay={1} />
-						<ProjectCard key={2} delay={1.4} />
-						<ProjectCard key={3} delay={1.4} /> */}
 					</div>
 				</div>
 				<div className='flex ml-2'>

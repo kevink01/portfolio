@@ -60,6 +60,7 @@ export interface Experience extends SanityBody {
 
 export interface Project extends SanityBody {
 	image: Image;
+	isCompleted: boolean;
 	isInProgress: boolean;
 	liveDemoURL?: string;
 	name: string;

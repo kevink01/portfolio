@@ -47,6 +47,11 @@ export default defineType({
       type: 'boolean',
     }),
     defineField({
+      name: 'isCompleted',
+      title: 'Is Completed',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'liveDemoURL',
       title: 'Live Demo URL',
       type: 'url',
@@ -55,5 +60,6 @@ export default defineType({
   ],
   initialValue: {
     isInProgress: false,
+    isCompleted: false
   },
 })

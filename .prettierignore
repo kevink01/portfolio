@@ -11,3 +11,15 @@ pnpm-lock.yaml
 
 # Sanity folder
 sanity
+
+# Husky
+.husky
+
+# Config files
+.gitignore
+.prettierignore
+.prettierrc
+.lintstagedrc
+
+# Environment variables
+.env.local

@@ -10,7 +10,7 @@ type Props = {
 
 function Welcome({ pageInfo }: Props) {
 	return (
-		<div className='flex items-center justify-center h-screen'>
+		<div className='flex items-center justify-center overflow-hidden h-screen'>
 			<motion.div
 				className='bg-card rounded-xl flex flex-col 1024:flex-row w-4/5 max-w-8xl h-9/10 min-h-32 max-h-360'
 				initial={{ opacity: 0, scale: 0 }}

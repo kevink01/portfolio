@@ -16,7 +16,7 @@ type Props = {
 
 export default function Home({ experiences, pageInfo, projects, skills }: Props) {
 	return (
-		<div className='bg-[#121212] font-mono overflow-scroll h-screen scrollbar scrollbar-track-gray-900 scrollbar-thumb-primary scroll-smooth snap-y snap-mandatory basis-2/4 select-none'>
+		<div className='bg-[#121212] font-mono overflow-x-hidden overflow-y-scroll h-screen scrollbar scrollbar-track-gray-900 scrollbar-thumb-primary scroll-smooth snap-y snap-mandatory basis-2/4 select-none'>
 			{/* ^^ Solution for snapping: https://css-tricks.com/practical-css-scroll-snapping/ ^^ */}
 			<Head>
 				<title>Kevin Kulich&apos;s Portfolio</title>
@@ -46,7 +46,7 @@ export default function Home({ experiences, pageInfo, projects, skills }: Props)
 				<section id='contact' className='section'>
 					<Contact pageInfo={pageInfo} />
 				</section>
-				<div className='h-px' id='footer'></div> {/* Footer for snapping */}
+				<div className='h-20' id='footer'></div> {/* Footer for snapping */}
 			</main>
 		</div>
 	);

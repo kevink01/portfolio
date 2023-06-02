@@ -29,7 +29,7 @@ function Projects({ projects }: Props) {
 	};
 
 	return (
-		<div className='flex flex-col items-center p-2 1920:space-y-10 w-screen h-screen'>
+		<div className='flex flex-col items-center overflow-hidden p-2 1920:space-y-10 w-screen h-screen'>
 			<h1 className='text-slate-300 py-1 1024:py-4 tracking-widest text-xl tablet:text-2xl 1024:text-3xl 1536:text-4xl 2560:text-5xl'>
 				Projects
 			</h1>

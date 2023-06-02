@@ -45,7 +45,7 @@ function Contact({ pageInfo }: Props) {
 	};
 
 	return (
-		<div className='flex flex-col overflow-y-hidden w-screen h-screen'>
+		<div className='flex flex-col overflow-hidden w-screen h-screen'>
 			<div className='flex-1 flex flex-col items-center w-full px-4'>
 				<motion.div
 					className='bg-card rounded-20 relative w-full max-w-2xl min-h-32 h-full max-h-240 my-4'
@@ -150,14 +150,14 @@ function Contact({ pageInfo }: Props) {
 						{/* TODO Figma link */}
 						{pageInfo?.figmaURL && (
 							<Link href={pageInfo.figmaURL} target='_blank'>
-								<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-sm mobile:text-base hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
+								<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-xs mobile:text-sm hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
 									<Image className='mr-1' src={Figma.src} width={24} height={24} alt='Figma' />
 									Figma Designs
 								</button>
 							</Link>
 						)}
 						<Link href={pageInfo.sourceCodeURL} target='_blank'>
-							<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-sm mobile:text-base hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
+							<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-xs mobile:text-sm hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
 								<Image className='mr-1' src={Code.src} width={24} height={24} alt='Figma' />
 								Source code
 							</button>
@@ -165,6 +165,7 @@ function Contact({ pageInfo }: Props) {
 					</motion.div>
 				</motion.div>
 			</motion.div>
+			<div className='h-10 bg-zinc-900'></div>
 		</div>
 	);
 }

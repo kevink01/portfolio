@@ -54,7 +54,7 @@ export interface Experience extends SanityBody {
 	isWorkingHere: boolean;
 	points: string[];
 	startDate: date;
-	technologies: Skill[];
+	technologies: Skill[] | Tool[];
 	title: string;
 }
 
@@ -66,7 +66,7 @@ export interface Project extends SanityBody {
 	name: string;
 	summary: string;
 	sourceCodeURL: string;
-	technologies: Skill[];
+	technologies: Skill[] | Tool[];
 }
 
 export interface Skill extends SanityBody {
@@ -74,4 +74,9 @@ export interface Skill extends SanityBody {
 	image: Image;
 	progress: number;
 	skillColor: Color;
+}
+
+export interface Tool extends SanityBody {
+	name: string;
+	image: Image;
 }

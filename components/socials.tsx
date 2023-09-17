@@ -32,18 +32,16 @@ function Socials({ pageInfo, size }: Props) {
 				bgColor='#B77A03'
 				className='social-link'
 			/>
-			{pageInfo?.resumeURL && (
-				<div style={{ width: size, height: size }}>
-					<Link download href={pageInfo?.resumeURL} target='_blank'>
-						<button
-							className='bg-secondary rounded-full hover:opacity-70 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125'
-							data-te-toggle='tooltip'
-							title='Download Resume'>
-							<Image src={Resume.src} width={size} height={size} alt='Resume' />
-						</button>
-					</Link>
-				</div>
-			)}
+			<div style={{ width: size, height: size }}>
+				<Link download href={pageInfo.resumeURL} target='_blank'>
+					<button
+						className='bg-secondary rounded-full hover:opacity-70 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-125'
+						data-te-toggle='tooltip'
+						title='Download Resume'>
+						<Image src={Resume.src} width={size} height={size} alt='Resume' />
+					</button>
+				</Link>
+			</div>
 			<div className='w-px h-px'></div> {/* Spacing */}
 		</div>
 	);

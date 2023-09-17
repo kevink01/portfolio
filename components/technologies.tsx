@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { createURL } from '@/sanity';
-import { Skill } from '@/typings';
+import { Skill, Tool } from '@/typings';
 
 type Props = {
 	size: number;
-	technologies: Skill[];
+	technologies: Skill[] | Tool[];
 };
 
 function Technologies({ size, technologies }: Props) {

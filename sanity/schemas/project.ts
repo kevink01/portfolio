@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity/lib/exports'
+import {defineField, defineType} from 'sanity/lib/exports';
 
 export default defineType({
   name: 'projects',
@@ -33,7 +33,7 @@ export default defineType({
       name: 'technologies',
       title: 'Technologies',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'skills'}}],
+      of: [{ type: 'reference', to: [{type: 'skills'}, {type: 'tools'}]}]
     }),
     defineField({
       name: 'sourceCodeURL',

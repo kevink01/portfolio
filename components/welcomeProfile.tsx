@@ -42,7 +42,7 @@ function Profile({ pageInfo }: Props) {
 					</div>
 					{pageInfo?.profilePic && (
 						<motion.img
-							className='w-auto h-2/3 tablet:h-1/2 1280:h-2/3 rounded-full'
+							className='w-auto h-1/4 tablet:h-1/2 1280:h-2/3 rounded-full'
 							src={createURL(pageInfo?.profilePic).url()}
 							alt='Kevin'
 							initial={{ opacity: 0 }}

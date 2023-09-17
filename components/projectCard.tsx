@@ -103,7 +103,7 @@ function ProjectCard({ delay, project }: Props) {
 							delayChildren: 1,
 						}}>
 						<motion.div variants={buttonAnimate}>
-							<Link href={project.sourceCodeURL}>
+							<Link href={project.sourceCodeURL} target='_blank'>
 								<button className='bg-secondary rounded-20 w-28 tablet:w-40 1536:w-44 h-10 2560:h-12 tablet:text-lg 1024:text-lg 1536:text-xl hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
 									Source code
 								</button>
@@ -111,7 +111,7 @@ function ProjectCard({ delay, project }: Props) {
 						</motion.div>
 						{project.liveDemoURL && (
 							<motion.div variants={buttonAnimate}>
-								<Link href={project.liveDemoURL}>
+								<Link href={project.liveDemoURL} target='_blank'>
 									<button className='bg-secondary rounded-20 w-28 tablet:w-40 1536:w-44 h-10 2560:h-12 tablet:text-lg 1024:text-lg 1536:text-xl hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
 										Live Demo
 									</button>

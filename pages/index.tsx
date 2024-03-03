@@ -6,7 +6,7 @@ import Skills from '@/components/skills';
 import Contact from '@/components/contact';
 import { getExperiences, getPageInfo, getProjects, getSkills } from '@/util';
 import { PageInfo } from '@/types/page-info';
-import { Skill, type Skills as SkillType } from '@/types/skill';
+import { type Skill } from '@/types/skill';
 import { type Experience } from '@/types/experience';
 import { type Project } from '@/types/project';
 
@@ -14,7 +14,7 @@ type Props = {
 	experiences: Experience[];
 	pageInfo: PageInfo;
 	projects: Project[];
-	skills: SkillType;
+	skills: Skill[];
 };
 
 export default function Home({ experiences, pageInfo, projects, skills }: Props) {

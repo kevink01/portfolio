@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import Technologies from './technologies';
-import { Experience } from '@/typings';
+import { Experience } from '@/types/experience';
 import { dividerAnimation, sectionAnimation, viewportOptions } from '@/util/animations';
+import { convertToUTC } from '@/util/time';
 
 type Props = {
 	experience: Experience;
@@ -27,7 +28,7 @@ function ExperienceCard({ experience }: Props) {
 			</motion.div>
 			<div className='relative flex-1 w-full'>
 				<motion.div
-					id={experience._id}
+					id={experience.id.toString()}
 					className='absolute inset-x-0.5 inset-y-0 flex flex-col'
 					initial='hidden'
 					whileInView='show'
@@ -40,34 +41,51 @@ function ExperienceCard({ experience }: Props) {
 					<motion.div className='w-full' variants={sectionAnimation}>
 						<p className='italic tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl'>{experience.company}</p>
 						<p className='font-bold text-xs tablet:text-sm 1024:text-base 1536:text-lg 2560:text-xl'>
-							{new Date(experience.startDate).toLocaleDateString()} -{' '}
-							{experience.isWorkingHere ? 'Present' : new Date(experience.endDate).toLocaleDateString()}
+							{convertToUTC(experience.start_date).toLocaleDateString()} -{' '}
+							{!experience.end_date ? 'Present' : convertToUTC(experience.end_date).toLocaleDateString()}
 						</p>
 					</motion.div>
-					{experience.technologies?.length > 0 && (
+					{experience.technologies.length > 0 && (
 						<motion.div className='font-bold tablet:text-lg 1024:text-xl 1536:text-2xl' variants={sectionAnimation}>
 							<div className='inline tablet:hidden'>
-								<Technologies size={30} technologies={experience.technologies} />
+								<Technologies
+									alignment='left'
+									id={`experience-${experience.id}`}
+									size={30}
+									technologies={experience.technologies}
+								/>
 							</div>
 							<div className='hidden tablet:inline 2560:hidden'>
-								<Technologies size={40} technologies={experience.technologies} />
+								<Technologies
+									alignment='left'
+									id={`experience-${experience.id}`}
+									size={40}
+									technologies={experience.technologies}
+								/>
 							</div>
 							<div className='hidden 2560:inline'>
-								<Technologies size={50} technologies={experience.technologies} />
+								<Technologies
+									alignment='left'
+									id={`experience-${experience.id}`}
+									size={50}
+									technologies={experience.technologies}
+								/>
 							</div>
 						</motion.div>
 					)}
-					{experience.points && (
+					{experience.responsibilities.length && (
 						<motion.div
 							className='flex flex-col w-full h-full'
 							variants={sectionAnimation}
-							onAnimationComplete={() => document.getElementById(experience._id)?.classList.add('overflow-y-auto')}>
+							onAnimationComplete={() =>
+								document.getElementById(experience.id.toString())?.classList.add('overflow-y-auto')
+							}>
 							<p className='font-bold tablet:text-lg 1024:text-xl 1536:text-2xl'>Responsibilities:</p>
 							<div className='relative flex-1 min-h-32'>
 								<div className='absolute inset-x-2 top-0.5 bottom-1 overflow-y-auto'>
 									<ul className='marker:text-white list-disc list-outside pl-4 1024:pl-6 pr-2 text-sm tablet:text-base 1024:text-lg 1536:text-xl'>
-										{experience.points.map((point, i) => {
-											return <li key={`${experience._id}-point-${i + 1}`}>{point}</li>;
+										{experience.responsibilities.map((point, i) => {
+											return <li key={`experience-${experience.id}-point-${i + 1}`}>{point}</li>;
 										})}
 									</ul>
 								</div>

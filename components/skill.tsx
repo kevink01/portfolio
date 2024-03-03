@@ -1,12 +1,12 @@
 import fontColorContrast from 'font-color-contrast';
 import { Variants, motion } from 'framer-motion';
 import { viewportOptions } from '@/util/animations';
-import { Skill } from '@/typings';
-import { createURL } from '@/sanity';
+import { type Skill as SkillType } from '@/types/skill';
+import { getImage } from '@/util/getImage';
 
 type Props = {
 	delay: number;
-	skill: Skill;
+	skill: SkillType;
 };
 
 const progressLabelAnimation = (delay: number) => {
@@ -59,8 +59,8 @@ function Skill({ delay, skill }: Props) {
 					initial='hidden'
 					whileInView='show'
 					viewport={viewportOptions}
-					src={createURL(skill.image).url()}
-					alt='Skill'
+					src={getImage(skill.image_url)}
+					alt={skill.name}
 					width={24}
 					height={24}></motion.img>
 			</div>
@@ -72,11 +72,11 @@ function Skill({ delay, skill }: Props) {
 					whileInView='show'
 					viewport={viewportOptions}
 					style={{
-						backgroundColor: skill.skillColor.hex,
+						backgroundColor: skill.color,
 					}}>
 					<motion.span
 						className='flex justify-end items-center h-full pr-5 text-xl'
-						style={{ color: fontColorContrast(skill.skillColor.hex) }}
+						style={{ color: fontColorContrast(skill.color) }}
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						viewport={viewportOptions}

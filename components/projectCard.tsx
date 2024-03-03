@@ -6,8 +6,8 @@ import { CalendarDaysIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
 import Technologies from './technologies';
 import Tooltip from './tooltip';
 import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/util/animations';
-import { createURL } from '@/sanity';
-import { Project } from '@/typings';
+import { Project } from '@/types/project';
+import { getProjectImage } from '@/util/getImage';
 
 type Props = {
 	delay: number;
@@ -31,15 +31,15 @@ function ProjectCard({ delay, project }: Props) {
 			whileInView={{ opacity: 1 }}
 			viewport={viewportOptions}
 			transition={{ duration: 0.5, ease: 'linear' }}>
-			{(project.isCompleted || project.isInProgress) && (
+			{(project.complete || project.in_progress) && (
 				<div className='absolute top-2 right-4 tablet:right-2 z-10'>
-					{project.isInProgress && (
-						<Tooltip text='In progress'>
+					{project.in_progress && (
+						<Tooltip alignment='right' text='In progress'>
 							<CalendarDaysIcon height={32} className='text-primary' />
 						</Tooltip>
 					)}
-					{project.isCompleted && (
-						<Tooltip text='Is completed'>
+					{project.complete && (
+						<Tooltip alignment='right' text='Is completed'>
 							<CheckCircleIcon height={32} className='text-primary' />
 						</Tooltip>
 					)}
@@ -55,8 +55,8 @@ function ProjectCard({ delay, project }: Props) {
 					<motion.div className='flex justify-center' variants={sectionAnimation}>
 						<Image
 							className='rounded-2xl'
-							src={createURL(project.image).url()}
-							alt='Project Logo'
+							src={getProjectImage(project.image_url)}
+							alt={project.name}
 							width={150}
 							height={150}
 						/>
@@ -67,19 +67,24 @@ function ProjectCard({ delay, project }: Props) {
 					<motion.div className='bg-primary/75 h-1' variants={dividerAnimation}></motion.div>
 					<div className='relative flex-1 min-h-32'>
 						<div className='absolute inset-x-2 inset-y-0 overflow-y-auto'>
-							{project.summary && (
+							{project.description && (
 								<motion.div variants={sectionAnimation}>
 									<p className='font-bold tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl'>
 										Project description:
 									</p>
-									<p>{project.summary}</p>
+									<p>{project.description}</p>
 								</motion.div>
 							)}
 							{project.technologies?.length > 0 && (
 								<motion.div
 									className='font-bold tablet:text-lg 1024:text-xl 1536:text-2xl 2560:text-3xl'
 									variants={sectionAnimation}>
-									<Technologies size={30} technologies={project.technologies} />
+									<Technologies
+										alignment='left'
+										id={`project-${project.id}`}
+										size={30}
+										technologies={project.technologies}
+									/>
 								</motion.div>
 							)}
 						</div>
@@ -103,15 +108,15 @@ function ProjectCard({ delay, project }: Props) {
 							delayChildren: 1,
 						}}>
 						<motion.div variants={buttonAnimate}>
-							<Link href={project.sourceCodeURL} target='_blank'>
+							<Link href={project.source_url} target='_blank'>
 								<button className='bg-secondary rounded-20 w-28 tablet:w-40 1536:w-44 h-10 2560:h-12 tablet:text-lg 1024:text-lg 1536:text-xl hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
 									Source code
 								</button>
 							</Link>
 						</motion.div>
-						{project.liveDemoURL && (
+						{project.live_demo && (
 							<motion.div variants={buttonAnimate}>
-								<Link href={project.liveDemoURL} target='_blank'>
+								<Link href={project.live_demo} target='_blank'>
 									<button className='bg-secondary rounded-20 w-28 tablet:w-40 1536:w-44 h-10 2560:h-12 tablet:text-lg 1024:text-lg 1536:text-xl hover:bg-secondaryHover motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500 motion-safe:hover:scale-110'>
 										Live Demo
 									</button>

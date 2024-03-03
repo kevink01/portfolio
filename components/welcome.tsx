@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Profile from './welcomeProfile';
 import Terminal from './welcomeTerminal';
-import { PageInfo } from '@/typings';
+import { PageInfo } from '@/types/page-info';
 import { viewportOptions } from '@/util/animations';
 
 type Props = {

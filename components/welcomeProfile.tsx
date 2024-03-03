@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { createURL } from '@/sanity';
 import Socials from './socials';
-import { PageInfo } from '@/typings';
+import { PageInfo } from '@/types/page-info';
 import { springAnimation, viewportOptions } from '@/util/animations';
+import ProfilePic from '@/public/images/kevin.jpg';
 
 type Props = {
 	pageInfo: PageInfo;
@@ -40,31 +40,29 @@ function Profile({ pageInfo }: Props) {
 								repeat: Infinity,
 							}}></motion.div>
 					</div>
-					{pageInfo?.profilePic && (
-						<motion.img
-							className='w-auto h-1/4 tablet:h-1/2 1280:h-2/3 rounded-full'
-							src={createURL(pageInfo?.profilePic).url()}
-							alt='Kevin'
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: [0, 0.1, 0.9, 1] }}
-							viewport={viewportOptions}
-							transition={{ duration: 2, ease: 'linear' }}></motion.img>
-					)}
+					<motion.img
+						className='w-auto h-1/4 tablet:h-1/2 1280:h-2/3 rounded-full'
+						src={ProfilePic.src}
+						alt='Kevin'
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: [0, 0.1, 0.9, 1] }}
+						viewport={viewportOptions}
+						transition={{ duration: 2, ease: 'linear' }}></motion.img>
 				</div>
 			</div>
 
 			<div className='flex justify-center w-full py-2'>
 				<div className='inline mobile:hidden'>
-					<Socials pageInfo={pageInfo} size={30} />
+					<Socials socials={pageInfo.socials} size={30} />
 				</div>
 				<div className='hidden mobile:inline 1024:hidden'>
-					<Socials pageInfo={pageInfo} size={40} />
+					<Socials socials={pageInfo.socials} size={40} />
 				</div>
 				<div className='hidden 1024:inline 1536:hidden'>
-					<Socials pageInfo={pageInfo} size={50} />
+					<Socials socials={pageInfo.socials} size={50} />
 				</div>
 				<div className='hidden 1536:inline'>
-					<Socials pageInfo={pageInfo} size={60} />
+					<Socials socials={pageInfo.socials} size={60} />
 				</div>
 			</div>
 		</motion.div>

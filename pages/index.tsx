@@ -4,14 +4,17 @@ import Experiences from '@/components/experiences';
 import Projects from '@/components/projects';
 import Skills from '@/components/skills';
 import Contact from '@/components/contact';
-import { Experience, PageInfo, Project, Skill } from '@/typings';
 import { getExperiences, getPageInfo, getProjects, getSkills } from '@/util';
+import { PageInfo } from '@/types/page-info';
+import { Skill, type Skills as SkillType } from '@/types/skill';
+import { type Experience } from '@/types/experience';
+import { type Project } from '@/types/project';
 
 type Props = {
 	experiences: Experience[];
 	pageInfo: PageInfo;
 	projects: Project[];
-	skills: Skill[];
+	skills: SkillType;
 };
 
 export default function Home({ experiences, pageInfo, projects, skills }: Props) {
@@ -53,11 +56,16 @@ export default function Home({ experiences, pageInfo, projects, skills }: Props)
 }
 
 export async function getStaticProps() {
-	const experiences = await getExperiences();
-	const pageInfo = await getPageInfo();
-	const projects = await getProjects();
-	const skills = await getSkills();
-
+	let experiences: Experience[] = [];
+	let pageInfo: PageInfo | undefined = undefined;
+	let projects: Project[] = [];
+	let skills: Skill[] = [];
+	await Promise.allSettled([getExperiences(), getPageInfo(), getProjects(), getSkills()]).then((values) => {
+		experiences = values[0].status === 'fulfilled' ? values[0].value : [];
+		pageInfo = values[1].status === 'fulfilled' ? values[1].value : undefined;
+		projects = values[2].status === 'fulfilled' ? values[2].value : [];
+		skills = values[3].status === 'fulfilled' ? values[3].value : [];
+	});
 	return {
 		props: {
 			experiences,

@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { ArrowLongUpIcon, AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import Code from '@/public/images/Code.png';
 import Figma from '@/public/images/Figma.png';
-import { PageInfo } from '@/typings';
+import { PageInfo } from '@/types/page-info';
 import { springAnimation, viewportOptions } from '@/util/animations';
 
 type Inputs = {
@@ -148,15 +148,13 @@ function Contact({ pageInfo }: Props) {
 					</motion.div>
 					<motion.div className='flex flex-col justify-start space-y-4' variants={springAnimation(-1, 0.5)}>
 						{/* TODO Figma link */}
-						{pageInfo?.figmaURL && (
-							<Link href={pageInfo.figmaURL} target='_blank'>
-								<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-xs mobile:text-sm hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
-									<Image className='mr-1' src={Figma.src} width={24} height={24} alt='Figma' />
-									Figma Designs
-								</button>
-							</Link>
-						)}
-						<Link href={pageInfo.sourceCodeURL} target='_blank'>
+						<Link href={pageInfo.figma_url} target='_blank'>
+							<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-xs mobile:text-sm hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
+								<Image className='mr-1' src={Figma.src} width={24} height={24} alt='Figma' />
+								Figma Designs
+							</button>
+						</Link>
+						<Link href={pageInfo.source_code_url} target='_blank'>
 							<button className='bg-secondary rounded-20 flex w-32 mobile:w-40 h-10 p-2 text-xs mobile:text-sm hover:bg-secondaryHover motion-safe:hover:scale-102 motion-safe:transition motion-safe:ease-in-out motion-safe:duration-500'>
 								<Image className='mr-1' src={Code.src} width={24} height={24} alt='Figma' />
 								Source code

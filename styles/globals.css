@@ -36,6 +36,6 @@
 	}
 
 	.tooltip {
-		@apply absolute top-full right-0 text-center whitespace-nowrap bg-gray-700 rounded-20 p-2 mt-1 group-hover:visible group-hover:opacity-100 transition duration-500;
+		@apply absolute top-full text-center whitespace-nowrap bg-gray-700 rounded-20 p-2 mt-1 group-hover:visible group-hover:opacity-100 transition duration-500;
 	}
 }

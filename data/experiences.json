@@ -1,0 +1,116 @@
+[
+	{
+		"id": 1,
+		"title": "IT Software Engineer Intern",
+		"company": "Ford Credit",
+		"start_date": "2022-05-31T00:00:00.000Z",
+		"end_date": "2022-08-23T00:00:00.000Z",
+		"technologies": [
+			{
+				"name": "Angular",
+				"image_url": "angular"
+			},
+			{
+				"name": "TypeScript",
+				"image_url": "typescript"
+			},
+			{
+				"name": "Java",
+				"image_url": "java"
+			},
+			{
+				"name": "SpringBoot",
+				"image_url": "springboot"
+			},
+			{
+				"name": "IntelliJ",
+				"image_url": "intellij"
+			},
+			{
+				"name": "GitHub",
+				"image_url": "github"
+			},
+			{
+				"name": "Gradle",
+				"image_url": "gradle"
+			}
+		],
+		"responsibilities": [
+			"Building a Java Spring Boot microservice API.",
+			"Developing a full-stack Angular application for Ford dealer information.",
+			"Navigating through an Angular course to educate team about useful features."
+		]
+	},
+	{
+		"id": 2,
+		"title": "Computer Science Lab Assistant",
+		"company": "Michigan Technological University",
+		"start_date": "2021-08-31T00:00:00.000Z",
+		"end_date": "2023-12-13T00:00:00.000Z",
+		"technologies": [
+			{
+				"name": "Java",
+				"image_url": "java"
+			},
+			{
+				"name": "IntelliJ",
+				"image_url": "intellij"
+			}
+		],
+		"responsibilities": [
+			"Assisting first-year students with Intro to Programming 1 labs.",
+			"Providing guidance to giving clarity to any ambiguity.",
+			"Grading students’ proficiency in lab reports."
+		]
+	},
+	{
+		"id": 3,
+		"title": "Teacher Assistant",
+		"company": "Michigan Technological University",
+		"start_date": "2023-08-28T00:00:00.000Z",
+		"end_date": "2023-12-16T00:00:00.000Z",
+		"technologies": [
+			{
+				"name": "Java",
+				"image_url": "java"
+			},
+			{
+				"name": "IntelliJ",
+				"image_url": "intellij"
+			},
+			{
+				"name": "Eclipse",
+				"image_url": "eclipse"
+			}
+		],
+		"responsibilities": [
+			"Grading assignments, programs, and exams for Data Structures.",
+			"Providing guidance to students to help their understanding."
+		]
+	},
+	{
+		"id": 4,
+		"title": "Enterprise Technology Intern",
+		"company": "Ford Motor Company",
+		"start_date": "2022-05-22T00:00:00.000Z",
+		"end_date": "2023-08-11T00:00:00.000Z",
+		"technologies": [
+			{
+				"name": "Terraform",
+				"image_url": "terraform"
+			},
+			{
+				"name": "Google Cloud Project",
+				"image_url": "gcp"
+			},
+			{
+				"name": "GitHub",
+				"image_url": "github"
+			}
+		],
+		"responsibilities": [
+			"Developing skills in Google Cloud Platform and Terraform for infrastructure as code.",
+			"Creating a guided lab for internal employees to assist in teaching about infrastructure as code."
+		]
+	}
+]

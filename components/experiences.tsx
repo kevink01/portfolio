@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ExperienceCard from './experienceCard';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
-import { Experience } from '@/typings';
+import { Experience } from '@/types/experience';
 
 type Props = {
 	experiences: Experience[];
@@ -44,8 +44,8 @@ function Experiences({ experiences }: Props) {
 					<div
 						className={`flex w-full h-full max-h-176 motion-safe:transition-transform motion-safe:ease-out motion-safe:duration-500`}
 						style={{ transform: `translateX(-${index * 100}%)` }}>
-						{experiences?.map((experience) => {
-							return <ExperienceCard key={experience._id} experience={experience} />;
+						{experiences?.map((experience, i) => {
+							return <ExperienceCard key={`experience-${experience.id}`} experience={experience} />;
 						})}
 					</div>
 				</div>

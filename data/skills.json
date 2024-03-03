@@ -1,0 +1,74 @@
+[
+	{
+		"name": "TypeScript",
+		"progress": 95,
+		"color": "#2f74c0",
+		"image_url": "typescript"
+	},
+	{
+		"name": "C/C++",
+		"progress": 90,
+		"color": "#00589c",
+		"image_url": "c"
+	},
+	{
+		"name": "Git",
+		"progress": 90,
+		"color": "#e44c30",
+		"image_url": "git"
+	},
+	{
+		"name": "GitHub",
+		"progress": 90,
+		"color": "#000000",
+		"image_url": "github"
+	},
+	{
+		"name": "Java",
+		"progress": 90,
+		"color": "#f89917",
+		"image_url": "java"
+	},
+	{
+		"name": "React",
+		"progress": 90,
+		"color": "#61dbfb",
+		"image_url": "react"
+	},
+	{
+		"name": "Next.js",
+		"progress": 85,
+		"color": "#000000",
+		"image_url": "nextjs"
+	},
+	{
+		"name": "TailwindCSS",
+		"progress": 85,
+		"color": "#009fbc",
+		"image_url": "tailwind"
+	},
+	{
+		"name": "MySQL",
+		"progress": 75,
+		"color": "#005e86",
+		"image_url": "mysql"
+	},
+	{
+		"name": "Angular",
+		"progress": 70,
+		"color": "#f13a2f",
+		"image_url": "angular"
+	},
+	{
+		"name": "Firebase",
+		"progress": 70,
+		"color": "#fdc400",
+		"image_url": "firebase"
+	},
+	{
+		"name": "C#",
+		"progress": 65,
+		"color": "#513c6e",
+		"image_url": "csharp"
+	}
+]

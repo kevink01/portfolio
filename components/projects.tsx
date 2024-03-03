@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ProjectCard from './projectCard';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
-import { Project } from '@/typings';
+import { Project } from '@/types/project';
 
 type Props = {
 	projects: Project[];
@@ -45,7 +45,9 @@ function Projects({ projects }: Props) {
 						className='flex w-full h-full max-h-176 motion-safe:transition-transform motion-safe:ease-out motion-safe:duration-500'
 						style={{ transform: `translateX(-${index * 100}%)` }}>
 						{projects.map((project, i) => {
-							return <ProjectCard key={project._id} delay={i === 0 ? 1 : 1.4} project={project} />;
+							return (
+								<ProjectCard key={`project-${project.id.toString()}`} delay={i === 0 ? 1 : 1.4} project={project} />
+							);
 						})}
 					</div>
 				</div>

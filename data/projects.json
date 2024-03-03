@@ -1,0 +1,138 @@
+[
+	{
+		"id": 1,
+		"name": "Portfolio",
+		"description": "\"A chance to learn React and NextJS, a web portfolio not only prompted me to learn a new JavaScript framework, but also build up my portfolio about my journey as a programmer. A simply, slick website that displays my interest to program!\"",
+		"complete": true,
+		"in_progress": false,
+		"technologies": [
+			{
+				"name": "React",
+				"image_url": "react"
+			},
+			{
+				"name": "Next.js",
+				"image_url": "nextjs"
+			},
+			{
+				"name": "TypeScript",
+				"image_url": "typescript"
+			},
+			{
+				"name": "TailwindCSS",
+				"image_url": "tailwind"
+			},
+			{
+				"name": "VSCode",
+				"image_url": "vscode"
+			},
+			{
+				"name": "GitHub",
+				"image_url": "github"
+			}
+		],
+		"source_url": "https://github.com/kevink01/portfolio",
+		"live_demo": "https://www.kkulich.com",
+		"image_url": "portfolio"
+	},
+	{
+		"id": 2,
+		"name": "Spotify++",
+		"description": "\"Spotify++ is a recreation of the Spotify application. Connecting to the Spotify API, this application displays user's playlists, favorite albums, and so much more. Includes interactivity such as adding songs to playlists, following artists and users, and even playing songs on active devices!\"",
+		"complete": false,
+		"in_progress": true,
+		"technologies": [
+			{
+				"name": "React",
+				"image_url": "react"
+			},
+			{
+				"name": "Next.js",
+				"image_url": "nextjs"
+			},
+			{
+				"name": "TypeScript",
+				"image_url": "typescript"
+			},
+			{
+				"name": "TailwindCSS",
+				"image_url": "tailwind"
+			},
+			{
+				"name": "VSCode",
+				"image_url": "vscode"
+			},
+			{
+				"name": "GitHub",
+				"image_url": "github"
+			}
+		],
+		"source_url": "https://github.com/kevink01/spotifyclone",
+		"live_demo": null,
+		"image_url": "spotify"
+	},
+	{
+		"id": 3,
+		"name": "task2Do",
+		"description": "\"A simple, efficient web application to track tasks to do. Simply create, manage, and check off your chores in a stress-free manner!\"",
+		"complete": true,
+		"in_progress": false,
+		"technologies": [
+			{
+				"name": "React",
+				"image_url": "react"
+			},
+			{
+				"name": "Next.js",
+				"image_url": "nextjs"
+			},
+			{
+				"name": "TypeScript",
+				"image_url": "typescript"
+			},
+			{
+				"name": "TailwindCSS",
+				"image_url": "tailwind"
+			},
+			{
+				"name": "Firebase",
+				"image_url": "firebase"
+			},
+			{
+				"name": "VSCode",
+				"image_url": "vscode"
+			},
+			{
+				"name": "GitHub",
+				"image_url": "github"
+			}
+		],
+		"source_url": "https://github.com/kevink01/spotifyclone",
+		"live_demo": null,
+		"image_url": "tasks"
+	},
+	{
+		"id": 4,
+		"name": "Discord Bot",
+		"description": "\"Kevin Discord Bot is a multi-purpose bot for the social media site Discord. Utilizes DiscordJS, a NodeJS module that interacts with Discord's API. This bot does basic server management, such as managing members, emojis, and messages. A cool side-hobby to learn more about interacting with public APIs!\"",
+		"complete": true,
+		"in_progress": false,
+		"technologies": [
+			{
+				"name": "TypeScript",
+				"image_url": "typescript"
+			},
+			{
+				"name": "VSCode",
+				"image_url": "vscode"
+			},
+			{
+				"name": "GitHub",
+				"image_url": "github"
+			}
+		],
+		"source_url": "https://github.com/kevink01/kevin-discord-bot",
+		"live_demo": null,
+		"image_url": "discord"
+	}
+]

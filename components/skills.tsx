@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Skill from './skill';
-import { Skill as SkillType } from '@/typings';
+import { Skill as SkillType } from '@/types/skill';
 import { viewportOptions } from '@/util/animations';
 
 type Props = {
@@ -22,7 +22,7 @@ function Skills({ skills }: Props) {
 						viewport={viewportOptions}
 						transition={{ ease: 'linear', staggerChildren: 0.2 }}>
 						{skills.map((skill, i) => {
-							return <Skill key={skill._id} delay={i} skill={skill} />;
+							return <Skill key={`skill-${skill.name}-${i}`} delay={i} skill={skill} />;
 						})}
 					</motion.div>
 				)}

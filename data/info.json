@@ -1,0 +1,32 @@
+{
+	"bio": [
+		"My name is Kevin, and I'm a full-time software engineer.",
+		"I have been programming for 5 years now, with a passion for front-end development. My favorite language to code in is Typescript, but my first language that I learned was Python.",
+		"I believe it is important to write quality software that is functional and user-friendly with good documentation.",
+		"Besides programming, I like to play pool and bowling, go rock climbing, and go on hikes."
+	],
+	"email": "kakulich01@gmail.com",
+	"figma_url": "https://www.figma.com/community/file/1231704439213443848",
+	"name": "Kevin Kulich",
+	"resume_url": "",
+	"socials": [
+		{
+			"name": "Github",
+			"url": "https://www.github.com/kevink01"
+		},
+		{
+			"name": "LinkedIn",
+			"url": "https://www.linkedin.com/in/kevin-kulich/"
+		}
+	],
+	"source_code_url": "https://github.com/kevink01/portfolio",
+	"typings": [
+		"System.out.println(\"Hello World\");",
+		"My name is Kevin!",
+		"<Full_Stack_Developer />",
+		"console.log('TypeScript enjoyer')",
+		"🎱-ball enthusiast",
+		"Avid rock climber",
+		"Enjoy my profile!!"
+	]
+}

@@ -1,20 +1,25 @@
 import Image from 'next/image';
-import { createURL } from '@/sanity';
-import { Skill, Tool } from '@/typings';
+import { Technologies as Tech } from '@/types/experience';
+import { getImage } from '@/util/getImage';
+import Tooltip from './tooltip';
 
 type Props = {
+	alignment: 'left' | 'right';
+	id: string;
 	size: number;
-	technologies: Skill[] | Tool[];
+	technologies: Tech;
 };
 
-function Technologies({ size, technologies }: Props) {
+function Technologies({ alignment, id, size, technologies }: Props) {
 	return (
 		<div>
 			<p>Technologies used:</p>
 			<div className='flex flex-row flex-wrap mobile:justify-start space-x-1 1920:space-x-2 w-full'>
-				{technologies?.map((technology) => {
+				{technologies.map((technology) => {
 					return (
-						<Image key={technology._id} src={createURL(technology.image).url()} width={size} height={size} alt='Tech' />
+						<Tooltip alignment={alignment} text={technology.name} key={`${id}-${technology.name}`}>
+							<Image src={getImage(technology.image_url)} width={size} height={size} alt={technology.name} />
+						</Tooltip>
 					);
 				})}
 			</div>

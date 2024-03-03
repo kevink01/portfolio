@@ -1,8 +1,11 @@
-import { Project } from '@/typings';
+import { Project, projectsSchema } from '@/types/project';
+import ProjectData from '@/data/projects.json' assert { type: 'json' };
+import { parse } from './parse';
 
 export async function getProjects() {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`);
-	const data = await res.json();
-	const projects: Project[] = data.projects;
-	return projects;
+	const parsed = parse<Project[]>(projectsSchema, ProjectData);
+	if (!parsed.success) {
+		return [];
+	}
+	return parsed.data;
 }

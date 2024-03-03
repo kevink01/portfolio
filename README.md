@@ -1,10 +1,10 @@
 # Welcome to Kevin's Portfolio
 
-## My name is Kevin Kulich, and I'm a 4th year computer science student.
+## My name is Kevin Kulich, and I'm a software engineer.
 
 Programming has been a hobby of mine. From learning to new technologies to creating hobby projects, I have developed many skills that advances my knowledge. I always love to learn a new technology, a new technique, or a new programming paradigm.
 
-This project is built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Sanity](https://www.sanity.io/studio).
+This project is built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [TailwindCSS](https://tailwindcss.com/).
 
 ---
 
@@ -30,7 +30,6 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/getSkills](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/getSkills.ts`.
 
 ---
 

@@ -1,7 +1,7 @@
 import fontColorContrast from 'font-color-contrast';
 import { Variants, motion } from 'framer-motion';
-import { viewportOptions } from '@/util/animations';
 import { type Skill as SkillType } from '@/types/skill';
+import { viewportOptions } from '@/util/animations';
 import { getImage } from '@/util/getImage';
 
 type Props = {

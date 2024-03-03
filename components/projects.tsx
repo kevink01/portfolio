@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import ProjectCard from './projectCard';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
-import { Project } from '@/types/project';
+import ProjectCard from './project-card';
+import { type Project } from '@/types/project';
 
 type Props = {
 	projects: Project[];

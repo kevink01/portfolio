@@ -10,4 +10,3 @@ const skillSchema = z.object({
 export const skillsSchema = z.array(skillSchema);
 
 export type Skill = z.infer<typeof skillSchema>;
-export type Skills = z.infer<typeof skillsSchema>;

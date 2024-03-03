@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Variants, motion } from 'framer-motion';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { ArrowLongUpIcon, AtSymbolIcon, UserCircleIcon } from '@heroicons/react/24/solid';
-import Code from '@/public/images/Code.png';
-import Figma from '@/public/images/Figma.png';
+import Code from '@/public/images/code.png';
+import Figma from '@/public/images/figma.png';
 import { PageInfo } from '@/types/page-info';
 import { springAnimation, viewportOptions } from '@/util/animations';
 

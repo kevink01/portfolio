@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Skill from './skill';
-import { Skill as SkillType } from '@/types/skill';
+import { type Skill as SkillType } from '@/types/skill';
 import { viewportOptions } from '@/util/animations';
 
 type Props = {

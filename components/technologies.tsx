@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { Technologies as Tech } from '@/types/experience';
-import { getImage } from '@/util/getImage';
 import Tooltip from './tooltip';
+import { type Technologies as Tech } from '@/types/experience';
+import { getImage } from '@/util/getImage';
 
 type Props = {
 	alignment: 'left' | 'right';

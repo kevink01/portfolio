@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import Socials from './socials';
-import { PageInfo } from '@/types/page-info';
-import { springAnimation, viewportOptions } from '@/util/animations';
 import ProfilePic from '@/public/images/kevin.jpg';
+import { type PageInfo } from '@/types/page-info';
+import { springAnimation, viewportOptions } from '@/util/animations';
 
 type Props = {
 	pageInfo: PageInfo;

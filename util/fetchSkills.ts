@@ -1,9 +1,9 @@
-import { type Skills, skillsSchema } from '@/types/skill';
+import { type Skill, skillsSchema } from '@/types/skill';
 import SkillData from '@/data/skills.json' assert { type: 'json' };
 import { parse } from './parse';
 
-export async function getSkills(): Promise<Skills | []> {
-	const parsed = parse<Skills>(skillsSchema, SkillData);
+export async function getSkills(): Promise<Skill[] | []> {
+	const parsed = parse<Skill[]>(skillsSchema, SkillData);
 
 	if (!parsed.success) {
 		return [];

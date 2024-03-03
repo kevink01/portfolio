@@ -5,8 +5,8 @@ import { Variants, motion } from 'framer-motion';
 import { CalendarDaysIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
 import Technologies from './technologies';
 import Tooltip from './tooltip';
+import { type Project } from '@/types/project';
 import { delayDividerAnimation, dividerAnimation, sectionAnimation, viewportOptions } from '@/util/animations';
-import { Project } from '@/types/project';
 import { getProjectImage } from '@/util/getImage';
 
 type Props = {

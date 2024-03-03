@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Technologies from './technologies';
-import { Experience } from '@/types/experience';
+import { type Experience } from '@/types/experience';
 import { dividerAnimation, sectionAnimation, viewportOptions } from '@/util/animations';
 import { convertToUTC } from '@/util/time';
 

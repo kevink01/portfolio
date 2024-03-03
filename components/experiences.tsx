@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import ExperienceCard from './experienceCard';
+import ExperienceCard from './experience-card';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
-import { Experience } from '@/types/experience';
+import { type Experience } from '@/types/experience';
 
 type Props = {
 	experiences: Experience[];
